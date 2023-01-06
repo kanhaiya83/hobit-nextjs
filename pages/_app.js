@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "../styles/globals.css";
 import "../styles/index.css";
-import { AuthContextProvider } from "./src/context/authContext";
+import { AuthContextProvider } from "../src/context/authContext";
 import { ChakraProvider } from '@chakra-ui/react'
 export default function App({ Component, pageProps }) {
   useEffect(() => {
