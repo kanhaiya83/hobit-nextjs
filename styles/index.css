@@ -1,0 +1,28 @@
+.gradient-text{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#1acf8f),to(#04b1ac));
+    background-image: linear-gradient(180deg,#1acf8f,#04b1ac);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.testimonial-bg-image-1,.testimonial-bg-image-2{
+    background-image: url("https://uploads-sslhttps://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4c34de870765f1e66b_stars.svg.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4d3497a237e1c65e0a_Group%201341.svg");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+    background-color: rgb(196 255 248 / 50%);
+}
+.testimonial-bg-image-2{
+    background-image: url("https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4c34de870765f1e66b_stars.svg");
+}
+.grad-btn{
+    background-image: linear-gradient(133deg,#1bd18e,#01aeae);
+    box-shadow: 0 10px 44px -20px rgb(61 156 242 / 40%);
+}
+.css-top-section{
+    background-image: url("https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4e852a05fb1b7f2c27185_Frame%202.png");
+    background-position: 0  0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
