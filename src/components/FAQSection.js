@@ -21,8 +21,8 @@ const FAQSection = ({}) => {
     
   ];
   return (
-    <div class="bg-white w-full py-10">
-      <div class="max-w-[60%] mx-auto">
+    <div class="bg-white w-full py-10 px-[5%]">
+      <div class="max-w-[900px] mx-auto">
         <h1 class="text-4xl font-semibold text-center   mb-4 text-slate-800">
           Frequently Asked Questions
           <br />( FAQ )

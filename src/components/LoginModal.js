@@ -11,6 +11,7 @@ import { useState } from "react";
 import Modal from "react-modal";
 import { useAuthContext } from "../context/authContext";
 import { auth } from "../utils/firebase";
+import GradientButton from "./GradientButton";
 const customStyles = {
   content: {
     top: "50%",
@@ -26,6 +27,7 @@ const customStyles = {
   },
   overlay: {
     backgroundColor: "rgb(52 52 52 / 75%)",
+    zIndex:1000
   },
 };
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
@@ -59,6 +61,7 @@ const LoginModal = () => {
   };
   const getOTP = (e) => {
     e.preventDefault();
+    if(expandForm)return;
     const fullMobileNumber = `${countryCode}${mobileNumber}`
     console.log({fullMobileNumber})
     const appVerifier = new RecaptchaVerifier(
@@ -119,18 +122,15 @@ const LoginModal = () => {
         <form className="flex flex-col items-start my-8" onSubmit={getOTP}>
           <InputGroup>
             <InputLeftAddon>{countryCode}</InputLeftAddon>
-            <Input type="tel" placeholder="phone number" value={mobileNumber} onChange={handleNumberChange} />
+            <Input type="tel" placeholder="Phone number" value={mobileNumber} onChange={handleNumberChange} />
           </InputGroup>
-          <Button
-            leftIcon={<EmailIcon />}
-            colorScheme="teal"
-            variant="solid"
-            className="w-full mt-4"
+          <GradientButton
+            applyClasses="mt-4 py-4 mt-4 bg-primary-color"
             onClick={getOTP}
             disabled={expandForm}
           >
             {expandForm ?"OTP sent!!" :"Get OTP"}
-          </Button>
+          </GradientButton>
         </form>
         {expandForm && (
           <>
@@ -143,14 +143,12 @@ const LoginModal = () => {
               onChange={handleOTPChange}
               placeholder="OTP"
             />
-            <Button
-              colorScheme="teal"
-              variant="solid"
-              className="w-full mt-4"
-              onClick={verifyOTP}
+            <GradientButton
+            applyClasses="mt-4 py-4 mt-4 bg-primary-color"
+            onClick={verifyOTP}
             >
               Verify
-            </Button>
+            </GradientButton>
           </>
         )}
       </div>

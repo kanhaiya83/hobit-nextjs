@@ -3,10 +3,14 @@
     "campaign_id": "zumba",
     "title": "Zumba for Weight Loss",
     "description": "Dance out your calories with a high-energy aerobic exercise that can be an effective and fun part of your weight loss journey. Pave your way to a leaner, fitter and more toned you with this full body dance workout combining muscle conditioning and balance too.",
-    "instructor": {"name":"Ms. Priyanka Saini","description":"Zumba Intructor"},
-    "bgImage":"https://user-images.githubusercontent.com/76777058/211171610-369d9c37-0f70-4783-a899-7084a96948b3.jpg",
-    "startDate":1673145775000,
-    "endDate":1673145775000,
+    "instructor": {
+      "name": "Ms. Priyanka Saini",
+      "image": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/b2cUsers%2FhWoYh4ohukPOVia7q1BCsvmYSZl1%2Fprofile_picture.jpg?alt=media&token=f2376a6b-14b5-48fd-a79a-48efceeb2c61",
+      "description": "Zumba Intructor"
+    },
+    "bgImage": "https://user-images.githubusercontent.com/76777058/211171647-de9dddcb-2409-4334-bbf7-ace4e8a73f87.jpg",
+    "startDate": 1673145775000,
+    "endDate": 1673145775000,
     "advantages": [
       {
         "id": 1,

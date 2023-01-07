@@ -4,7 +4,7 @@ import GradientText from "./GradientText";
 
 const TopSection = ({data}) => {
   return (
-    <div className="bg-dark-primary-color w-full text-white relative overflow-hidden">
+    <div className="bg-dark-primary-color w-full text-white relative overflow-hidden z-10">
       <div class="bg-dark-primary-color absolute top-0 left-0 w-full h-full">
           <img src={data.bgImage} alt="background"/>
       </div>
