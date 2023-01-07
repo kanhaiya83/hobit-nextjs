@@ -1,3 +1,8 @@
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .gradient-text{
     background-image: -webkit-gradient(linear,left top,left bottom,from(#1acf8f),to(#04b1ac));
     background-image: linear-gradient(180deg,#1acf8f,#04b1ac);
@@ -16,13 +21,15 @@
 .testimonial-bg-image-2{
     background-image: url("https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4c34de870765f1e66b_stars.svg");
 }
-.grad-btn{
-    background-image: linear-gradient(133deg,#1bd18e,#01aeae);
-    box-shadow: 0 10px 44px -20px rgb(61 156 242 / 40%);
+.gradient-btn{
+    background: linear-gradient(-45deg,#cb6ce4 20%,#8b53ff)!important;    
 }
 .css-top-section{
-    background-image: url("https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4e852a05fb1b7f2c27185_Frame%202.png");
+    background-image: url("https://user-images.githubusercontent.com/76777058/211166136-e3ad906c-093f-4d56-bc8a-b262db08e690.jpg");
     background-position: 0  0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+img{
+    font-size: 0;
 }

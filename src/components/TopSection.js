@@ -1,19 +1,20 @@
+import Image from "next/image";
 import { useAuthContext } from "../context/authContext";
 import GradientText from "./GradientText";
 
-const TopSection = () => {
-const {setIsAuthModalOpen} = useAuthContext()
+const TopSection = ({data}) => {
   return (
-    <div className="bg-primary-color w-full text-white css-top-section relative">
-      <div className=" py-32 flex flex-col items-center mx-auto max-w-[900px] text-center">
-        <h1 className="text-4xl font-semibold mb-4 px-[10%]">Learn Secrets To <GradientText>Skyrocket Your Linkedin </GradientText>  Growth In Just 5 Days!</h1>
+    <div className="bg-dark-primary-color w-full text-white relative overflow-hidden">
+      <div class="bg-dark-primary-color absolute top-0 left-0 w-full h-full">
+          <img src={data.bgImage} alt="background"/>
+      </div>
+      <div className=" py-32 flex flex-col items-center mx-auto max-w-[900px] text-center relative">
+        <h1 className="text-4xl font-semibold mb-4 px-[10%]"><GradientText>{data.title}</GradientText></h1>
         <h5 className="text-lg font-medium px-[15%] mx-auto my-2">
-          Secrets that generated me over <GradientText>300K+ followers</GradientText>, and <GradientText>1000’s of leads</GradientText>
-          for FREE bringing in <GradientText>thousands of dollars</GradientText> on a monthly basis from
-          Linkedin.
+          {data.description}
         </h5>
         <div className="flex w-full mt-5">
-          <LeftCard />
+          <LeftCard data={data}/>
           <RightCard />
         </div>
       </div>
@@ -21,9 +22,9 @@ const {setIsAuthModalOpen} = useAuthContext()
   );
 };
 
-const LeftCard = () => {
+const LeftCard = ({data}) => {
   return (
-    <div className="w-full mx-2 rounded-xl bg-secondary-color p-5">
+    <div className="w-full mx-2 rounded-xl bg-dark-secondary-color p-5">
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
         <div className=" bg-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
           <img
@@ -52,20 +53,16 @@ const LeftCard = () => {
         <div className=" bg-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
           <img
           className="w-8"
-            src="https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4e6508e4e0d3d23669fba_Vector-2.svg"
-            alt=""
+            src="/images/users.svg"
+            alt="users"
           />
-          <span className="font-semibold ml-2 text-left">5 Days</span>
+          <span className="font-semibold ml-2 text-left">20</span>
         </div>
       </div>
       <div className="flex flex-col items-center py-8">
-        <h3 className="text-2xl font-bold mb-1">John Doe</h3>
+        <h3 className="text-2xl font-bold mb-1">{data.instructor.name}</h3>
         <h3 className="text-sm text-slate-400">
-          LinkedIn Growth Expert,
-          <br />
-          Growth Hacker,
-          <br />
-          Ex- Uber & Klook
+          {data.instructor.description}
         </h3>
       </div>
       <div className="flex">

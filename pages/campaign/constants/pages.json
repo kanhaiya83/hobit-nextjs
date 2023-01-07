@@ -1,0 +1,80 @@
+[
+  {
+    "campaign_id": "zumba",
+    "title": "Zumba for Weight Loss",
+    "description": "Dance out your calories with a high-energy aerobic exercise that can be an effective and fun part of your weight loss journey. Pave your way to a leaner, fitter and more toned you with this full body dance workout combining muscle conditioning and balance too.",
+    "instructor": {"name":"Ms. Priyanka Saini","description":"Zumba Intructor"},
+    "bgImage":"https://user-images.githubusercontent.com/76777058/211171610-369d9c37-0f70-4783-a899-7084a96948b3.jpg",
+    "startDate":1673145775000,
+    "endDate":1673145775000,
+    "advantages": [
+      {
+        "id": 1,
+        "text": "Full body workout with a dance form"
+      },
+      {
+        "id": 2,
+        "text": "Beginner friendly sessions"
+      },
+      {
+        "id": 3,
+        "text": "Tone your muscles"
+      },
+      {
+        "id": 4,
+        "text": "Improve your balance and posture"
+      },
+      {
+        "id": 5,
+        "text": "Added advantage to your heart health"
+      }
+    ],
+    "testimonials": [
+      {
+        "id": 1,
+        "image": "https://avatars.dicebear.com/api/miniavs/24244234343.svg",
+        "text": "The Zumba sessions are great and very much easy to follow. The instructor is also very clear with her instructions and cooperative too.",
+        "given_by": "Savita Pandey"
+      },
+      {
+        "id": 2,
+        "image": "https://avatars.dicebear.com/api/miniavs/2424.svg",
+        "text": "Perfect classes for weight loss. Lost 4 kg with help of these classes. ",
+        "given_by": "Shriya"
+      },
+      {
+        "id": 3,
+        "image": "https://avatars.dicebear.com/api/miniavs/fefer32r325r235r.svg",
+        "text": "The teacher is very good..teaching steps not too slow not too fast..so far, I’m loving these workout ",
+        "given_by": "Chanchal Choudhary"
+      }
+    ],
+    "faqs": [
+      {
+        "id": 1,
+        "question": "Will I get to interact with my tutor?",
+        "answer": "Yes! All the doubts and queries would be addressed through built in chat option and WhatsApp portal would also be active where your tutor would respond you within 24 hours of addressing your query."
+      },
+      {
+        "id": 2,
+        "question": "Who all can attend this course?",
+        "answer": "Anyone struggling with weight gain or a non- consistent workout routine can hop onto these sessions."
+      },
+      {
+        "id": 3,
+        "question": "Do I need any equipment?",
+        "answer": "No! These are no equipment workouts for you to practice them easily at home."
+      },
+      {
+        "id": 4,
+        "question": "What is the procedure after I purchase this course?",
+        "answer": "Once you register for our sessions, your course will be visible to you in ‘My stuff’. You can select your desired time slot once each day and can attend your session."
+      },
+      {
+        "id": 5,
+        "question": "What if I miss a session?",
+        "answer": "In case you miss a session, don’t worry. We offer flexible time slots to our users. You can select your desired time slot each day."
+      }
+    ]
+  }
+]
