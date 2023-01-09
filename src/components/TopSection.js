@@ -30,35 +30,35 @@ const LeftCard = ({data}) => {
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
         <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
           <img
-          className="w-8"
-            src="https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4e6508e4e0d3d23669fba_Vector-2.svg"
+          className="w-7"
+            src="/images/clock.svg"
             alt=""
           />
-          <span className="font-semibold ml-2 text-left">5 Days</span>
+          <span className="font-semibold ml-3 text-left">7:00PM</span>
         </div>
         <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
           <img
-          className="w-8"
-            src="https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4e6511fcd6385aa72ac2c_Vector.svg"
+          className="w-7"
+            src="/images/calender.svg"
             alt=""  
           />
-          <span className="font-semibold ml-2 text-left">Pre-recorded Videos</span>
+          <span className="font-semibold ml-3 text-left">2 January 2023</span>
         </div>
         <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
           <img
-          className="w-8"
-            src="https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4e6508e4e0d3d23669fba_Vector-2.svg"
+          className="w-7"
+            src="/images/video.svg"
             alt=""
           />
-          <span className="font-semibold ml-2 text-left">5 Days</span>
+          <span className="font-semibold ml-3 text-left">Recorded Videos</span>
         </div>
         <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
           <img
-          className="w-8"
+          className="w-7"
             src="/images/users.svg"
             alt="users"
           />
-          <span className="font-semibold ml-2 text-left">20</span>
+          <span className="font-semibold ml-3 text-left">20</span>
         </div>
       </div>
       <div className="flex flex-col items-center py-8">

@@ -29,9 +29,9 @@ const TimerSection = ({data})=>{
                     <div class="bg-slate-700 rounded-lg  flex-1 mx-3 flex items-center justify-center"><div class="flex flex-col items-center p-10"><span class="text-6xl">{seconds}</span><span class="text-lg text-slate-200">Seconds</span></div></div>
                 </div>
                 <div class="mt-10 flex justify-center w-full">
-                    <GradientButton applyClasses={" max-w-[500px] text-3xl py-6 px-10"}>
-                        Buy Now
-                    </GradientButton>
+                    <button className="w-full text-2xl py-6 px-10 text-white font-semibold rounded-lg  gradient-bg-animation">
+                        Enroll Now
+                    </button>
                 </div>
             </div>
         </div>

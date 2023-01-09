@@ -24,15 +24,27 @@
 .gradient-btn{
     background: linear-gradient(-45deg,#cb6ce4 20%,#8b53ff)!important;    
 }
-.gradient-border{
-    border-color: #8b53ff;  
+.gradient-bg-animation{
+    background: linear-gradient(60deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82);
+    -webkit-animation: animatedgradient 3s ease infinite alternate;
+    animation: animatedgradient 3s ease infinite alternate;
+    background-size: 300% 300%;
 }
 .css-top-section{
+    content: "";
     background-image: url("https://user-images.githubusercontent.com/76777058/211166136-e3ad906c-093f-4d56-bc8a-b262db08e690.jpg");
     background-position: 0  0;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-img{
-    font-size: 0;
+@keyframes animatedgradient {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
