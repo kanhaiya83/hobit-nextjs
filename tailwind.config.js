@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,12 +11,13 @@ module.exports = {
       colors: {
         "primary-color": "#8B53FF",
         "secondary-color": "#13242D",
-        "dark-primary-color":"#010100",
-        "dark-secondary-color":"#1E1A1D"
+        "dark-primary-color": "#010100",
+        "dark-secondary-color": "#1E1A1D",
+      },
+      fontFamily: {
+        sans: ["var(--font-poppins)", ...fontFamily.sans],
       },
     },
   },
-  plugins: [
-    require('tw-elements/dist/plugin')
-  ]
-}
+  plugins: [require("tw-elements/dist/plugin")],
+};
