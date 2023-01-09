@@ -21,7 +21,7 @@ const TimerSection = ({ data }) => {
     };
   }, [timeRemaining]);
   return (
-    <div class="bg-white w-full my-20 px-[5%]">
+    <div class="bg-white w-full my-10 md:my-15 px-[5%]">
       <div class="max-w-[1000px] mx-auto">
         <h1 class="text-4xl font-semibold text-slate-800 text-center mx-auto">
           Time Is Running Out. Grab Your Spot Fast!

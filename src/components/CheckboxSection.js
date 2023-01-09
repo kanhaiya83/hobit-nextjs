@@ -2,7 +2,7 @@
 const CheckboxSection = ({checklist}) => {
   return (
     <>
-    <div class="w-full bg-white my-20 px-[5%]">
+    <div class="w-full bg-white my-10 md:my-15  px-[5%]">
       <div class="max-w-[1000px] mx-auto">
         <h1 class="text-4xl text-slate-800 mb-8 max-w-[500px] mx-auto font-semibold text-center">
           Here are few benefits that you will receive by joining this class.

@@ -10,7 +10,7 @@ const TopSection = ({data}) => {
       <div class="bg-dark-primary-color absolute top-0 left-0 w-full h-full">
           <img src={data.bgImage} alt="background"/>
       </div>
-      <div className=" py-32 flex flex-col items-center mx-auto max-w-[900px] text-center relative">
+      <div className="py-20 md:py-32 flex flex-col items-center mx-auto max-w-[900px] text-center relative">
         <h1 className="text-5xl font-bold mb-4 md:px-[10%]"><GradientText>{data.title}</GradientText></h1>
         <h5 className="text-lg font-medium md:px-[15%] mx-auto my-2">
           {data.description}
