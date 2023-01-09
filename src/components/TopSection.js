@@ -6,7 +6,7 @@ import GradientText from "./GradientText";
 
 const TopSection = ({data}) => {
   return (
-    <div className="bg-dark-primary-color w-full text-white relative overflow-hidden z-10">
+    <div className="bg-dark-primary-color w-full text-white relative overflow-hidden z-10 px-[5%]">
       <div class="bg-dark-primary-color absolute top-0 left-0 w-full h-full">
           <img src={data.bgImage} alt="background"/>
       </div>
@@ -15,7 +15,7 @@ const TopSection = ({data}) => {
         <h5 className="text-lg font-medium px-[15%] mx-auto my-2">
           {data.description}
         </h5>
-        <div className="flex w-full mt-5">
+        <div className="flex w-full mt-5 flex-col-reverse md:flex-row">
           <LeftCard data={data}/>
           <RightCard data={data}/>
         </div>
@@ -26,7 +26,7 @@ const TopSection = ({data}) => {
 
 const LeftCard = ({data}) => {
   return (
-    <div className="w-full mx-2 rounded-xl bg-dark-secondary-color p-5">
+    <div className="w-full mx-2 rounded-xl bg-dark-secondary-color p-5 my-4 md:my-0">
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
         <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
           <img

@@ -2,12 +2,12 @@
 const CheckboxSection = ({checklist}) => {
   return (
     <>
-    <div class="w-full bg-white my-20">
+    <div class="w-full bg-white my-20 px-[5%]">
       <div class="max-w-[1000px] mx-auto">
-        <h1 class="text-4xl text-slate-800 mb-8 px-[25%] font-semibold text-center">
+        <h1 class="text-4xl text-slate-800 mb-8 max-w-[500px] mx-auto font-semibold text-center">
           Here are few benefits that you will receive by joining this class.
         </h1>
-        <div class="w-full  grid grid-cols-2 grid-rows-3 gap-x-4 gap-y-8">
+        <div class="w-full  grid grid-cols-1 md:grid-cols-2 grid-rows-3 gap-y-2 md:gap-x-4 md:gap-y-8">
           {checklist.map((t) => {
             return <CheckBox key={t.id} text={t.text} />;
           })}

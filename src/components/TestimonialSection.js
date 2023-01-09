@@ -1,7 +1,7 @@
 
 const TestimonialSection = ({testimonials}) => {
   return (
-    <section class="my-20 text-gray-700 max-w-[1000px] mx-auto">
+    <section class="my-20 text-gray-700 max-w-[1000px] mx-auto px-[5%]">
       <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto">
         <h3 class="text-3xl font-bold mb-6 text-gray-800">Testimonials</h3>
         <p class="mb-6 pb-2 md:mb-12 md:pb-0">

@@ -23,14 +23,14 @@ const FAQSection = ({}) => {
   return (
     <div class="bg-white w-full py-10 px-[5%]">
       <div class="max-w-[900px] mx-auto">
-        <h1 class="text-4xl font-semibold text-center   mb-4 text-slate-800">
+        <h1 class="text-3xl md:text-4xl font-semibold text-center   mb-4 text-slate-800">
           Frequently Asked Questions
           <br />( FAQ )
         </h1>
-        <h4 className="text-xl text-slate-700 font-medium text-center max-w-[80%] mx-auto mb-6">
-          I’ve tried my best to answer all frequently asked questions. For
+        <h4 className="md:text-xl text-slate-700 font-medium text-center md:max-w-[80%] mx-auto mb-6">
+          We’ve tried my best to answer all frequently asked questions. For
           further queries, please email me at:{" "}
-          <span className=" text-blue-700">support@sisinty.com</span>. My
+          <span className=" text-blue-700">support@hobit.in</span>. Our
           amazing support team will reply within 12 hours. 🙂
         </h4>
         <Accordion allowToggle>
