@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 .gradient-text{
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#1acf8f),to(#04b1ac));
-    background-image: linear-gradient(180deg,#1acf8f,#04b1ac);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#cb6ce4),to(#8b53ff));
+    background-image: linear-gradient(180deg,#cb6ce4,#8b53ff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
