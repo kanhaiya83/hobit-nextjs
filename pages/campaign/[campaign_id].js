@@ -10,6 +10,7 @@ import TimerSection from "../../src/components/TimerSection";
 import { useRouter } from "next/router";
 import  pagesData  from "./constants/pages.json";
 import { Divider } from "@chakra-ui/react";
+import Footer from "../../src/components/Footer";
 
 export default function CampaignPage({ data }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -27,6 +28,7 @@ export default function CampaignPage({ data }) {
       <CheckboxSection checklist={data.advantages}/>
     <Divider maxW={700} mx="auto"/>
       <FAQSection />
+      <Footer/>
       <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );

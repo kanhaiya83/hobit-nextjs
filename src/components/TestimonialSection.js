@@ -19,7 +19,7 @@ const TestimonialSection = ({testimonials}) => {
 };
 const Testimonial = ({ testimonial }) => {
   return (
-    <div class="mb-12 md:mb-0">
+    <div class="mb-6 border-b border-slate-300 pb-4 md:mb-0 md:border-b-0">
       <div class="flex justify-center mb-6">
         <img
           src={testimonial.image}

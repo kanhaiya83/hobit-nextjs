@@ -27,28 +27,28 @@ const TimerSection = ({ data }) => {
           Time Is Running Out. Grab Your Spot Fast!
         </h1>
         <div class="flex justify-between w-full text-white mt-8">
-          <div class="bg-slate-700 rounded-lg  flex-1 mx-3 flex items-center justify-center">
-            <div class="flex flex-col items-centerp-6 md:p-10 text-center">
-              <span class=" text-3xl md:text-6xl">{days}</span>
-              <span class="text-lg text-slate-200">Days</span>
+          <div class="bg-slate-700 rounded-lg  flex-1 mx-1 md:mx-3 flex items-center justify-center">
+            <div class="flex flex-col items-center p-3 md:p-10 text-center">
+              <span class=" text-2xl md:text-6xl">{days}</span>
+              <span class="md:text-lg text-slate-200">Days</span>
             </div>
           </div>
-          <div class="bg-slate-700 rounded-lg  flex-1 mx-3 flex items-center justify-center">
-            <div class="flex flex-col items-center p-6 md:p-10 text-center">
-              <span class=" text-3xl md:text-6xl">{hours}</span>
-              <span class="text-lg text-slate-200">Hours</span>
+          <div class="bg-slate-700 rounded-lg  flex-1 mx-1 md:mx-3 flex items-center justify-center">
+            <div class="flex flex-col items-center p-3 md:p-10 text-center">
+              <span class=" text-2xl md:text-6xl">{hours}</span>
+              <span class="md:text-lg text-slate-200">Hours</span>
             </div>
           </div>
-          <div class="bg-slate-700 rounded-lg  flex-1 mx-3 flex items-center justify-center">
-            <div class="flex flex-col items-centerp-6 md:p-10 text-center">
-              <span class=" text-3xl md:text-6xl">{minutes}</span>
-              <span class="text-lg text-slate-200">Minutes</span>
+          <div class="bg-slate-700 rounded-lg  flex-1 mx-1 md:mx-3 flex items-center justify-center">
+            <div class="flex flex-col items-center p-3 md:p-10 text-center">
+              <span class=" text-2xl md:text-6xl">{minutes}</span>
+              <span class="md:text-lg text-slate-200">Minutes</span>
             </div>
           </div>
-          <div class="bg-slate-700 rounded-lg  flex-1 mx-3 flex items-center justify-center">
-            <div class="flex flex-col items-centerp-6 md:p-10 text-center">
-              <span class=" text-3xl md:text-6xl">{seconds}</span>
-              <span class="text-lg text-slate-200">Seconds</span>
+          <div class="bg-slate-700 rounded-lg  flex-1 mx-1 md:mx-3 flex items-center justify-center">
+            <div class="flex flex-col items-center p-3 md:p-10 text-center">
+              <span class=" text-2xl md:text-6xl">{seconds}</span>
+              <span class="md:text-lg text-slate-200">Seconds</span>
             </div>
           </div>
         </div>
