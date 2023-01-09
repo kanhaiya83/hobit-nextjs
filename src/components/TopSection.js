@@ -89,7 +89,7 @@ const VideoPlayer=({video})=>{
       <div class="absolute top-0 left-0 w-full h-full">
         {
           playVideo?
-          <video className="w-full relative" autoplay>
+          <video className="w-full relative" playsInline autoPlay muted loop>
           <source src={video.src} type="video/mp4"/>
         Your browser does not support the video tag.
         </video>:
