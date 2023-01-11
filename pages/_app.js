@@ -7,7 +7,8 @@ import { Poppins } from '@next/font/google'
 import Head from 'next/head'
 const poppins = Poppins({
   weight:["300","500","700"],
-  variable: '--font-poppins'
+  variable: '--font-poppins',
+  subsets:["latin"]
 })
 
 export default function App({ Component, pageProps }) {

@@ -31,7 +31,6 @@ const TopSection = ({ data }) => {
 };
 
 const InfoCard = ({ data }) => {
-  const [selectedSlot, setSelectedSlot] = useState("");
   return (
     <div className="w-full mx-2 rounded-xl bg-dark-secondary-color p-5 mt-10 mb-4">
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
@@ -88,50 +87,7 @@ const InfoCard = ({ data }) => {
       {/* Divider */}
       <div className="bg-slate-700 mx-auto w-[80%] h-[1px]"></div>
       {/* Slot Picker */}
-      <div className="flex flex-col items-start mt-8">
-        <h1 className="text-2xl text-slate-200 mb-4 font-medium">
-          Select your time slot
-        </h1>
-        <div className="flex items-center gap-2 mb-4">
-          <h4>Morning Slots</h4>
-          <div className="flex justify-between gap-2">
-            {slots["morning"].map((s) => {
-              return (
-                <button
-                  key={s}
-                  className={`px-4 py-2 border-primary-color border-2 rounded ${
-                    selectedSlot === s && " bg-primary-color"
-                  }`}
-                  onClick={()=>{setSelectedSlot(s)}}
-                >
-                  <span>{s}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <h4>Evening Slots</h4>
-          <div className="flex justify-between gap-2">
-            {slots["evening"].map((s) => {
-              return (
-                <button
-                  key={s}
-                  className={`px-4 py-2 border-primary-color border-2 rounded ${
-                    selectedSlot === s && " bg-primary-color"
-                  }`}
-                  onClick={()=>{setSelectedSlot(s)}}
-                >
-                  <span>{s}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-        <GradientButton applyClasses="py-4 mt-4 text-lg">
-          Book your slot at &#x20b9; 999
-        </GradientButton>
-      </div>
+      <SlotPicker />
     </div>
   );
 };
@@ -179,6 +135,59 @@ const VideoPlayer = ({ video }) => {
           </div>
         )}
       </div>
+    </div>
+  );
+};
+const SlotPicker = () => {
+  const [selectedSlot, setSelectedSlot] = useState(null);
+  return (
+    <div className="flex flex-col items-start mt-8">
+      <h1 className="text-2xl text-slate-200 mb-4 font-medium">
+        Select your time slot
+      </h1>
+      <div className="flex items-center gap-2 mb-4">
+        <h4>Morning Slots</h4>
+        <div className="flex justify-between gap-2">
+          {slots["morning"].map((s) => {
+            return (
+              <button
+                key={s}
+                className={`px-4 py-2 border-primary-color border-2 rounded ${
+                  selectedSlot === s && " bg-primary-color"
+                }`}
+                onClick={() => {
+                  setSelectedSlot(s);
+                }}
+              >
+                <span>{s}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+      <div className="flex items-center gap-2">
+        <h4>Evening Slots</h4>
+        <div className="flex justify-between gap-2">
+          {slots["evening"].map((s) => {
+            return (
+              <button
+                key={s}
+                className={`px-4 py-2 border-primary-color border-2 rounded ${
+                  selectedSlot === s && " bg-primary-color"
+                }`}
+                onClick={() => {
+                  setSelectedSlot(s);
+                }}
+              >
+                <span>{s}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+      <GradientButton applyClasses="py-4 mt-4 text-lg" disabled={!Boolean(selectedSlot) && true}>
+        Book your slot at &#x20b9; 999
+      </GradientButton>
     </div>
   );
 };
