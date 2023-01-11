@@ -1,6 +1,7 @@
 [
   {
     "campaign_id": "zumba",
+    "activity_name":"Zumba",
     "title": "Zumba for Weight Loss",
     "description": "Dance out your calories with a high-energy aerobic exercise that can be an effective and fun part of your weight loss journey. Pave your way to a leaner, fitter and more toned you with this full body dance workout combining muscle conditioning and balance too.",
     "instructor": {
@@ -16,26 +17,27 @@
     "enroll_btn":"Enroll now (Starts 02 Jan)",
     "startDate": 1674145775000,
     "endDate": 1674145775000,
-    "advantages": [
+    "daysCount":30,
+    "checklist": [
       {
         "id": 1,
-        "text": "Full body workout with a dance form"
+        "text": "Are you looking for a body workout with a dance form?"
       },
       {
         "id": 2,
-        "text": "Beginner friendly sessions"
+        "text": "Are looking for beginner friendly sessions?"
       },
       {
         "id": 3,
-        "text": "Tone your muscles"
+        "text": "Wanna tone your muscles?"
       },
       {
         "id": 4,
-        "text": "Improve your balance and posture"
+        "text": "Wanna improve your balance and posture?"
       },
       {
         "id": 5,
-        "text": "Added advantage to your heart health"
+        "text": "Wanna improve your heart health?"
       }
     ],
     "testimonials": [

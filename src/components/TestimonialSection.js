@@ -1,139 +1,36 @@
-
-const TestimonialSection = ({testimonials}) => {
+const videoTestimonials=[
+  "//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700660%3Fh%3D76585e1ed8%26app_id%3D122963&amp;dntp=1&amp;display_name=Vimeo&amp;url=https%3A%2F%2Fvimeo.com%2F703700660%2F76585e1ed8&amp;image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341536-79f6bac7ce17549e7677ed85488525d4dfbbe21dc1af168c29e81743d6808553-d_640&amp;key=96f1f04c5f4143bcb0f2e68c87d65feb&amp;type=text%2Fhtml&amp;schema=vimeo",
+  "//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700604%3Fh%3Dfb12c8fa05%26app_id%3D122963&amp;dntp=1&amp;display_name=Vimeo&amp;url=https%3A%2F%2Fvimeo.com%2F703700604%2Ffb12c8fa05&amp;image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341131-7c7c17500d6eaa5d197592cff6b5633e230bf1a7e984e733b522fb8aeeb1ca2c-d_640&amp;key=96f1f04c5f4143bcb0f2e68c87d65feb&amp;type=text%2Fhtml&amp;schema=vimeo",
+ "//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700534%3Fh%3Dc98555dbe8%26app_id%3D122963&amp;dntp=1&amp;display_name=Vimeo&amp;url=https%3A%2F%2Fvimeo.com%2F703700534%2Fc98555dbe8&amp;image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341123-cce2c99a0b0aeab17843e3ff4d7e5aeeea222b3ee251aa5af89fc02aa2756f47-d_640&amp;key=c4e54deccf4d4ec997a64902e9a30300&amp;type=text%2Fhtml&amp;schema=vimeo"
+]
+const TestimonialSection = () => {
   return (
-    <section className="my-10 md:my-15 text-gray-700 max-w-[1000px] mx-auto px-[5%]">
-      <div className="text-center md:max-w-xl lg:max-w-3xl mx-auto">
-        <h3 className="text-3xl font-bold mb-6 text-gray-800">Testimonials</h3>
-        <p className="mb-6 pb-2 md:mb-12 md:pb-0">
-        1000+ people people from all over the world have taken the classes. 
-        </p>
-      </div>
+    <section className="my-10 md:my-20 text-gray-700 max-w-[1000px] mx-auto px-[5%]">
+   
 
       <div className="grid md:grid-cols-3 gap-6 lg:gap-12 text-center">
-        {testimonials.map((t, i) => {
+        {/* {videoTestimonials.map((t, i) => {
           return <Testimonial key={i} testimonial={t} />;
-        })}
+        })} */}
+        
+   <div className="relative w-full pt-[100%]">
+     <iframe className="absolute top-0 left-0 w-full h-full" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700660%3Fh%3D76585e1ed8%26app_id%3D122963&amp;dntp=1&amp;display_name=Vimeo&amp;url=https%3A%2F%2Fvimeo.com%2F703700660%2F76585e1ed8&amp;image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341536-79f6bac7ce17549e7677ed85488525d4dfbbe21dc1af168c29e81743d6808553-d_640&amp;key=96f1f04c5f4143bcb0f2e68c87d65feb&amp;type=text%2Fhtml&amp;schema=vimeo" scrolling="no" allowfullscreen="" title="Aaradhya-14"></iframe>
+   </div>
+   <div className="relative w-full pt-[100%]">
+     <iframe className="absolute top-0 left-0 w-full h-full" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700604%3Fh%3Dfb12c8fa05%26app_id%3D122963&amp;dntp=1&amp;display_name=Vimeo&amp;url=https%3A%2F%2Fvimeo.com%2F703700604%2Ffb12c8fa05&amp;image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341131-7c7c17500d6eaa5d197592cff6b5633e230bf1a7e984e733b522fb8aeeb1ca2c-d_640&amp;key=96f1f04c5f4143bcb0f2e68c87d65feb&amp;type=text%2Fhtml&amp;schema=vimeo" scrolling="no" allowfullscreen="" title="Aaradhya-14"></iframe>
+   </div>
+   <div className="relative w-full pt-[100%]">
+     <iframe className="absolute top-0 left-0 w-full h-full" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700534%3Fh%3Dc98555dbe8%26app_id%3D122963&amp;dntp=1&amp;display_name=Vimeo&amp;url=https%3A%2F%2Fvimeo.com%2F703700534%2Fc98555dbe8&amp;image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341123-cce2c99a0b0aeab17843e3ff4d7e5aeeea222b3ee251aa5af89fc02aa2756f47-d_640&amp;key=c4e54deccf4d4ec997a64902e9a30300&amp;type=text%2Fhtml&amp;schema=vimeo" scrolling="no" allowfullscreen="" title="Aaradhya-14"></iframe>
+   </div>
       </div>
     </section>
   );
 };
 const Testimonial = ({ testimonial }) => {
   return (
-    <div className="mb-6 border-b border-slate-300 pb-4 md:mb-0 md:border-b-0">
-      <div className="flex justify-center mb-6">
-        <img
-          src={testimonial.image}
-          className="rounded-full shadow-lg w-32"
-        />
-      </div>
-      <h5 className="text-xl font-semibold mb-4">{testimonial.given_by}</h5>
-      {/* <h6 className="font-semibold text-blue-600 mb-4">Web Developer</h6> */}
-      <p className="mb-4">
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          data-prefix="fas"
-          data-icon="quote-left"
-          className="w-6 pr-2 inline-block"
-          role="img"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-        >
-          <path
-            fill="currentColor"
-            d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"
-          ></path>
-        </svg>
-        {testimonial.text}
-      </p>
-      <ul className="flex justify-center mb-0">
-        <li>
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="star"
-            className="w-4 text-yellow-500"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-          >
-            <path
-              fill="currentColor"
-              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-            ></path>
-          </svg>
-        </li>
-        <li>
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="star"
-            className="w-4 text-yellow-500"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-          >
-            <path
-              fill="currentColor"
-              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-            ></path>
-          </svg>
-        </li>
-        <li>
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="star"
-            className="w-4 text-yellow-500"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-          >
-            <path
-              fill="currentColor"
-              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-            ></path>
-          </svg>
-        </li>
-        <li>
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="star"
-            className="w-4 text-yellow-500"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-          >
-            <path
-              fill="currentColor"
-              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-            ></path>
-          </svg>
-        </li>
-        <li>
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="star"
-            className="w-4 text-yellow-500"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-          >
-            <path
-              fill="currentColor"
-              d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-            ></path>
-          </svg>
-        </li>
-      </ul>
-    </div>
+   <div className="relative w-full pt-[100%]">
+     <iframe className="absolute top-0 left-0 w-full h-full" src={testimonial} scrolling="no" allowfullscreen="" title="Aaradhya-14"></iframe>
+   </div>
   );
 };
 export default TestimonialSection;

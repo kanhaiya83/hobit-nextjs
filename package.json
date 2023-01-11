@@ -24,6 +24,7 @@
     "react-dom": "18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-modal": "^3.16.1",
+    "swiper": "^8.4.5",
     "tw-elements": "^1.0.0-alpha13"
   },
   "devDependencies": {

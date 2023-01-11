@@ -1,6 +1,5 @@
 import TopSection from "../../src/components/TopSection";
 import FAQSection from "../../src/components/FAQSection";
-import WorkshopDetailsSection from "../../src/components/WorkshopDetailsSection";
 import CheckboxSection from "../../src/components/CheckboxSection";
 import LoginModal from "../../src/components/LoginModal";
 import { useState } from "react";
@@ -11,6 +10,8 @@ import { useRouter } from "next/router";
 import  pagesData  from "./constants/pages.json";
 import { Divider } from "@chakra-ui/react";
 import Footer from "../../src/components/Footer";
+import FeaturedSection from "../../src/components/FeaturedSection";
+import SlidingTestimonials from "../../src/components/SlidingTestimonials";
 
 export default function CampaignPage({ data }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -20,12 +21,14 @@ export default function CampaignPage({ data }) {
       <div id="recaptcha-container" style={{ width: "100%" }}></div>
       <Header />
       <TopSection data={data}/>
-      {/* <WorkshopDetailsSection /> */}
+      <FeaturedSection />
+    <Divider maxW={700} mx="auto"/>
+    <SlidingTestimonials/>
       <TestimonialSection testimonials={data.testimonials}/>
     <Divider maxW={700} mx="auto"/>
       <TimerSection data={data}/>
     <Divider maxW={700} mx="auto"/>
-      <CheckboxSection checklist={data.advantages}/>
+      <CheckboxSection data={data}/>
     <Divider maxW={700} mx="auto"/>
       <FAQSection />
       <Footer/>
