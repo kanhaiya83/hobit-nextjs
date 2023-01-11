@@ -1,15 +1,15 @@
 
 const TestimonialSection = ({testimonials}) => {
   return (
-    <section class="my-10 md:my-15 text-gray-700 max-w-[1000px] mx-auto px-[5%]">
-      <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto">
-        <h3 class="text-3xl font-bold mb-6 text-gray-800">Testimonials</h3>
-        <p class="mb-6 pb-2 md:mb-12 md:pb-0">
+    <section className="my-10 md:my-15 text-gray-700 max-w-[1000px] mx-auto px-[5%]">
+      <div className="text-center md:max-w-xl lg:max-w-3xl mx-auto">
+        <h3 className="text-3xl font-bold mb-6 text-gray-800">Testimonials</h3>
+        <p className="mb-6 pb-2 md:mb-12 md:pb-0">
         1000+ people people from all over the world have taken the classes. 
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6 lg:gap-12 text-center">
+      <div className="grid md:grid-cols-3 gap-6 lg:gap-12 text-center">
         {testimonials.map((t, i) => {
           return <Testimonial key={i} testimonial={t} />;
         })}
@@ -19,22 +19,22 @@ const TestimonialSection = ({testimonials}) => {
 };
 const Testimonial = ({ testimonial }) => {
   return (
-    <div class="mb-6 border-b border-slate-300 pb-4 md:mb-0 md:border-b-0">
-      <div class="flex justify-center mb-6">
+    <div className="mb-6 border-b border-slate-300 pb-4 md:mb-0 md:border-b-0">
+      <div className="flex justify-center mb-6">
         <img
           src={testimonial.image}
-          class="rounded-full shadow-lg w-32"
+          className="rounded-full shadow-lg w-32"
         />
       </div>
-      <h5 class="text-xl font-semibold mb-4">{testimonial.given_by}</h5>
-      {/* <h6 class="font-semibold text-blue-600 mb-4">Web Developer</h6> */}
-      <p class="mb-4">
+      <h5 className="text-xl font-semibold mb-4">{testimonial.given_by}</h5>
+      {/* <h6 className="font-semibold text-blue-600 mb-4">Web Developer</h6> */}
+      <p className="mb-4">
         <svg
           aria-hidden="true"
           focusable="false"
           data-prefix="fas"
           data-icon="quote-left"
-          class="w-6 pr-2 inline-block"
+          className="w-6 pr-2 inline-block"
           role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
@@ -46,14 +46,14 @@ const Testimonial = ({ testimonial }) => {
         </svg>
         {testimonial.text}
       </p>
-      <ul class="flex justify-center mb-0">
+      <ul className="flex justify-center mb-0">
         <li>
           <svg
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
             data-icon="star"
-            class="w-4 text-yellow-500"
+            className="w-4 text-yellow-500"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
@@ -70,7 +70,7 @@ const Testimonial = ({ testimonial }) => {
             focusable="false"
             data-prefix="fas"
             data-icon="star"
-            class="w-4 text-yellow-500"
+            className="w-4 text-yellow-500"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
@@ -87,7 +87,7 @@ const Testimonial = ({ testimonial }) => {
             focusable="false"
             data-prefix="fas"
             data-icon="star"
-            class="w-4 text-yellow-500"
+            className="w-4 text-yellow-500"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
@@ -104,7 +104,7 @@ const Testimonial = ({ testimonial }) => {
             focusable="false"
             data-prefix="fas"
             data-icon="star"
-            class="w-4 text-yellow-500"
+            className="w-4 text-yellow-500"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
@@ -121,7 +121,7 @@ const Testimonial = ({ testimonial }) => {
             focusable="false"
             data-prefix="fas"
             data-icon="star"
-            class="w-4 text-yellow-500"
+            className="w-4 text-yellow-500"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
