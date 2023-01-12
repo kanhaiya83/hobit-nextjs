@@ -1,6 +1,5 @@
 import { useState } from "react";
 import EnrollButton from "./EnrollButton";
-import GradientButton from "./GradientButton";
 import SectionHeading from "./SectionHeading";
 
 const CheckboxSection = ({ data }) => {

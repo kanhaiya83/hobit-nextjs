@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import SectionHeading from "./SectionHeading";
 
@@ -9,7 +10,9 @@ const MentorSection = ({ data }) => {
       </SectionHeading>
       <div className="flex flex-col md:flex-row items-center justify-center  gap-4">
         <div className="flex-1 max-w-[400px] rounded-md overflow-hidden">
-          <img src={data.instructor.image} alt="" />
+          <div class="w-full pt-[100%] relative">
+          <Image src={data.instructor.image} alt="Instructor" fill={true} style={{objectFit:"cover"}}/>
+          </div>
         </div>
         <div className="flex-1 text-center">
           <h3 className="text-2xl font-bold mb-1">{data.instructor.name}</h3>

@@ -1,5 +1,6 @@
 import { Divider } from "@chakra-ui/react";
 import moment from "moment";
+import Image from "next/image";
 import { useState } from "react";
 import EnrollButton from "./EnrollButton";
 import GradientButton from "./GradientButton";
@@ -14,7 +15,6 @@ const TopSection = ({ data }) => {
   let titleEl;
   if(titleData){
     titleEl = titleData.map((txt,i)=>{
-      console.log(txt);
       if(txt["gradient"]){
         return <GradientText key={i}>{txt["gradient"]}</GradientText>
       }
@@ -23,8 +23,8 @@ const TopSection = ({ data }) => {
   }
   return (
     <div className="bg-dark-primary-color w-full text-white relative overflow-hidden z-10 px-[5%] py-4">
-      <div className="bg-dark-primary-color absolute top-0 left-0 w-full h-full">
-        <img src={data.bgImage} alt="background" />
+      <div className="bg-dark-primary-color absolute top-0 left-0 w-full h-full flex items-start justify-start">
+        <Image src={data.bgImage} fill={true} style={{objectFit:"contain",objectPosition:"0% 0%"}} alt="background" className="w-[50%]"/>
       </div>
       <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
         <h1 className="text-3xl md:text-5xl font-bold mb-4 md:px-[10%]">
@@ -75,8 +75,10 @@ const InfoCard = ({ data }) => {
       <div className="my-8">
         <h1 className="text-2xl text-slate-200 mb-4">Meet your instructor</h1>
         <div className="flex items-center justify-center  gap-4">
-          <div className="w-full max-w-[300px] rounded-md overflow-hidden">
-            <img src={data.instructor.image} alt="" />
+          <div class="max-w-[300px] w-full ">
+          <div className=" rounded-md overflow-hidden relative pt-[100%]">
+            <Image src={data.instructor.image} alt="Instructor" fill={true} style={{objectFit:"cover",objectPosition:"0% 0%"}} />
+          </div>
           </div>
           <div className="flex flex-col">
             <h3 className="text-2xl font-bold mb-1">{data.instructor.name}</h3>
