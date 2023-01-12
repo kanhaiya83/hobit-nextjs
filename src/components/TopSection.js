@@ -157,9 +157,9 @@ const SlotPicker = () => {
       <h1 className="text-2xl text-slate-200 mb-4 font-medium">
         Select your time slot
       </h1>
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-2 mb-4">
         <h4>Morning Slots</h4>
-        <div className="flex justify-between gap-2">
+        <div className="flex justify-between gap-2 flex-wrap">
           {slots["morning"].map((s) => {
             return (
               <button
@@ -177,7 +177,7 @@ const SlotPicker = () => {
           })}
         </div>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-2 ">
         <h4>Evening Slots</h4>
         <div className="flex justify-between gap-2">
           {slots["evening"].map((s) => {
