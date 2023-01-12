@@ -25,6 +25,7 @@
     "react-firebase-hooks": "^5.1.1",
     "react-modal": "^3.16.1",
     "swiper": "^8.4.5",
+    "tailwind-merge": "^1.8.1",
     "tw-elements": "^1.0.0-alpha13"
   },
   "devDependencies": {

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import GradientButton from "./GradientButton";
+import SectionHeading from "./SectionHeading";
 const TimerSection = ({ data }) => {
   const [timeRemaining, setTimeRemaining] = useState(0);
   const seconds = timeRemaining % 60;
@@ -23,9 +24,9 @@ const TimerSection = ({ data }) => {
   return (
     <div class="bg-white w-full my-10 md:my-15 px-[5%]">
       <div class="max-w-[1000px] mx-auto">
-        <h1 class="text-4xl font-semibold text-slate-800 text-center mx-auto">
+        <SectionHeading>
           Time Is Running Out. Grab Your Spot Fast!
-        </h1>
+        </SectionHeading>
         <div class="flex justify-between w-full text-white mt-8">
           <div class="bg-slate-700 rounded-lg  flex-1 mx-1 md:mx-3 flex items-center justify-center">
             <div class="flex flex-col items-center p-3 md:p-10 text-center">

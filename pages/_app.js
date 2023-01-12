@@ -3,13 +3,35 @@ import "../styles/globals.css";
 import "../styles/index.css";
 import { AuthContextProvider } from "../src/context/authContext";
 import { ChakraProvider } from '@chakra-ui/react'
-import { Poppins } from '@next/font/google'
 import Head from 'next/head'
-const poppins = Poppins({
-  weight:["300","500","700"],
-  variable: '--font-poppins',
-  subsets:["latin"]
-})
+import localFont from '@next/font/local'
+
+const gilroy = localFont({ src: [{
+  path: '../public/fonts/gilroy/Gilroy-Light.woff',
+  weight: '300',
+  style: 'normal',
+},{
+  path: '../public/fonts/gilroy/Gilroy-Regular.woff',
+  weight: '400',
+  style: 'normal',
+},{
+  path: '../public/fonts/gilroy/Gilroy-Medium.woff',
+  weight: '500',
+  style: 'normal',
+},{
+  path: '../public/fonts/gilroy/Gilroy-SemiBold.woff',
+  weight: '600',
+  style: 'normal',
+},{
+  path: '../public/fonts/gilroy/Gilroy-Bold.woff',
+  weight: '800',
+  style: 'normal',
+},{
+  path: '../public/fonts/gilroy/Gilroy-Heavy.woff',
+  weight: '900',
+  style: 'normal',
+}] ,variable: '--font-gilroy'})
+
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -27,7 +49,7 @@ export default function App({ Component, pageProps }) {
     </Head>
     <ChakraProvider>
       <AuthContextProvider>
-          <main className={`${poppins.variable} font-sans`}>
+          <main className={`${gilroy.variable} font-sans`}>
           <Component {...pageProps} />
           </main>
       </AuthContextProvider>

@@ -15,7 +15,7 @@ module.exports = {
         "dark-secondary-color": "#1E1A1D",
       },
       fontFamily: {
-        sans: ["var(--font-poppins)", ...fontFamily.sans],
+        sans: ["var(--font-gilroy)", ...fontFamily.sans],
       },
     },
   },

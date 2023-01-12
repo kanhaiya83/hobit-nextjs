@@ -2,7 +2,10 @@
   {
     "campaign_id": "zumba",
     "activity_name":"Zumba",
-    "title": "Zumba for Weight Loss",
+    "title":[
+      {"gradient":"Lose Belly fat "},
+      {"normal":"& Sky Rocket your confidence in just 30 days."}
+    ],
     "description": "Dance out your calories with a high-energy aerobic exercise that can be an effective and fun part of your weight loss journey. Pave your way to a leaner, fitter and more toned you with this full body dance workout combining muscle conditioning and balance too.",
     "instructor": {
       "name": "Ms. Priyanka Saini",

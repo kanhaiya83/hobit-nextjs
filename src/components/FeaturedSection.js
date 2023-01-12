@@ -1,8 +1,9 @@
 import Image from "next/image"
+import SectionHeading from "./SectionHeading"
 const FeaturedSection =()=>{
     return(
         <div class="my-10 md:my-15 py-6 w-full flex flex-col items-center px-[5%]">
-            <h1 class="text-3xl text-slate-800 font-bold mb-8">Featured In</h1>
+            <SectionHeading>Featured In</SectionHeading>
             <div class="grid grid-cols-2 md:grid-cols-4 max-w-[900px] w-full gap-x-[5%] gap-y-8">
                 <div className="relative h-[70px]">
                     <Image src="/images/featured_in_logos/business-insider.png" alt="" fill={true} style={{objectFit:"contain"}}/>

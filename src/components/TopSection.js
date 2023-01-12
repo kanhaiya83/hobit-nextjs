@@ -1,6 +1,7 @@
 import { Divider } from "@chakra-ui/react";
 import moment from "moment";
 import { useState } from "react";
+import EnrollButton from "./EnrollButton";
 import GradientButton from "./GradientButton";
 import GradientText from "./GradientText";
 // import moment from "moment/moment";
@@ -9,16 +10,28 @@ const slots = {
   evening: ["5PM", "6PM", "7PM", "8PM", "9PM"],
 };
 const TopSection = ({ data }) => {
+  const titleData = data.title;
+  let titleEl;
+  if(titleData){
+    titleEl = titleData.map((txt,i)=>{
+      console.log(txt);
+      if(txt["gradient"]){
+        return <GradientText key={i}>{txt["gradient"]}</GradientText>
+      }
+      return <span key={i}>{txt["normal"]}</span>
+    })
+  }
   return (
     <div className="bg-dark-primary-color w-full text-white relative overflow-hidden z-10 px-[5%] py-4">
       <div className="bg-dark-primary-color absolute top-0 left-0 w-full h-full">
         <img src={data.bgImage} alt="background" />
       </div>
       <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
-        <h1 className="text-5xl font-bold mb-4 md:px-[10%]">
-          <GradientText>{data.title}</GradientText>
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 md:px-[10%]">
+          {/* <GradientText>{data.title}</GradientText> */}
+          {titleEl}
         </h1>
-        <h5 className="text-lg font-medium md:px-[15%] mx-auto my-2">
+        <h5 className="md:text-lg font-medium md:px-[15%] mx-auto my-2">
           {data.description}
         </h5>
         <div className="flex flex-col-reverse lg:flex-row w-full my-5 ">
@@ -94,9 +107,9 @@ const VideoCard = ({ data }) => {
   return (
     <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
       <VideoPlayer video={data.video} />
-      <GradientButton applyClasses={"w-full py-5 mb-4"}>
+      <EnrollButton applyClasses={"mb-4"}>
         {data.enroll_btn}
-      </GradientButton>
+      </EnrollButton>
       <h4 className="text-lg text-slate-200 font-medium">
         Reserve a seat before {moment(data.startDate).format("Do MMMM,YYYY")}
       </h4>
@@ -184,9 +197,9 @@ const SlotPicker = () => {
           })}
         </div>
       </div>
-      <GradientButton applyClasses="py-4 mt-4 text-lg" disabled={!Boolean(selectedSlot) && true}>
+      <EnrollButton applyClasses="py-4 mt-4 text-lg" disabled={!Boolean(selectedSlot) && true}>
         Book your slot at &#x20b9; 999
-      </GradientButton>
+      </EnrollButton>
     </div>
   );
 };

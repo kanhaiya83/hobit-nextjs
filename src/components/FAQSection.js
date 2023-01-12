@@ -1,4 +1,6 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box } from "@chakra-ui/react";
+import EnrollButton from "./EnrollButton";
+import SectionHeading from "./SectionHeading";
 
 const FAQSection = ({}) => {
   const List = [
@@ -23,10 +25,10 @@ const FAQSection = ({}) => {
   return (
     <div class="bg-white w-full py-10 px-[5%]">
       <div class="max-w-[900px] mx-auto">
-        <h1 class="text-3xl md:text-4xl font-semibold text-center   mb-4 text-slate-800">
+        <SectionHeading className={"mb-2"}>
           Frequently Asked Questions
           <br />( FAQ )
-        </h1>
+        </SectionHeading>
         <h4 className="md:text-xl text-slate-700 font-medium text-center md:max-w-[80%] mx-auto mb-6">
           We’ve tried my best to answer all frequently asked questions. For
           further queries, please email me at:{" "}
@@ -40,6 +42,9 @@ const FAQSection = ({}) => {
             );
           })}
         </Accordion>
+        <EnrollButton applyClasses="my-8">
+            Sale at &#x20b9; 999
+        </EnrollButton>
       </div>
     </div>
   );

@@ -1,14 +1,16 @@
 import { useState } from "react";
+import EnrollButton from "./EnrollButton";
 import GradientButton from "./GradientButton";
+import SectionHeading from "./SectionHeading";
 
 const CheckboxSection = ({ data }) => {
   return (
     <>
       <div class="w-full bg-white my-10 md:my-15  px-[5%]">
         <div class="max-w-[1000px] mx-auto">
-          <h1 class="text-3xl md:text-4xl font-semibold text-slate-800 mb-4 w-full text-center">
+          <SectionHeading className={"mb-2"}>
             Still Wondering If This Virtual Class Is For You?
-          </h1>
+          </SectionHeading>
           <h1 class="text-2xl text-slate-700 mb-8 mx-auto text-center">
           Please Check All Boxes Where Your Answer Is YES!
           </h1>
@@ -21,9 +23,9 @@ const CheckboxSection = ({ data }) => {
         If you checked ANY of the boxes above, then you’re invited to join <span class=" text-[#FFAC32]">The {data.daysCount} Days Transformative {data.activity_name} Program</span>
         </h1>
 
-      <GradientButton applyClasses="py-4 mt-4 text-lg">
+      <EnrollButton applyClasses="md:py-5 mt-4">
         Book your slot!
-      </GradientButton>
+      </EnrollButton>
         </div>
       </div>
     </>

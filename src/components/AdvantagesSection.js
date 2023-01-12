@@ -1,9 +1,10 @@
 import React from 'react'
+import SectionHeading from './SectionHeading'
 
 const AdvantagesSection = ({data}) => {
   return (
     <div class="my-10 mx-auto px-[5%] lg:px-4 flex flex-col items-center" >
-        <h1 class="text-center text-4xl font-semibold mb-6 text-slate-800">Why you should join this class?</h1>
+        <SectionHeading>Why you should join this class?</SectionHeading>
         <ul>
             {data.advantages.map((adv)=>{
                 return <li key={adv.id}>

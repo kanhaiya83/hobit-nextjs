@@ -4,6 +4,8 @@ import SwiperCore, { Autoplay } from 'swiper';
 import "swiper/css";
 import "swiper/css/autoplay"
 import GradientButton from "./GradientButton";
+import EnrollButton from "./EnrollButton";
+import SectionHeading from "./SectionHeading";
 const testimonialImages = [
   "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f08191d9463d3_Screenshot_20201012-012848_Instagram-1.png",
   "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f0889409463e7_Screenshot_20201009-140529_Instagram-1.png",
@@ -19,7 +21,7 @@ const SlidingTestimonials = () => {
   return (
     <div class="my-10 md:my-15 w-full max-w-[1100px] mx-auto text-center px-[5%] px-4">
         <div className="text-center md:max-w-xl lg:max-w-3xl mx-auto">
-        <h3 className="text-3xl font-bold mb-6 text-gray-800">Testimonials</h3>
+          <SectionHeading className={"mb-2"}> Testimonials</SectionHeading>
         <p className="mb-6 pb-2 md:mb-12 md:pb-0">
         1000+ people people from all over the world have taken the classes. 
         </p>
@@ -56,9 +58,9 @@ const SlidingTestimonials = () => {
         })}
       </Swiper>
      </div>
-     <GradientButton applyClasses={"py-5 my-8 font-medium text-xl"}>
+     <EnrollButton applyClasses={"md:py-6 my-8"}>
         Sale at &#x20b9;999
-     </GradientButton>
+     </EnrollButton>
     </div>
   );
 };

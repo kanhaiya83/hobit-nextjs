@@ -1,11 +1,12 @@
 import React from "react";
+import SectionHeading from "./SectionHeading";
 
 const MentorSection = ({ data }) => {
   return (
     <div className="my-10 md:my-20 px-[5%] lg:py-[4] max-w-[900px] mx-auto">
-      <h1 class="text-4xl font-semibold text-slate-800 mb-8 w-ful text-center">
+      <SectionHeading>
         Your instructor
-      </h1>
+      </SectionHeading>
       <div className="flex flex-col md:flex-row items-center justify-center  gap-4">
         <div className="flex-1 max-w-[400px] rounded-md overflow-hidden">
           <img src={data.instructor.image} alt="" />

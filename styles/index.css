@@ -22,7 +22,8 @@
     background-image: url("https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4c34de870765f1e66b_stars.svg");
 }
 .gradient-btn{
-    background: linear-gradient(-45deg,#cb6ce4 20%,#8b53ff)!important;    
+    background: linear-gradient(-45deg,#cb6ce4 20%,#8b53ff)!important;  
+    color: white;  
 }
 .gradient-bg-animation{
     background: linear-gradient(60deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82);
