@@ -3,7 +3,6 @@ import SwiperCore, { Autoplay } from 'swiper';
 
 import "swiper/css";
 import "swiper/css/autoplay"
-import GradientButton from "./GradientButton";
 import EnrollButton from "./EnrollButton";
 import SectionHeading from "./SectionHeading";
 const testimonialImages = [

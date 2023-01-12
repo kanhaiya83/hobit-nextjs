@@ -50,25 +50,25 @@ const InfoCard = ({ data }) => {
   return (
     <div className="flex-1 mx-2 rounded-xl bg-dark-secondary-color p-5">
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
-        <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
-          <img className="w-6" src="/images/calender.svg" alt="" />
-          <span className="font-semibold ml-3 text-left">30 Days</span>
+        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+          <img className="w-4 md:w-6" src="/images/calender.svg" alt="" />
+          <span className="text-sm md:text-base font-semibold ml-3 text-left">30 Days</span>
         </div>
-        <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
-          <img className="w-6" src="/images/double-chevron-right.svg" alt="" />
-          <span className="font-semibold ml-3 text-left">
+        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+          <img className="w-4 md:w-6" src="/images/double-chevron-right.svg" alt="" />
+          <span className="text-sm md:text-base font-semibold ml-3 text-left">
             Starts from {moment(data.startDate).format("Do MMMM,YYYY")}
           </span>
         </div>
-        <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
-          <img className="w-6" src="/images/video.svg" alt="" />
-          <span className="font-semibold ml-3 text-left">
+        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+          <img className="w-4 md:w-6" src="/images/video.svg" alt="" />
+          <span className="text-sm md:text-base font-semibold ml-3 text-left">
             Virtual Class + QnA chat
           </span>
         </div>
-        <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
-          <img className="w-6" src="/images/hour-glass.svg" alt="users" />
-          <span className="font-semibold ml-3 text-left">45 minutes/class</span>
+        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+          <img className="w-4 md:w-6" src="/images/hour-glass.svg" alt="users" />
+          <span className="text-sm md:text-base font-semibold ml-3 text-left">45 minutes/class</span>
         </div>
       </div>
       {/* Intructor */}
@@ -87,15 +87,15 @@ const InfoCard = ({ data }) => {
         </div>
       </div>
       <div className="grid grid-cols-2 w-full gap-2 mb-8">
-        <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
-          <img className="w-6" src="/images/planner.svg" alt="" />
-          <span className="font-semibold ml-3 text-left">
+        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+          <img className="w-4 md:w-6" src="/images/planner.svg" alt="" />
+          <span className="text-sm md:text-base font-semibold ml-3 text-left">
             Personilzed Diet Plans
           </span>
         </div>
-        <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
-          <img className="w-6" src="/images/clock.svg" alt="" />
-          <span className="font-semibold ml-3 text-left">
+        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+          <img className="w-4 md:w-6" src="/images/clock.svg" alt="" />
+          <span className="text-sm md:text-base font-semibold ml-3 text-left">
             Convinient Time Slots
           </span>
         </div>
