@@ -21,7 +21,7 @@ const TopSection = ({ data }) => {
         <h5 className="text-lg font-medium md:px-[15%] mx-auto my-2">
           {data.description}
         </h5>
-        <div className="flex w-full my-5">
+        <div className="flex flex-col-reverse lg:flex-row w-full my-5 ">
         <InfoCard data={data} />
           <VideoCard data={data} />
         </div>
