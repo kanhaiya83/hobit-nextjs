@@ -4,14 +4,14 @@ import CheckboxSection from "../../src/components/CheckboxSection";
 import LoginModal from "../../src/components/LoginModal";
 import { useState } from "react";
 import Header from "../../src/components/Header";
-import TestimonialSection from "../../src/components/TestimonialSection";
+import VideoTestimonialSection from "../../src/components/VideoTestimonialSection";
 import TimerSection from "../../src/components/TimerSection";
-import { useRouter } from "next/router";
-import  pagesData  from "./constants/pages.json";
+import  pagesData  from "../../src/constants/pages.json";
 import { Divider } from "@chakra-ui/react";
 import Footer from "../../src/components/Footer";
 import FeaturedSection from "../../src/components/FeaturedSection";
 import SlidingTestimonials from "../../src/components/SlidingTestimonials";
+import MentorSection from "../../src/components/MentorSection";
 
 export default function CampaignPage({ data }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -23,12 +23,16 @@ export default function CampaignPage({ data }) {
       <TopSection data={data}/>
       <FeaturedSection />
     <Divider maxW={700} mx="auto"/>
+      <VideoTestimonialSection data={data}/>
+
+    <Divider maxW={700} mx="auto"/>
     <SlidingTestimonials/>
-      <TestimonialSection testimonials={data.testimonials}/>
     <Divider maxW={700} mx="auto"/>
       <TimerSection data={data}/>
     <Divider maxW={700} mx="auto"/>
       <CheckboxSection data={data}/>
+    <Divider maxW={700} mx="auto"/>
+    <MentorSection data={data}/>
     <Divider maxW={700} mx="auto"/>
       <FAQSection />
       <Footer/>

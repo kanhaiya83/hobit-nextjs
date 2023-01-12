@@ -18,26 +18,44 @@
     "startDate": 1674145775000,
     "endDate": 1674145775000,
     "daysCount":30,
-    "checklist": [
+    "advantages": [
       {
         "id": 1,
-        "text": "Are you looking for a body workout with a dance form?"
+        "text": "Full body workout with a dance form"
       },
       {
         "id": 2,
-        "text": "Are looking for beginner friendly sessions?"
+        "text": "Beginner friendly sessions"
       },
       {
         "id": 3,
-        "text": "Wanna tone your muscles?"
+        "text": "Tone your muscles"
       },
       {
         "id": 4,
-        "text": "Wanna improve your balance and posture?"
+        "text": "Improve your balance and posture"
       },
       {
         "id": 5,
-        "text": "Wanna improve your heart health?"
+        "text": "Added advantage to your heart health"
+      }
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Your are a beginner and you want to lose belly fat?"
+      },
+      {
+        "id": 2,
+        "text": "Your schedule is hectic and you  want take classes on a convenient time slot??"
+      },
+      {
+        "id": 3,
+        "text": "You want to create a customized diet for yourself?"
+      },
+      {
+        "id": 4,
+        "text": "You want to stay fit,healthy and increase your strength?"
       }
     ],
     "testimonials": [

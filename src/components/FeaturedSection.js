@@ -14,7 +14,7 @@ const FeaturedSection =()=>{
                     <Image src="/images/featured_in_logos/the-print.webp" alt="" fill={true} style={{objectFit:"contain"}}/>
                 </div>
                 <div className="relative h-[70px]">
-                    <Image src="/images/featured_in_logos/business-insider.png" alt="" fill={true} style={{objectFit:"contain"}}/>
+                    <Image src="/images/featured_in_logos/yourstory.png" alt="" fill={true} style={{objectFit:"contain"}}/>
                 </div>
             </div>
         </div>

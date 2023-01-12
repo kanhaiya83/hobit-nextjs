@@ -10,21 +10,24 @@ const slots = {
 };
 const TopSection = ({ data }) => {
   return (
-    <div className="bg-dark-primary-color w-full text-white relative overflow-hidden z-10 px-[5%]">
+    <div className="bg-dark-primary-color w-full text-white relative overflow-hidden z-10 px-[5%] py-4">
       <div className="bg-dark-primary-color absolute top-0 left-0 w-full h-full">
         <img src={data.bgImage} alt="background" />
       </div>
-      <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[900px] text-center relative">
+      <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
         <h1 className="text-5xl font-bold mb-4 md:px-[10%]">
           <GradientText>{data.title}</GradientText>
         </h1>
         <h5 className="text-lg font-medium md:px-[15%] mx-auto my-2">
           {data.description}
         </h5>
-        <div className="flex w-full mt-5 flex-col">
+        <div className="flex w-full my-5">
+        <InfoCard data={data} />
           <VideoCard data={data} />
-          <InfoCard data={data} />
         </div>
+      <div className="bg-slate-700 mx-auto w-[80%] h-[1px]"></div>
+
+        <SlotPicker/>
       </div>
     </div>
   );
@@ -32,7 +35,7 @@ const TopSection = ({ data }) => {
 
 const InfoCard = ({ data }) => {
   return (
-    <div className="w-full mx-2 rounded-xl bg-dark-secondary-color p-5 mt-10 mb-4">
+    <div className="flex-1 mx-2 rounded-xl bg-dark-secondary-color p-5">
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
         <div className=" bg-dark-primary-color px-4 h-20 rounded-xl flex justify-start items-center">
           <img className="w-6" src="/images/calender.svg" alt="" />
@@ -84,16 +87,12 @@ const InfoCard = ({ data }) => {
           </span>
         </div>
       </div>
-      {/* Divider */}
-      <div className="bg-slate-700 mx-auto w-[80%] h-[1px]"></div>
-      {/* Slot Picker */}
-      <SlotPicker />
     </div>
   );
 };
 const VideoCard = ({ data }) => {
   return (
-    <div className="w-full mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
+    <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
       <VideoPlayer video={data.video} />
       <GradientButton applyClasses={"w-full py-5 mb-4"}>
         {data.enroll_btn}
