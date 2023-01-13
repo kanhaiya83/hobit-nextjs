@@ -1,51 +1,83 @@
-*,::before,::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.gradient-text{
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#cb6ce4),to(#8b53ff));
-    background-image: linear-gradient(180deg,#cb6ce4,#8b53ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.gradient-text {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#cb6ce4),
+    to(#8b53ff)
+  );
+  background-image: linear-gradient(180deg, #cb6ce4, #8b53ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.testimonial-bg-image-1,.testimonial-bg-image-2{
-    background-image: url("https://uploads-sslhttps://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4c34de870765f1e66b_stars.svg.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4d3497a237e1c65e0a_Group%201341.svg");
-    background-position: 100% 0;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-attachment: fixed;
-    background-color: rgb(196 255 248 / 50%);
+.testimonial-bg-image-1,
+.testimonial-bg-image-2 {
+  background-image: url("https://uploads-sslhttps://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4c34de870765f1e66b_stars.svg.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4d3497a237e1c65e0a_Group%201341.svg");
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-attachment: fixed;
+  background-color: rgb(196 255 248 / 50%);
 }
-.testimonial-bg-image-2{
-    background-image: url("https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4c34de870765f1e66b_stars.svg");
+.testimonial-bg-image-2 {
+  background-image: url("https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/60d4ec4c34de870765f1e66b_stars.svg");
 }
-.gradient-btn{
-    background: linear-gradient(-45deg,#cb6ce4 20%,#8b53ff)!important;  
-    color: white;  
+.gradient-btn {
+  background: linear-gradient(-45deg, #cb6ce4 20%, #8b53ff) !important;
+  color: white;
 }
-.gradient-bg-animation{
-    background: linear-gradient(60deg,#f79533,#f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#07b39b,#6fba82);
-    -webkit-animation: animatedgradient 3s ease infinite alternate;
-    animation: animatedgradient 3s ease infinite alternate;
-    background-size: 300% 300%;
+.gradient-bg-animation {
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  -webkit-animation: animatedgradient 3s ease infinite alternate;
+  animation: animatedgradient 3s ease infinite alternate;
+  background-size: 300% 300%;
 }
-.css-top-section{
-    content: "";
-    background-image: url("https://user-images.githubusercontent.com/76777058/211166136-e3ad906c-093f-4d56-bc8a-b262db08e690.jpg");
-    background-position: 0  0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.css-top-section {
+  content: "";
+  background-image: url("https://user-images.githubusercontent.com/76777058/211166136-e3ad906c-093f-4d56-bc8a-b262db08e690.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.next-image-container {
+  width: 100%;
+}
+.next-image-container > div {
+  position: unset !important;
+}
+
+.next-image-container img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
 }
 @keyframes animatedgradient {
-    0%{
-        background-position: 0 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0 50%;
-    }
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

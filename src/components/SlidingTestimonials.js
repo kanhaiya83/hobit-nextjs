@@ -30,8 +30,6 @@ const SlidingTestimonials = () => {
       <div>
         <Swiper
           autoplay={{ delay: 300000 }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
             400: {
               slidesPerView: 1,
