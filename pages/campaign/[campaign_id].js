@@ -13,6 +13,7 @@ import FeaturedSection from "../../src/components/FeaturedSection";
 import SlidingTestimonials from "../../src/components/SlidingTestimonials";
 import MentorSection from "../../src/components/MentorSection";
 import AdvantagesSection from "../../src/components/AdvantagesSection";
+import VideoTestimonialSection from "../../src/components/VideoTestimonialSection";
 
 export default function CampaignPage({ data }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -24,8 +25,8 @@ export default function CampaignPage({ data }) {
       <TopSection data={data}/>
       <FeaturedSection />
     <Divider maxW={700} mx="auto"/>
-      {/* <VideoTestimonialSection data={data}/> */}
-      {/* <Divider maxW={700} mx="auto"/> */}
+      <VideoTestimonialSection data={data}/>
+      <Divider maxW={700} mx="auto"/>
 <AdvantagesSection data={data}/>
     <Divider maxW={700} mx="auto"/>
     <SlidingTestimonials/>
