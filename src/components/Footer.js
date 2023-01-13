@@ -42,16 +42,16 @@ const Footer = () => {
       <div class="flex items-center justify-center md:justify-start mb-6">
         <h1 className="text-lg mr-2">FOLLOW US ON</h1>
         <a href="#">
-        <Image src="/images/facebook.svg" alt="" class="w-8 mr-1" width={32} height={32} />
+        <Image src="/images/facebook.svg" alt="" width={32} height={32} />
         </a>
         <a href="#">
-        <Image src="/images/linkedin.svg" alt="" class="w-8 mr-1" width={32} height={32} />
+        <Image src="/images/linkedin.svg" alt="" width={32} height={32} />
         </a>
         <a href="#">
-        <Image src="/images/instagram.svg" alt="" class="w-8 mr-1" width={32} height={32} />
+        <Image src="/images/instagram.svg" alt="" width={32} height={32} />
         </a>
         <a href="#">
-        <img src="/images/whatsapp.svg" alt="" class="w-8 mr-1"/>
+        <Image src="/images/whatsapp.svg" alt=""  width={32} height={32} />
         </a>
       </div>
         <h4 className="text-slate-600 font-medium w-full text-center md:text-left">© 2022 All rights reserved by Hobit Technologies Pvt. Ltd.</h4>

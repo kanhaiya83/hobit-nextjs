@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import SectionHeading from './SectionHeading'
 
@@ -9,8 +10,8 @@ const AdvantagesSection = ({data}) => {
             {data.advantages.map((adv)=>{
                 return <li key={adv.id}>
                     <div class="flex items-center mb-3">
-                        <div class="w-7 mr-2">
-                        <img src="/images/checked-circle.svg" alt="" />
+                        <div class="mr-2">
+                        <Image src="/images/checked-circle.svg" alt="" width={28} height={28}/>
                         </div>
                         <h4 className='text-2xl font-thin'>{adv.text}</h4>
                     </div>

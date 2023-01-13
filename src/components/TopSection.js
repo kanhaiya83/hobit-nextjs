@@ -1,9 +1,7 @@
-import { Divider } from "@chakra-ui/react";
 import moment from "moment";
 import Image from "next/image";
 import { useState } from "react";
 import EnrollButton from "./EnrollButton";
-import GradientButton from "./GradientButton";
 import GradientText from "./GradientText";
 // import moment from "moment/moment";
 const slots = {
