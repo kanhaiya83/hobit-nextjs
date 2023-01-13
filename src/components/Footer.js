@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <footer className="w-full bg-slate-100 text-slate-800 py-10 px-[5%] md:px-[10%]">
       <div class="w-full flex justify-start mb-3">
-        <img src="/images/logo.png" alt="" className="w-10" />
+        <Image src="/images/logo.png" alt="" width={40} height={40} />
         <h2 className="uppercase text-3xl font-bold ml-2">HOBIT</h2>
       </div>
       <div class="grid grid-cols-2 gap-y-2 md:grid-cols-3 w-full mb-6">
@@ -28,10 +30,10 @@ const Footer = () => {
             <h1 className="font-semibold pb-2 border-b-2 border-primary-color mb-2 w-fit">Install App</h1>
             <div class="flex w-full">
                 <a href="" className="mr-2">
-                <img src="/images/play-store.png" alt=""  className="h-10 rounded-lg" />
+                <Image src="/images/play-store.png" alt=""  className="h-10 rounded-lg"  width={160} height={40} />
                 </a>
                 <a href="">
-                <img src="/images/app-store.png" alt=""  className="h-10 rounded-lg" />
+                <Image src="/images/app-store.png" alt=""  className="h-10 rounded-lg"  width={160} height={40} />
                 </a>
             
             </div>
@@ -40,13 +42,13 @@ const Footer = () => {
       <div class="flex items-center justify-center md:justify-start mb-6">
         <h1 className="text-lg mr-2">FOLLOW US ON</h1>
         <a href="#">
-        <img src="/images/facebook.svg" alt="" class="w-8 mr-1"/>
+        <Image src="/images/facebook.svg" alt="" class="w-8 mr-1" width={32} height={32} />
         </a>
         <a href="#">
-        <img src="/images/linkedin.svg" alt="" class="w-8 mr-1"/>
+        <Image src="/images/linkedin.svg" alt="" class="w-8 mr-1" width={32} height={32} />
         </a>
         <a href="#">
-        <img src="/images/instagram.svg" alt="" class="w-8 mr-1"/>
+        <Image src="/images/instagram.svg" alt="" class="w-8 mr-1" width={32} height={32} />
         </a>
         <a href="#">
         <img src="/images/whatsapp.svg" alt="" class="w-8 mr-1"/>
