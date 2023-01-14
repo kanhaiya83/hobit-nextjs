@@ -30,7 +30,7 @@ const VideoTestimonialSection = ({ data }) => {
 };
 const Testimonial = ({ testimonial }) => {
   return (
-    <div className="relative w-full pt-[100%]">
+    <div className="relative w-full">
       <video controls preload="none" poster="/videos/demo.png">
         <source src={url} type="video/mp4" />
         Your browser does not support the video tag.
