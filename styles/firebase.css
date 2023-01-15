@@ -1,0 +1,10 @@
+.mdl-shadow--2dp{
+    box-shadow: none!important;
+}
+.mdl-button--raised.mdl-button--colored{
+    background: linear-gradient(-45deg, #cb6ce4 20%, #8b53ff) !important;
+    color: white!important;
+    margin-left: 0px!important;
+    padding: 8px!important;
+    height: auto!important;
+}

@@ -4,9 +4,9 @@ import { logout,auth } from "../utils/firebase";
 import GradientButton from "./GradientButton";
 
 const Header = () => {
-    const {isAuthenticated,setIsAuthenticated,setIsAuthModalOpen}  = useAuthContext();
-    const btnAction = isAuthenticated ? ()=>{logout();setIsAuthenticated(false)} : ()=>{setIsAuthModalOpen(true)}
-    
+    const {isAuthenticated,loading,setIsAuthModalOpen}  = useAuthContext();
+    const btnAction = loading ? null :(isAuthenticated ? ()=>{logout()} : ()=>{setIsAuthModalOpen(true)})
+    console.log(loading,isAuthenticated)
   return (
     <>
       <header className="w-full absolute top-0 left-0 z-20">
@@ -17,7 +17,7 @@ const Header = () => {
             applyClasses={"rounded font-medium px-6 py-2 md:py-3 text-xl"}
             onClick={btnAction}
           >
-            {isAuthenticated ? "Logout" : "Login"}
+            {loading?"Loading":(isAuthenticated ? "Logout" : "Login")}
           </GradientButton>
           </div>
         </div>
