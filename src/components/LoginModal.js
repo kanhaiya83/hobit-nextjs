@@ -1,18 +1,13 @@
-import {phone} from 'phone';
+import { phone } from "phone";
 
-import {
-  Input,
-  InputGroup,
-  InputLeftAddon,
-  Select,
-} from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftAddon, Select } from "@chakra-ui/react";
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 import { useState } from "react";
 import Modal from "react-modal";
 import { useAuthContext } from "../context/authContext";
 import { auth } from "../utils/firebase";
 import GradientButton from "./GradientButton";
-import { warnToast } from '../utils/toast';
+import { errorToast, warnToast } from "../utils/toast";
 const customStyles = {
   content: {
     top: "50%",
@@ -28,27 +23,31 @@ const customStyles = {
   },
   overlay: {
     backgroundColor: "rgb(52 52 52 / 75%)",
-    zIndex:1000
+    zIndex: 1000,
   },
 };
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement("#__next");
 const LoginModal = () => {
-  const { isAuthModalOpen: isOpen, setIsAuthModalOpen: setIsOpen,setIsAuthenticated } =
-    useAuthContext();
-    const [countryCode, setCountryCode] = useState("+91");
-    const [mobileNumber, setMobileNumber] = useState("");
+  const {
+    isAuthModalOpen: isOpen,
+    setIsAuthModalOpen: setIsOpen,
+    setIsAuthenticated,
+  } = useAuthContext();
+  const [countryCode, setCountryCode] = useState("+91");
+  const [mobileNumber, setMobileNumber] = useState("");
   const [otp, setOtp] = useState("");
   // form ui states
   const [expandForm, setExpandForm] = useState(false);
+  const [gettingOTP,setGettingOTP] = useState(false);
+  const [verifyingOTP,setVerifyingOTP] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
-    setCountryCode("+91")
-    setMobileNumber("")
-    setOtp("")
-    setExpandForm(false)
-    
+    setCountryCode("+91");
+    setMobileNumber("");
+    setOtp("");
+    setExpandForm(false);
   }
 
   const handleOTPChange = (e) => {
@@ -61,44 +60,52 @@ const LoginModal = () => {
   };
   const getOTP = (e) => {
     e.preventDefault();
-    if(expandForm)return;
-    const fullMobileNumber = `${countryCode}${mobileNumber}`
-    const phoneValidation = phone(fullMobileNumber)
-    console.log({phoneValidation})
-    if(!phoneValidation.isValid){
-    return warnToast("Please enter a valid mobile number!!")
+    if (expandForm) return;
+    const fullMobileNumber = `${countryCode}${mobileNumber}`;
+    const phoneValidation = phone(fullMobileNumber);
+    console.log({ phoneValidation });
+    if (!phoneValidation.isValid) {
+      return warnToast("Please enter a valid mobile number!!");
     }
-    if(!window.appVerifier){
-    window.appVerifier = new RecaptchaVerifier(
-      "recaptcha-container",
-      {
-        size: "invisible",
-        callback: (response) => {
-          console.log({ response });
+    setGettingOTP(true);
+    if (!window.appVerifier) {
+      window.appVerifier = new RecaptchaVerifier(
+        "recaptcha-container",
+        {
+          size: "invisible",
+          callback: (response) => {
+            console.log({ response });
+          },
         },
-      },
-      auth
-    );
-  }
-  signInWithPhoneNumber(auth, fullMobileNumber, window.appVerifier)
+        auth
+      );
+    }
+    signInWithPhoneNumber(auth, fullMobileNumber, window.appVerifier)
       .then((confirmationResult) => {
-        setExpandForm(true)
+        setExpandForm(true);
+        setGettingOTP(false)
         window.confirmationResult = confirmationResult;
       })
       .catch((e) => {
-        console.log(e); 
+        setGettingOTP(false);
+        console.log("Error while getting OTP:",e);
       });
   };
   const verifyOTP = () => {
+    setVerifyingOTP(true);
     window.confirmationResult
       .confirm(otp)
       .then((result) => {
         const user = result.user;
-        setIsAuthenticated(true)
+        setIsAuthenticated(true);
+        setVerifyingOTP(false);
+
         console.log(user);
-        closeModal()
+        closeModal();
       })
       .catch((error) => {
+        setVerifyingOTP(false);
+        errorToast("Incorrect OPT!!")
         console.log("error", error);
         // ...
       });
@@ -128,14 +135,19 @@ const LoginModal = () => {
         <form className="flex flex-col items-start my-8" onSubmit={getOTP}>
           <InputGroup>
             <InputLeftAddon>{countryCode}</InputLeftAddon>
-            <Input type="tel" placeholder="Phone number" value={mobileNumber} onChange={handleNumberChange} />
+            <Input
+              type="tel"
+              placeholder="Phone number"
+              value={mobileNumber}
+              onChange={handleNumberChange}
+            />
           </InputGroup>
           <GradientButton
             applyClasses="mt-4 py-4 mt-4 bg-primary-color"
             onClick={getOTP}
             disabled={expandForm}
           >
-            {expandForm ?"OTP sent!!" :"Get OTP"}
+            {expandForm ? "OTP sent!!" : (gettingOTP ? "Sending OTP..." : "Get OTP")}
           </GradientButton>
         </form>
         {expandForm && (
@@ -150,10 +162,10 @@ const LoginModal = () => {
               placeholder="OTP"
             />
             <GradientButton
-            applyClasses="mt-4 py-4 mt-4 bg-primary-color"
-            onClick={verifyOTP}
+              applyClasses="mt-4 py-4 mt-4 bg-primary-color"
+              onClick={verifyOTP}
             >
-              Verify
+              {verifyingOTP ? "Verifying..." :"Verify"}
             </GradientButton>
           </>
         )}
