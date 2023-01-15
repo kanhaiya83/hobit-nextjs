@@ -5,9 +5,10 @@ const authContext=React.createContext({isAuthenticated:false})
 export const useAuthContext = ()=>useContext(authContext);
 
 export const AuthContextProvider = ({children})=>{
-    const [isAuthModalOpen,setIsAuthModalOpen] = useState(false)
-    const [isAuthenticated,setIsAuthenticated] = useState(false)
-   useEffect(()=>{
+  const [isAuthenticated,setIsAuthenticated] = useState(false)
+  const [isAuthModalOpen,setIsAuthModalOpen] = useState(false)
+  const [hasEnrolled,setHasEnrolled] = useState(false)
+  useEffect(()=>{
    auth.onAuthStateChanged((user)=>{
     console.log("Auth state changed",user);
     if (user) {
@@ -22,7 +23,7 @@ export const AuthContextProvider = ({children})=>{
        
       
    },[])
-    const value = {isAuthenticated,setIsAuthenticated,isAuthModalOpen,setIsAuthModalOpen}
+    const value = {isAuthenticated,setIsAuthenticated,isAuthModalOpen,setIsAuthModalOpen,hasEnrolled,setHasEnrolled}
     return(
         <authContext.Provider value={value}>{children}</authContext.Provider>
     )
