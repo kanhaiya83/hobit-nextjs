@@ -6,6 +6,9 @@ const authContext=React.createContext({isAuthenticated:false})
 export const useAuthContext = ()=>useContext(authContext);
 
 export const AuthContextProvider = ({children})=>{
+
+  const [hasEnrolled,setHasEnrolled] = useState(false);
+
     const [isAuthModalOpen,setIsAuthModalOpen] = useState(false)
     const [user, loading, error] = useAuthState(auth);
     useEffect(()=>{
@@ -13,7 +16,8 @@ export const AuthContextProvider = ({children})=>{
         setIsAuthModalOpen(false);
       }
     },[user])
-    const value = {isAuthenticated:Boolean(user),loading, error,isAuthModalOpen,setIsAuthModalOpen}
+    const value = {isAuthenticated:Boolean(user),loading, error,isAuthModalOpen,setIsAuthModalOpen,hasEnrolled,setHasEnrolled}
+
     return(
         <authContext.Provider value={value}>{children}</authContext.Provider>
     )

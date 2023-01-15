@@ -1,5 +1,6 @@
 import logoImage from "./../../public/images/logo.png";
 import { errorToast, successToast } from "./toast";
+import { auth } from "./firebase";
 const initializeRazorpay = () => {
   return new Promise((resolve) => {
     const script = document.createElement("script");
@@ -39,12 +40,10 @@ export const makePayment = async (data) => {
       order_id: response.id,
       image: logoImage,
       notes:{
-        "batch":"Zumba"
+        "course":"zumba",
+        "uid":auth.currentUser.uid
       },
       handler: function (response) {
-        // alert(response.razorpay_payment_id);
-        // alert(response.razorpay_order_id);
-        // alert(response.razorpay_signature);
         successToast("Payment successful!!")
 
       },
@@ -61,6 +60,7 @@ export const makePayment = async (data) => {
     const paymentObject = new window.Razorpay(options);
     paymentObject.open();
   } catch (e) {
+    errorToast("Some error occurred!!")
     console.log(e);
   }
 };
