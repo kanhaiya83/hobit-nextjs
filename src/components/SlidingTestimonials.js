@@ -51,7 +51,6 @@ const SlidingTestimonials = () => {
                 <div className=" p-2 rounded pt-[157%]">
                   <Image
                     src={img}
-                    onLoadingComplete={(e)=>{console.log(e);}}
                     fill={true}
                     style={{ objectFit: "contain",objectPosition:"top"}}
                     alt=""

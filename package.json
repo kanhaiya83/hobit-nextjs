@@ -20,10 +20,13 @@
     "framer-motion": "^8.1.9",
     "moment": "^2.29.4",
     "next": "13.1.1",
+    "razorpay": "^2.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-modal": "^3.16.1",
+    "react-toastify": "^9.1.1",
+    "shortid": "^2.2.16",
     "swiper": "^8.4.5",
     "tailwind-merge": "^1.8.1",
     "tw-elements": "^1.0.0-alpha13"

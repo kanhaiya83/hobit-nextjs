@@ -6,6 +6,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import Head from 'next/head'
 import localFont from '@next/font/local'
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const gilroy = localFont({ src: [{
   path: '../public/fonts/gilroy/Gilroy-Light.woff',
   weight: '300',
@@ -54,6 +56,7 @@ export default function App({ Component, pageProps }) {
           </main>
       </AuthContextProvider>
       </ChakraProvider>
+      <ToastContainer/>
     </>
   );
 }
