@@ -108,7 +108,7 @@ const VideoCard = ({ data }) => {
     <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
       <VideoPlayer video={data.video} />
       <EnrollButton applyClasses={"mb-4"}>
-        {data.enroll_btn_text}
+        {`Enroll Now(Starts ${moment(data.startDate).format("Do MMMM,YYYY")})`}
       </EnrollButton>
       <h4 className="text-lg text-slate-200 font-medium">
         Reserve a seat before {moment(data.startDate).format("Do MMMM,YYYY")}
