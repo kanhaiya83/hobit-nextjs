@@ -144,7 +144,7 @@ const VideoPlayer = ({ video }) => {
               className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col items-center bg-slate-800 bg-opacity-50 p-2 rounded-lg"
               onClick={handleClick}
             >
-              <img src="/images/play.svg" alt="Play" className="w-8" />
+              <Image src="/images/play.svg" alt="Play" width={32} height={32}/>
               <span className="text-sm">Watch Trailer</span>
             </button>
           </div>

@@ -4,7 +4,6 @@ import CheckboxSection from "../../src/components/CheckboxSection";
 import LoginModal from "../../src/components/LoginModal";
 import { useState } from "react";
 import Header from "../../src/components/Header";
-// import VideoTestimonialSection from "../../src/components/VideoTestimonialSection";
 import TimerSection from "../../src/components/TimerSection";
 import  pagesData  from "../../src/constants/pages.json";
 import { Divider } from "@chakra-ui/react";

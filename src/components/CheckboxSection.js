@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import EnrollButton from "./EnrollButton";
 import SectionHeading from "./SectionHeading";
@@ -43,7 +44,7 @@ const CheckBox = () => {
   return (
     <button class="w-8 h-8 border-primary-color border-2 rounded relative aspect-square" onClick={()=>{setChecked(prev=>!prev)}}>
       {checked && <div class="absolute top-0 left-0 w-full h-full">
-        <img src="/images/tick.svg" alt="" className="w-full" />
+        <Image src="/images/tick.svg" width={30} height={30}  alt="Check mark" />
       </div>}
     </button>
   );
