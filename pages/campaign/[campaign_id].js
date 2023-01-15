@@ -29,7 +29,7 @@ export default function CampaignPage({ data }) {
       <Divider maxW={700} mx="auto"/>
 <AdvantagesSection data={data}/>
     <Divider maxW={700} mx="auto"/>
-    <SlidingTestimonials/>
+    <SlidingTestimonials data={data}/>
     <Divider maxW={700} mx="auto"/>
       <TimerSection data={data}/>
     <Divider maxW={700} mx="auto"/>
@@ -37,7 +37,7 @@ export default function CampaignPage({ data }) {
     <Divider maxW={700} mx="auto"/>
     <MentorSection data={data}/>
     <Divider maxW={700} mx="auto"/>
-      <FAQSection />
+      <FAQSection data={data}/>
       <Footer/>
       <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </>

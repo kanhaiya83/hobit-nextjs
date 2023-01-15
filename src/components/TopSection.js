@@ -38,7 +38,7 @@ const TopSection = ({ data }) => {
         </div>
       <div className="bg-slate-700 mx-auto w-[80%] h-[1px]"></div>
 
-        <SlotPicker/>
+        <SlotPicker data={data}/>
       </div>
     </div>
   );
@@ -108,7 +108,7 @@ const VideoCard = ({ data }) => {
     <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
       <VideoPlayer video={data.video} />
       <EnrollButton applyClasses={"mb-4"}>
-        {data.enroll_btn}
+        {data.enroll_btn_text}
       </EnrollButton>
       <h4 className="text-lg text-slate-200 font-medium">
         Reserve a seat before {moment(data.startDate).format("Do MMMM,YYYY")}
@@ -153,7 +153,7 @@ const VideoPlayer = ({ video }) => {
     </div>
   );
 };
-const SlotPicker = () => {
+const SlotPicker = ({data}) => {
   const [selectedSlot, setSelectedSlot] = useState(null);
   return (
     <div className="flex flex-col items-start mt-8">
@@ -201,7 +201,7 @@ const SlotPicker = () => {
         </div>
       </div>
       <EnrollButton applyClasses="py-4 mt-4 text-lg" disabled={!Boolean(selectedSlot) && true}>
-        Book your slot at &#x20b9; 999
+        Book your slot at &#x20b9; {data.price}
       </EnrollButton>
     </div>
   );

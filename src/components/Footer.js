@@ -41,16 +41,16 @@ const Footer = () => {
       </div>
       <div class="flex items-center justify-center md:justify-start mb-6">
         <h1 className="text-lg mr-2">FOLLOW US ON</h1>
-        <a href="#">
+        <a href="#" className="mr-2">
         <Image src="/images/facebook.svg" alt="" width={32} height={32} />
         </a>
-        <a href="#">
+        <a href="#" className="mr-2">
         <Image src="/images/linkedin.svg" alt="" width={32} height={32} />
         </a>
-        <a href="#">
+        <a href="#" className="mr-2">
         <Image src="/images/instagram.svg" alt="" width={32} height={32} />
         </a>
-        <a href="#">
+        <a href="#" className="mr-2">
         <Image src="/images/whatsapp.svg" alt=""  width={32} height={32} />
         </a>
       </div>

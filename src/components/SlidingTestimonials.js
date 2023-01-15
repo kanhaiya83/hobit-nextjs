@@ -16,7 +16,7 @@ const testimonialImages = [
   "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f0889409463e7_Screenshot_20201009-140529_Instagram-1.png",
   "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f083d009463eb_Screenshot_20201012-001628_Instagram-1.png",
 ];
-const SlidingTestimonials = () => {
+const SlidingTestimonials = ({data}) => {
   SwiperCore.use(Autoplay);
   return (
     <div class="my-10 md:my-15 w-full max-w-[1100px] mx-auto text-center px-[5%] px-4">
@@ -64,7 +64,7 @@ const SlidingTestimonials = () => {
         </Swiper>
       </div>
       <EnrollButton applyClasses={"md:py-6 my-8"}>
-        Sale at &#x20b9;999
+        Sale at &#x20b9;{data.price}
       </EnrollButton>
     </div>
   );

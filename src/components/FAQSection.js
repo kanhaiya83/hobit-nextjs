@@ -2,7 +2,7 @@ import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPane
 import EnrollButton from "./EnrollButton";
 import SectionHeading from "./SectionHeading";
 
-const FAQSection = ({}) => {
+const FAQSection = ({data}) => {
   const List = [
     {
       question: "1.Will I get to interact with my tutor?",
@@ -43,7 +43,7 @@ const FAQSection = ({}) => {
           })}
         </Accordion>
         <EnrollButton applyClasses="my-8">
-            Sale at &#x20b9; 999
+            Sale at &#x20b9; {data.price}
         </EnrollButton>
       </div>
     </div>

@@ -7,6 +7,8 @@
       {"normal":"& Sky Rocket your confidence in just 30 days."}
     ],
     "description": "Dance out your calories with a high-energy aerobic exercise that can be an effective and fun part of your weight loss journey. Pave your way to a leaner, fitter and more toned you with this full body dance workout combining muscle conditioning and balance too.",
+    "before_discount_price":1299,
+    "price":999,
     "instructor": {
       "name": "Ms. Priyanka Saini",
       "image": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/b2cUsers%2FhWoYh4ohukPOVia7q1BCsvmYSZl1%2Fprofile_picture.jpg?alt=media&token=f2376a6b-14b5-48fd-a79a-48efceeb2c61",
@@ -17,7 +19,7 @@
       "src":"https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Zumba+Tutor+Videos1-1.mp4",
       "thumbnail":"https://hobitworkshops.s3.ap-south-1.amazonaws.com/Newposterapp/Zumba2.jpeg"
     },
-    "enroll_btn":"Enroll now (Starts 02 Jan)",
+    "enroll_btn_text":"Enroll now (Starts 02 Jan)",
     "startDate": 1674145775000,
     "endDate": 1674145775000,
     "daysCount":30,

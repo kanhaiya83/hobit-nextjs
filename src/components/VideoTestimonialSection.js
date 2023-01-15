@@ -22,8 +22,8 @@ const VideoTestimonialSection = ({ data }) => {
       </h4>
       <EnrollButton applyClasses={"flex justify-center py-4 md:py-6"}>
         30 Days transformative Zumba class in &#x20b9;&nbsp;
-        <span className="line-through text-slate-200 font-thin">1299</span>
-        <span className="ml-1 text-2xl font-bold">999</span>
+        <span className="line-through text-slate-200 font-thin">{data.before_discount_price}</span>
+        <span className="ml-1 text-2xl font-bold">{data.price}</span>
       </EnrollButton>
     </section>
   );

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import EnrollButton from "./EnrollButton";
 import GradientButton from "./GradientButton";
 import SectionHeading from "./SectionHeading";
 const TimerSection = ({ data }) => {
@@ -54,9 +55,9 @@ const TimerSection = ({ data }) => {
           </div>
         </div>
         <div class="mt-10 flex justify-center w-full">
-          <button className="w-full text-2xl py-6 px-10 text-white font-semibold rounded-lg  gradient-bg-animation">
+          <EnrollButton className="gradient-bg-animation">
             Enroll Now
-          </button>
+          </EnrollButton>
         </div>
       </div>
     </div>
