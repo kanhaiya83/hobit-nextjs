@@ -12,6 +12,8 @@ export const AuthContextProvider = ({children})=>{
     console.log("Auth state changed",user);
     if (user) {
       setIsAuthenticated(true);
+      setIsAuthModalOpen(false)
+
     } else {
       setIsAuthenticated(false);
 

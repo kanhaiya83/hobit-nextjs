@@ -17,9 +17,9 @@ const initializeRazorpay = () => {
 };
 export const makePayment = async (data) => {
   try {
-    const res = await initializeRazorpay();
+    // const res = await initializeRazorpay();
 
-    if (!res) {
+    if (!window.Razorpay) {
       errorToast("Some error occurred!")
       return;
     }

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import Script from 'next/script'
 import "../styles/globals.css";
 import "../styles/index.css";
 import { AuthContextProvider } from "../src/context/authContext";
@@ -36,12 +36,6 @@ const gilroy = localFont({ src: [{
 
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    const use = async () => {
-      (await import("tw-elements")).default;
-    };
-    use();
-  }, []);
 
   return (
     <>
@@ -52,7 +46,9 @@ export default function App({ Component, pageProps }) {
     <ChakraProvider>
       <AuthContextProvider>
           <main className={`${gilroy.variable} font-sans`}>
+
           <Component {...pageProps} />
+          <Script src="https://checkout.razorpay.com/v1/checkout.js"/>
           </main>
       </AuthContextProvider>
       </ChakraProvider>

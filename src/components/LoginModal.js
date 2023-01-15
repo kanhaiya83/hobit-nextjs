@@ -1,6 +1,6 @@
-import { EmailIcon } from "@chakra-ui/icons";
+import {phone} from 'phone';
+
 import {
-  Button,
   Input,
   InputGroup,
   InputLeftAddon,
@@ -12,6 +12,7 @@ import Modal from "react-modal";
 import { useAuthContext } from "../context/authContext";
 import { auth } from "../utils/firebase";
 import GradientButton from "./GradientButton";
+import { warnToast } from '../utils/toast';
 const customStyles = {
   content: {
     top: "50%",
@@ -56,15 +57,19 @@ const LoginModal = () => {
   };
   const handleNumberChange = (e) => {
     const val = e.target.value;
-    // if(!Boolean(val))return;
     setMobileNumber(val);
   };
   const getOTP = (e) => {
     e.preventDefault();
     if(expandForm)return;
     const fullMobileNumber = `${countryCode}${mobileNumber}`
-    console.log({fullMobileNumber})
-    const appVerifier = new RecaptchaVerifier(
+    const phoneValidation = phone(fullMobileNumber)
+    console.log({phoneValidation})
+    if(!phoneValidation.isValid){
+    return warnToast("Please enter a valid mobile number!!")
+    }
+    if(!window.appVerifier){
+    window.appVerifier = new RecaptchaVerifier(
       "recaptcha-container",
       {
         size: "invisible",
@@ -74,13 +79,14 @@ const LoginModal = () => {
       },
       auth
     );
-    signInWithPhoneNumber(auth, fullMobileNumber, appVerifier)
+  }
+  signInWithPhoneNumber(auth, fullMobileNumber, window.appVerifier)
       .then((confirmationResult) => {
         setExpandForm(true)
         window.confirmationResult = confirmationResult;
       })
       .catch((e) => {
-        console.log(e);
+        console.log(e); 
       });
   };
   const verifyOTP = () => {
