@@ -18,6 +18,5 @@ module.exports = {
         sans: ["var(--font-gilroy)", ...fontFamily.sans],
       },
     },
-  },
-  plugins: [require("tw-elements/dist/plugin")],
+  }
 };
