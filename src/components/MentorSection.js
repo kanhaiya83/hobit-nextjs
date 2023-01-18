@@ -17,13 +17,10 @@ const MentorSection = ({ data }) => {
         <div className="flex-1 text-center">
           <h3 className="text-2xl font-bold mb-1">{data.instructor.name}</h3>
           <h3 className="text-sm text-slate-400 mb-4">
-            {data.instructor.description}
+            {data.instructor.profession}
           </h3>
           <p className="text-sm font-thin text-slate-700 max-w-[80%] mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non
-            mauris sit amet nisi imperdiet fringilla. Maecenas molestie mauris
-            tincidunt placerat tempus. Aenean eu consequat orci. Integer a
-            blandit arcu.
+            {data.instructor.description}
           </p>
         </div>
       </div>

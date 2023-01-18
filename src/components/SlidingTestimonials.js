@@ -6,17 +6,8 @@ import "swiper/css/autoplay";
 import EnrollButton from "./EnrollButton";
 import SectionHeading from "./SectionHeading";
 import Image from "next/image";
-const testimonialImages = [
-  "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f08191d9463d3_Screenshot_20201012-012848_Instagram-1.png",
-  "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f0889409463e7_Screenshot_20201009-140529_Instagram-1.png",
-  "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f0860859463e5_Screenshot_20201001-053628_Instagram-1.png",
-  "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f0889409463e7_Screenshot_20201009-140529_Instagram-1.png",
-  "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f083d009463eb_Screenshot_20201012-001628_Instagram-1.png",
-  "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f0860859463e5_Screenshot_20201001-053628_Instagram-1.png",
-  "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f0889409463e7_Screenshot_20201009-140529_Instagram-1.png",
-  "https://uploads-ssl.webflow.com/5fdb2866020c200cd7fd7369/5feb5c987b9f083d009463eb_Screenshot_20201012-001628_Instagram-1.png",
-];
 const SlidingTestimonials = ({data}) => {
+  const {testimonialsImages} = data;
   SwiperCore.use(Autoplay);
   return (
     <div class="my-10 md:my-15 w-full max-w-[1100px] mx-auto text-center px-[5%] px-4">
@@ -29,7 +20,7 @@ const SlidingTestimonials = ({data}) => {
 
       <div>
         <Swiper
-          autoplay={{ delay: 300000 }}
+          autoplay={{ delay: 3000 }}
           breakpoints={{
             400: {
               slidesPerView: 1,
@@ -45,7 +36,7 @@ const SlidingTestimonials = ({data}) => {
             },
           }}
         >
-          {testimonialImages.map((img, i) => {
+          {testimonialsImages.map((img, i) => {
             return (
               <SwiperSlide key={i}>
                 <div className=" p-2 rounded pt-[157%]">

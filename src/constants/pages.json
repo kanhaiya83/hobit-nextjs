@@ -12,7 +12,8 @@
     "instructor": {
       "name": "Ms. Priyanka Saini",
       "image": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/b2cUsers%2FhWoYh4ohukPOVia7q1BCsvmYSZl1%2Fprofile_picture.jpg?alt=media&token=f2376a6b-14b5-48fd-a79a-48efceeb2c61",
-      "description": "Zumba Intructor"
+      "profession": "Zumba Intructor",
+      "description": "Priyanka Saini has guided a number of people through their weigh loss journey. Currently she holds 7+ years of experience in training corporates and industries for Zumba."
     },
     "bgImage": "https://user-images.githubusercontent.com/76777058/212105231-56049550-4000-4831-91be-66e53d018031.jpg",
     "video":{
@@ -62,26 +63,17 @@
         "text": "You want to stay fit,healthy and increase your strength?"
       }
     ],
-    "testimonials": [
-      {
-        "id": 1,
-        "image": "https://avatars.dicebear.com/api/miniavs/24244234343.svg",
-        "text": "The Zumba sessions are great and very much easy to follow. The instructor is also very clear with her instructions and cooperative too.",
-        "given_by": "Savita Pandey"
-      },
-      {
-        "id": 2,
-        "image": "https://avatars.dicebear.com/api/miniavs/2424.svg",
-        "text": "Perfect classes for weight loss. Lost 4 kg with help of these classes. ",
-        "given_by": "Shriya"
-      },
-      {
-        "id": 3,
-        "image": "https://avatars.dicebear.com/api/miniavs/fefer32r325r235r.svg",
-        "text": "The teacher is very good..teaching steps not too slow not too fast..so far, I’m loving these workout ",
-        "given_by": "Chanchal Choudhary"
-      }
-    ],
+    "testimonialsImages":[
+      "https://user-images.githubusercontent.com/76777058/212974664-1dc1eb30-efa9-4752-be6d-866b2d740438.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974677-1249e8a5-df10-457e-b514-ef2a29798a97.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974681-9a5a04d9-f9e1-4832-8dc4-f0c04fdc26f6.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974688-7183fff8-bb18-472d-8632-111e3be4a2c9.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974693-3c635c0b-cd33-41e6-a419-c3c30748e0f6.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974695-46a620e2-391b-47e5-a1a6-ba12c082eb04.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974698-5cd7b95f-2c62-4e7d-a58b-14e59bad58d4.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974702-31c8d967-9182-4720-b2c4-f21805b1c09e.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974712-3463eb28-0ec2-443b-9baf-c53fba618cad.jpeg"],
     "faqs": [
       {
         "id": 1,
