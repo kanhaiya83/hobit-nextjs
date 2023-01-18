@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import EnrollButton from "./EnrollButton";
-import GradientButton from "./GradientButton";
 import SectionHeading from "./SectionHeading";
 const TimerSection = ({ data }) => {
   const [timeRemaining, setTimeRemaining] = useState(0);
