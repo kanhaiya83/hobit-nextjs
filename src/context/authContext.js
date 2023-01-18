@@ -8,6 +8,7 @@ export const useAuthContext = ()=>useContext(authContext);
 export const AuthContextProvider = ({children})=>{
 
   const [hasEnrolled,setHasEnrolled] = useState(false);
+  const [slot,setSlot] = useState(null);
 
     const [isAuthModalOpen,setIsAuthModalOpen] = useState(false)
     const [user, loading, error] = useAuthState(auth);
@@ -16,7 +17,7 @@ export const AuthContextProvider = ({children})=>{
         setIsAuthModalOpen(false);
       }
     },[user])
-    const value = {isAuthenticated:Boolean(user),loading, error,isAuthModalOpen,setIsAuthModalOpen,hasEnrolled,setHasEnrolled}
+    const value = {isAuthenticated:Boolean(user),loading, error,isAuthModalOpen,setIsAuthModalOpen,hasEnrolled,setHasEnrolled,slot,setSlot}
 
     return(
         <authContext.Provider value={value}>{children}</authContext.Provider>

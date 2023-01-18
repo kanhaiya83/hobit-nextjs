@@ -1,4 +1,3 @@
-import Script from 'next/script'
 import "../styles/globals.css";
 import "../styles/index.css";
 import "../styles/firebase.css";
@@ -49,9 +48,8 @@ export default function App({ Component, pageProps }) {
           <main className={`${gilroy.variable} font-sans`}>
 
           <Component {...pageProps} />
-          <Script src="https://checkout.razorpay.com/v1/checkout.js"/>
           </main>
-      </AuthContextProvider>
+s      </AuthContextProvider>
       </ChakraProvider>
       <ToastContainer/>
     </>

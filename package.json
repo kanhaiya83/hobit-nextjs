@@ -27,6 +27,7 @@
     "react-firebase-hooks": "^5.1.1",
     "react-firebaseui": "^6.0.0",
     "react-modal": "^3.16.1",
+    "react-razorpay": "^1.2.0",
     "react-toastify": "^9.1.1",
     "shortid": "^2.2.16",
     "swiper": "^8.4.5",

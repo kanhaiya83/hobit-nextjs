@@ -16,6 +16,7 @@ import VideoTestimonialSection from "../../src/components/VideoTestimonialSectio
 import { useAuthContext } from "../../src/context/authContext";
 import { auth } from "../../src/utils/firebase";
 import { useRouter } from "next/router";
+import { RazorpayContextProvider } from "../../src/context/razorpayContext";
 
 export default function CampaignPage({ data }) {
 const {isAuthenticated,hasEnrolled,setHasEnrolled} = useAuthContext()
@@ -25,7 +26,6 @@ const pid = router.query;
   useEffect(() => {
     if(!isAuthenticated || hasEnrolled===pid) return;
     (async () => {
-      console.log("Verifying course status!!")
       const res= await fetch(`/api/razorpay?uid=${auth.currentUser.uid}&course=${pid}`);
       const response = await res.json();
       if(response.success){
@@ -35,6 +35,7 @@ const pid = router.query;
   }, [isAuthenticated]);
   return (
     <>
+    <RazorpayContextProvider pageData={data}>
       <div id="recaptcha-container" style={{ width: "100%" }}></div>
       <Header />
       <TopSection data={data} />
@@ -54,7 +55,9 @@ const pid = router.query;
       <Divider maxW={700} mx="auto" />
       <FAQSection data={data} />
       <Footer />
+
       <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      </RazorpayContextProvider>
     </>
   );
 }

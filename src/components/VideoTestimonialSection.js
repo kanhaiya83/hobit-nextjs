@@ -1,6 +1,4 @@
-import moment from "moment";
 import EnrollButton from "./EnrollButton";
-import GradientButton from "./GradientButton";
 
 const videoTestimonials = [
   "//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F703700660%3Fh%3D76585e1ed8%26app_id%3D122963&amp;dntp=1&amp;display_name=Vimeo&amp;url=https%3A%2F%2Fvimeo.com%2F703700660%2F76585e1ed8&amp;image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F1421341536-79f6bac7ce17549e7677ed85488525d4dfbbe21dc1af168c29e81743d6808553-d_640&amp;key=96f1f04c5f4143bcb0f2e68c87d65feb&amp;type=text%2Fhtml&amp;schema=vimeo",

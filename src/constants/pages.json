@@ -1,14 +1,14 @@
 [
   {
     "campaign_id": "zumba",
-    "activity_name":"Zumba",
-    "title":[
-      {"gradient":"Lose Belly fat "},
-      {"normal":"& Sky Rocket your confidence in just 30 days."}
+    "activity_name": "Zumba",
+    "title": [
+      { "gradient": "Lose Belly fat " },
+      { "normal": "& Sky Rocket your confidence in just 30 days." }
     ],
     "description": "Dance out your calories with a high-energy aerobic exercise that can be an effective and fun part of your weight loss journey. Pave your way to a leaner, fitter and more toned you with this full body dance workout combining muscle conditioning and balance too.",
-    "before_discount_price":1299,
-    "price":999,
+    "before_discount_price": 1299,
+    "price": 999,
     "instructor": {
       "name": "Ms. Priyanka Saini",
       "image": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/b2cUsers%2FhWoYh4ohukPOVia7q1BCsvmYSZl1%2Fprofile_picture.jpg?alt=media&token=f2376a6b-14b5-48fd-a79a-48efceeb2c61",
@@ -16,13 +16,13 @@
       "description": "Priyanka Saini has guided a number of people through their weigh loss journey. Currently she holds 7+ years of experience in training corporates and industries for Zumba."
     },
     "bgImage": "https://user-images.githubusercontent.com/76777058/212105231-56049550-4000-4831-91be-66e53d018031.jpg",
-    "video":{
-      "src":"https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Zumba+Tutor+Videos1-1.mp4",
-      "thumbnail":"https://hobitworkshops.s3.ap-south-1.amazonaws.com/Newposterapp/Zumba2.jpeg"
+    "video": {
+      "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Zumba+Tutor+Videos1-1.mp4",
+      "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Newposterapp/Zumba2.jpeg"
     },
     "startDate": 1674145775000,
     "endDate": 1674145775000,
-    "daysCount":30,
+    "daysCount": 30,
     "advantages": [
       {
         "id": 1,
@@ -63,7 +63,7 @@
         "text": "You want to stay fit,healthy and increase your strength?"
       }
     ],
-    "testimonialsImages":[
+    "testimonialsImages": [
       "https://user-images.githubusercontent.com/76777058/212974664-1dc1eb30-efa9-4752-be6d-866b2d740438.jpeg",
       "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
       "https://user-images.githubusercontent.com/76777058/212974677-1249e8a5-df10-457e-b514-ef2a29798a97.jpeg",
@@ -73,7 +73,8 @@
       "https://user-images.githubusercontent.com/76777058/212974695-46a620e2-391b-47e5-a1a6-ba12c082eb04.jpeg",
       "https://user-images.githubusercontent.com/76777058/212974698-5cd7b95f-2c62-4e7d-a58b-14e59bad58d4.jpeg",
       "https://user-images.githubusercontent.com/76777058/212974702-31c8d967-9182-4720-b2c4-f21805b1c09e.jpeg",
-      "https://user-images.githubusercontent.com/76777058/212974712-3463eb28-0ec2-443b-9baf-c53fba618cad.jpeg"],
+      "https://user-images.githubusercontent.com/76777058/212974712-3463eb28-0ec2-443b-9baf-c53fba618cad.jpeg"
+    ],
     "faqs": [
       {
         "id": 1,
@@ -100,6 +101,10 @@
         "question": "What if I miss a session?",
         "answer": "In case you miss a session, don’t worry. We offer flexible time slots to our users. You can select your desired time slot each day."
       }
-    ]
+    ],
+    "slots": {
+      "morning": ["5AM", "6AM", "7AM", "8AM"],
+      "evening": ["5PM", "6PM", "7PM", "8PM", "9PM"]
+    }
   }
 ]

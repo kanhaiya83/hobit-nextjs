@@ -1,13 +1,11 @@
 import moment from "moment";
 import Image from "next/image";
 import { useState } from "react";
+import { useAuthContext } from "../context/authContext";
 import EnrollButton from "./EnrollButton";
 import GradientText from "./GradientText";
 // import moment from "moment/moment";
-const slots = {
-  morning: ["5AM", "6AM", "7AM", "8AM"],
-  evening: ["5PM", "6PM", "7PM", "8PM", "9PM"],
-};
+
 const TopSection = ({ data }) => {
   const titleData = data.title;
   let titleEl;
@@ -100,7 +98,7 @@ const InfoCard = ({ data }) => {
             alt="users"
           />
           <span className="text-sm md:text-base font-semibold ml-3 text-left">
-            45 minutes/class
+            40-45 minutes/class
           </span>
         </div>
       </div>
@@ -213,24 +211,24 @@ const VideoPlayer = ({ video }) => {
   );
 };
 const SlotPicker = ({ data }) => {
-  const [selectedSlot, setSelectedSlot] = useState(null);
+  const {slot,setSlot}=useAuthContext()
   return (
-    <div className="flex flex-col items-start mt-8">
+    <div className="flex flex-col items-start mt-8" id="slot-picker">
       <h1 className="text-2xl text-slate-200 mb-4 font-medium">
         Select your time slot
       </h1>
       <div className="flex flex-col md:flex-row items-start md:items-center gap-2 mb-4">
         <h4>Morning Slots</h4>
         <div className="flex justify-between gap-2 flex-wrap">
-          {slots["morning"].map((s) => {
+          {data.slots["morning"].map((s) => {
             return (
               <button
                 key={s}
                 className={`px-4 py-2 border-primary-color border-2 rounded ${
-                  selectedSlot === s && " bg-primary-color"
+                  slot === s && " bg-primary-color"
                 }`}
                 onClick={() => {
-                  setSelectedSlot(s);
+                  setSlot(s);
                 }}
               >
                 <span>{s}</span>
@@ -242,15 +240,15 @@ const SlotPicker = ({ data }) => {
       <div className="flex flex-col md:flex-row items-start md:items-center gap-2 ">
         <h4>Evening Slots</h4>
         <div className="flex justify-between gap-2">
-          {slots["evening"].map((s) => {
+          {data.slots["evening"].map((s) => {
             return (
               <button
                 key={s}
                 className={`px-4 py-2 border-primary-color border-2 rounded ${
-                  selectedSlot === s && " bg-primary-color"
+                  slot === s && " bg-primary-color"
                 }`}
                 onClick={() => {
-                  setSelectedSlot(s);
+                  setSlot(s);
                 }}
               >
                 <span>{s}</span>
@@ -261,7 +259,7 @@ const SlotPicker = ({ data }) => {
       </div>
       <EnrollButton
         applyClasses="py-4 mt-4 text-lg"
-        disabled={!Boolean(selectedSlot) && true}
+        disabled={!Boolean(slot) && true}
       >
         Book your slot at &#x20b9; {data.price}
       </EnrollButton>

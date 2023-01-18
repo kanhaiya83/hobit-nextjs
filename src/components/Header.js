@@ -6,7 +6,6 @@ import GradientButton from "./GradientButton";
 const Header = () => {
     const {isAuthenticated,loading,setIsAuthModalOpen}  = useAuthContext();
     const btnAction = loading ? null :(isAuthenticated ? ()=>{logout()} : ()=>{setIsAuthModalOpen(true)})
-    console.log(loading,isAuthenticated)
   return (
     <>
       <header className="w-full absolute top-0 left-0 z-20">
