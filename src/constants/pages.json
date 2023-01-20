@@ -103,7 +103,7 @@
       }
     ],
     "slots": {
-      "morning": ["5AM", "6AM", "7AM", "8AM"],
+      "morning": ["5AM", "6AM", "7AM", "8AM","9AM"],
       "evening": ["5PM", "6PM", "7PM", "8PM", "9PM"]
     }
   }
