@@ -47,6 +47,7 @@ const SlidingTestimonials = ({data}) => {
                     alt=""
                     className="select-none w-full h-auto"
                     draggable="false"
+                    quality={100}
                   />
                 </div>
               </SwiperSlide>

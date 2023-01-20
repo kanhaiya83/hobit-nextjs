@@ -1,12 +1,5 @@
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-} from "@chakra-ui/react";
-import { useState } from "react";
+import Image from "next/image";
+import { useRef, useState } from "react";
 import EnrollButton from "./EnrollButton";
 import SectionHeading from "./SectionHeading";
 
@@ -34,8 +27,8 @@ const FAQSection = ({ data }) => {
     },
   ];
   return (
-    <div class="bg-white w-full py-10 px-[5%]">
-      <div class="max-w-[900px] mx-auto">
+    <div className="bg-white w-full py-10 px-[5%]">
+      <div className="max-w-[900px] mx-auto">
         <SectionHeading className={"mb-2"}>
           Frequently Asked Questions
           <br />( FAQ )
@@ -46,19 +39,18 @@ const FAQSection = ({ data }) => {
           <span className=" text-blue-700">support@hobit.in</span>. Our amazing
           support team will reply within 12 hours. 🙂
         </h4>
-        <Accordion allowToggle>
+        <ul className="flex flex-col items-stretch">
           {List.map((l, i) => {
-            return (
-              <FAQ key={i} index={i} question={l.question} answer={l.answer} />
-            );
-          })}
-
-        </Accordion>
-        {List.map((l, i) => {
-            return (
-              <CustomAccordion key={i} index={i} question={l.question} answer={l.answer} />
-            );
-          })}
+          return (
+            <AccordionItem
+              key={i}
+              index={i}
+              question={l.question}
+              answer={l.answer}
+            />
+          );
+        })}
+        </ul>
         <EnrollButton applyClasses="my-8">
           Sale at &#x20b9; {data.price}
         </EnrollButton>
@@ -67,33 +59,28 @@ const FAQSection = ({ data }) => {
   );
 };
 
-const FAQ = ({ question, answer }) => {
-  return (
-    <AccordionItem>
-      <h2>
-        <AccordionButton fontSize={20} py={5}>
-          <Box as="span" flex="1" textAlign="left">
-            {question}
-          </Box>
-          <AccordionIcon />
-        </AccordionButton>
-      </h2>
-      <AccordionPanel pb={4} fontSize={18}>
-        {answer}
-      </AccordionPanel>
-    </AccordionItem>
-  );
-};
-const CustomAccordion = ({ question, answer }) => {
+const AccordionItem = ({ question, answer }) => {
   const [isActive, setIsActive] = useState(false);
-  return <div className="w-full flex flex-col  px-4 border-b border-slate-200">
-      <div className="flex items-center  text-xl py-5 cursor-pointer hover:bg-slate-50" onClick={() => setIsActive(!isActive)}>
-        <div>{question}</div>
-        <div>{isActive ? "-" : "+"}</div>
+  const collapsibleRef = useRef();
+  return (
+    <div className="w-full flex flex-col border-b border-slate-200">
+      <div
+        className="flex items-center justify-between   py-5 cursor-pointer hover:bg-[#f3f3f3] rounded"
+        onClick={() => setIsActive(!isActive)}
+      >
+        <h1 className="text-xl px-4">{question}</h1>
+        <div className={`w-8 h-8 relative mr-[5%] transition-all ${isActive && "rotate-180"}`}>
+            <Image src="/images/chevron-down.svg" alt="Chevron" fill={true} style={{objectFit:"contain"}}/>
+        </div>
       </div>
-      <div className={`transition-[transform] origin-top duration-200 ease-linear overflow-hidden ${isActive ? "scale-y-100" : "scale-y-0"}`}>
-        <h3 className="text-lg text-slate-700">{answer}</h3>
+      <div
+        className={`transition-[max-height] max-h-0 duration-100 ease-in overflow-hidden`}
+        style={{maxHeight:isActive?collapsibleRef?.current?.scrollHeight:"0px"}}
+        ref={collapsibleRef}
+      >
+        <h3 className="text-lg text-slate-700 p-4">{answer}</h3>
       </div>
     </div>
+  );
 };
 export default FAQSection;

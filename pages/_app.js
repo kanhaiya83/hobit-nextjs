@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import "../styles/index.css";
 import "../styles/firebase.css";
 import { AuthContextProvider } from "../src/context/authContext";
-import { ChakraProvider } from '@chakra-ui/react'
 import Head from 'next/head'
 import localFont from '@next/font/local'
 
@@ -43,14 +42,12 @@ export default function App({ Component, pageProps }) {
     <title>Hobit</title>
         <link rel="shortcut icon" href="/images/logo.png" />
     </Head>
-    <ChakraProvider>
       <AuthContextProvider>
           <main className={`${gilroy.variable} font-sans`}>
 
           <Component {...pageProps} />
           </main>
 s      </AuthContextProvider>
-      </ChakraProvider>
       <ToastContainer/>
     </>
   );
