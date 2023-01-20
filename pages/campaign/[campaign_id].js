@@ -15,7 +15,7 @@ import VideoTestimonialSection from "../../src/components/VideoTestimonialSectio
 import { useAuthContext } from "../../src/context/authContext";
 import { auth } from "../../src/utils/firebase";
 import { useRouter } from "next/router";
-import { RazorpayContextProvider } from "../../src/context/razorpayContext";
+// import { RazorpayContextProvider } from "../../src/context/razorpayContext";
 import Divider from "../../src/components/Divider";
 
 export default function CampaignPage({ data }) {
@@ -35,7 +35,7 @@ const pid = router.query;
   }, [isAuthenticated]);
   return (
     <>
-    <RazorpayContextProvider pageData={data}>
+    {/* <RazorpayContextProvider pageData={data}> */}
       <div id="recaptcha-container" style={{ width: "100%" }}></div>
       <Header />
       <TopSection data={data} />
@@ -57,7 +57,7 @@ const pid = router.query;
       <Footer />
 
       <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
-      </RazorpayContextProvider>
+      {/* </RazorpayContextProvider> */}
     </>
   );
 }
