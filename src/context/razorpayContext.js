@@ -1,4 +1,4 @@
-import React, { useContext, useCallback } from "react";
+import React, { useContext } from "react";
 import useRazorpay from "react-razorpay";
 import { auth } from "../utils/firebase";
 import { errorToast, successToast, warnToast } from "../utils/toast";

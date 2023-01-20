@@ -14,7 +14,6 @@
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "firebase": "^9.0.0",
-    "framer-motion": "^8.1.9",
     "moment": "^2.29.4",
     "next": "13.1.1",
     "phone": "^3.1.32",
@@ -31,6 +30,7 @@
     "tailwind-merge": "^1.8.1"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "autoprefixer": "^10.4.13",
     "next-unused": "^0.0.6",
     "postcss": "^8.4.20",
