@@ -20,9 +20,9 @@ const featuredInList = [
 ];
 const FeaturedSection = () => {
   return (
-    <div class="my-10 md:my-15 py-6 w-full flex flex-col items-center px-[5%]">
+    <div className="my-10 md:my-15 py-6 w-full flex flex-col items-center px-[5%]">
       <SectionHeading>Featured In</SectionHeading>
-      <div class="grid grid-cols-2 md:grid-cols-4 max-w-[900px] w-full gap-x-[5%] gap-y-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 max-w-[900px] w-full gap-x-[5%] gap-y-8">
         {featuredInList.map((item, index) => {
           return (
             <a

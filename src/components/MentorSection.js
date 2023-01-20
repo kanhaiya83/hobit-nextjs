@@ -10,7 +10,7 @@ const MentorSection = ({ data }) => {
       </SectionHeading>
       <div className="flex flex-col md:flex-row items-center justify-center  gap-4">
         <div className="flex-1 max-w-[400px] rounded-md overflow-hidden">
-          <div class="w-full pt-[100%] relative">
+          <div className="w-full pt-[100%] relative">
           <Image src={data.instructor.image} alt="Instructor" fill={true} style={{objectFit:"cover"}}/>
           </div>
         </div>

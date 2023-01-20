@@ -10,7 +10,7 @@ const SlidingTestimonials = ({data}) => {
   const {testimonialsImages} = data;
   SwiperCore.use(Autoplay);
   return (
-    <div class="my-10 md:my-15 w-full max-w-[1100px] mx-auto text-center px-[5%] px-4">
+    <div className="my-10 md:my-15 w-full max-w-[1100px] mx-auto text-center px-[5%] px-4">
       <div className="text-center md:max-w-xl lg:max-w-3xl mx-auto">
         <SectionHeading className={"mb-2"}> Testimonials</SectionHeading>
         <p className="mb-6 pb-2 md:mb-12 md:pb-0">

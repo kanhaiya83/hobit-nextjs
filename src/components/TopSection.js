@@ -106,7 +106,7 @@ const InfoCard = ({ data }) => {
       <div className="my-8">
         <h1 className="text-2xl text-slate-200 mb-4">Meet your instructor</h1>
         <div className="flex items-center justify-center  gap-4">
-          <div class="max-w-[300px] w-full ">
+          <div className="max-w-[300px] w-full ">
             <div className=" rounded-md overflow-hidden relative pt-[100%]">
               <Image
                 src={data.instructor.image}
