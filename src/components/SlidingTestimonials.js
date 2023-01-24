@@ -23,8 +23,8 @@ const SlidingTestimonials = ({data}) => {
           autoplay={{ delay: 3000 }}
           breakpoints={{
             400: {
-              slidesPerView: 1,
-              spaceBetween: 0,
+              slidesPerView: 1.2,
+              spaceBetween: 10,
             },
             768: {
               slidesPerView: 2,

@@ -11,7 +11,7 @@ const CheckboxSection = ({ data }) => {
           <SectionHeading className={"mb-2"}>
             Still Wondering If This Virtual Class Is For You?
           </SectionHeading>
-          <h1 className="text-2xl text-slate-700 mb-8 mx-auto text-center">
+          <h1 className="md:text-2xl text-slate-700 mb-8 mx-auto text-center">
           Please Check All Boxes Where Your Answer Is YES!
           </h1>
           <div className="w-full flex flex-col gap-y-4">
@@ -19,7 +19,7 @@ const CheckboxSection = ({ data }) => {
               return <CheckBoxContainer key={t.id} text={t.text} />;
             })}
           </div>
-          <h1 className="text-2xl font-medium text-center px-1 my-8 text-slate-800">
+          <h1 className="text-lg md:text-2xl font-medium text-center px-1 my-8 text-slate-800">
         If you checked ANY of the boxes above, then you’re invited to join <span className=" text-[#FFAC32]">The {data.daysCount} Days Transformative {data.activity_name} Program</span>
         </h1>
 
