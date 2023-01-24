@@ -30,7 +30,7 @@ const TopSection = ({ data }) => {
         />
       </div>
       <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 md:px-[10%]">
+        <h1 className="text-2xl md:text-5xl font-bold mb-4 md:px-[10%]">
           {/* <GradientText>{data.title}</GradientText> */}
           {titleEl}
         </h1>
@@ -53,7 +53,7 @@ const InfoCard = ({ data }) => {
   return (
     <div className="flex-1 mx-2 rounded-xl bg-dark-secondary-color p-5">
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
-        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
           <Image
             width={20}
             height={20}
@@ -65,7 +65,7 @@ const InfoCard = ({ data }) => {
             30 Days
           </span>
         </div>
-        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
           <Image
             width={20}
             height={20}
@@ -77,7 +77,7 @@ const InfoCard = ({ data }) => {
             Starts from {moment(data.startDate).format("Do MMMM,YYYY")}
           </span>
         </div>
-        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
           <Image
             width={20}
             height={20}
@@ -89,7 +89,7 @@ const InfoCard = ({ data }) => {
             Virtual Class + QnA chat
           </span>
         </div>
-        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
           <Image
             width={20}
             height={20}
@@ -105,8 +105,8 @@ const InfoCard = ({ data }) => {
       {/* Intructor */}
       <div className="my-8">
         <h1 className="text-2xl text-slate-200 mb-4">Meet your instructor</h1>
-        <div className="flex items-center justify-center  gap-4">
-          <div className="max-w-[300px] w-full ">
+        <div className="flex items-center justify-center gap-4">
+          <div className="max-w-[300px] flex-[4]">
             <div className=" rounded-md overflow-hidden relative pt-[100%]">
               <Image
                 src={data.instructor.image}
@@ -117,8 +117,8 @@ const InfoCard = ({ data }) => {
               />
             </div>
           </div>
-          <div className="flex flex-col">
-            <h3 className="text-2xl font-bold mb-1">{data.instructor.name}</h3>
+          <div className="flex flex-col  flex-[6]">
+            <h3 className="text-lg md:text-2xl font-bold mb-1">{data.instructor.name}</h3>
             <h3 className="text-sm text-slate-400">
               {data.instructor.description}
             </h3>
@@ -126,7 +126,7 @@ const InfoCard = ({ data }) => {
         </div>
       </div>
       <div className="grid grid-cols-2 w-full gap-2 mb-8">
-        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
           <Image
             width={20}
             height={20}
@@ -138,7 +138,7 @@ const InfoCard = ({ data }) => {
             Personilzed Diet Plans
           </span>
         </div>
-        <div className=" bg-dark-primary-color px-2 md:px-4 h-20 rounded-xl flex justify-start items-center">
+        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
           <Image
             width={20}
             height={20}
@@ -159,7 +159,7 @@ const VideoCard = ({ data }) => {
     <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
       <VideoPlayer video={data.video} />
       <EnrollButton applyClasses={"mb-4"}>
-        {`Enroll Now(Starts ${moment(data.startDate).format("Do MMMM,YYYY")})`}
+        Book your slot at &#x20b9; {data.price}
       </EnrollButton>
       <h4 className="text-lg text-slate-200 font-medium">
         Reserve a seat before {moment(data.startDate).format("Do MMMM,YYYY")}
@@ -258,7 +258,7 @@ const SlotPicker = ({ data }) => {
         </div>
       </div>
       <EnrollButton
-        applyClasses="py-4 mt-4 text-lg"
+        applyClasses="py-4 mt-4"
         disabled={!Boolean(slot) && true}
       >
         Book your slot at &#x20b9; {data.price}

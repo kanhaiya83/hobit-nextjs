@@ -20,15 +20,18 @@ const featuredInList = [
 ];
 const FeaturedSection = () => {
   return (
-    <div className="my-10 md:my-15 py-6 w-full flex flex-col items-center px-[5%]">
-      <SectionHeading>Featured In</SectionHeading>
+    <div className="bg-dark-primary-color mb-10 md:mb-15 py-6 w-full flex flex-col items-center px-[5%]">
+      <SectionHeading className={"text-slate-200"}>Featured In</SectionHeading>
       <div className="grid grid-cols-2 md:grid-cols-4 max-w-[900px] w-full gap-x-[5%] gap-y-8">
         {featuredInList.map((item, index) => {
           return (
-            <a
+            <div
+            className=" bg-dark-secondary-color rounded-lg py-2"
+            key={index}
+            >
+              <a
               href={item.link}
-              className="relative h-[70px]"
-              key={index}
+              className="relative h-[50px]  block"
               target="_blank"
               rel="noreferrer"
             >
@@ -39,6 +42,7 @@ const FeaturedSection = () => {
                 style={{ objectFit: "contain" }}
               />
             </a>
+            </div>
           );
         })}
       </div>

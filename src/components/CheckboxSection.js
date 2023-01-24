@@ -35,14 +35,14 @@ const CheckBoxContainer = ({ text }) => {
   return (
     <div className="flex items-center py-4 px-5 bg-[#f7f7f7] hover:bg-[#ededed] rounded-md">
       <CheckBox/>
-      <h3 className="text-lg font-medium ml-2">{text}</h3>
+      <h3 className="tmd:ext-lg font-medium ml-2">{text}</h3>
     </div>
   );
 };
 const CheckBox = () => {
   const [checked,setChecked] = useState(false)
   return (
-    <button className="w-8 h-8 border-primary-color border-2 rounded relative aspect-square" onClick={()=>{setChecked(prev=>!prev)}}>
+    <button className="w-5 h-5 md:w-8 md:h-8  border-primary-color border-2 rounded relative aspect-square" onClick={()=>{setChecked(prev=>!prev)}}>
       {checked && <div className="absolute top-0 left-0 w-full h-full">
         <Image src="/images/tick.svg" width={30} height={30}  alt="Check mark" />
       </div>}

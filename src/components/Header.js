@@ -10,7 +10,7 @@ const Header = () => {
         <div className="wrapper flex justify-end px-[5%] pt-5">
           <div className="btn-container max-w-[200px]">
           <button
-            className="rounded font-medium px-6 py-2 md:py-3 text-xl  w-full text-white gradient-btn"
+            className="rounded font-medium px-6 py-2 md:py-3 md:text-xl  w-full text-white gradient-btn"
             onClick={btnAction}
           >
             {loading?"Loading":(isAuthenticated ? "Logout" : "Login")}
