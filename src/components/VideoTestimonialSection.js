@@ -3,11 +3,11 @@ import EnrollButton from "./EnrollButton";
 const videoTestimonials = [
   {
     src: "https://user-images.githubusercontent.com/76777058/213711162-3246f27d-fbfd-489e-a7bc-1d14e982e81b.mp4",
-    thumbnail: "https://user-images.githubusercontent.com/76777058/214374912-47c0d644-3100-49d6-8da5-ef7a58a05d97.png",
+    thumbnail: "https://user-images.githubusercontent.com/76777058/214374975-6df5544d-6481-41f2-9d80-58689c525aa5.png",
   },
   {
     src: "https://user-images.githubusercontent.com/76777058/213711184-5eb620b3-723e-4c66-bd6b-67f39cb433c8.mp4",
-    thumbnail: "https://user-images.githubusercontent.com/76777058/214374975-6df5544d-6481-41f2-9d80-58689c525aa5.png",
+    thumbnail: "https://user-images.githubusercontent.com/76777058/214374912-47c0d644-3100-49d6-8da5-ef7a58a05d97.png",
   },
 ];
 const VideoTestimonialSection = ({ data }) => {
