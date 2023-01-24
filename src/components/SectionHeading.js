@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge'
 
 const SectionHeading = ({children,className}) => {
   return (
-    <h1 className={twMerge(`text-xl md:text-4xl font-bold text-center text-slate-800 w-full mb-8 ${className}`)}>{children}</h1>
+    <h1 className={twMerge(`text-2xl md:text-4xl font-bold text-center text-slate-800 w-full mb-8 ${className}`)}>{children}</h1>
   )
 }
 
