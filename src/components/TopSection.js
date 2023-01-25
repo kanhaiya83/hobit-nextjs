@@ -214,9 +214,11 @@ const VideoPlayer = ({ video }) => {
 const SlotPicker = ({ data }) => {
   const {slot,setSlot}=useAuthContext()
   return (
-    <div className="flex flex-col items-start mt-8 w-full" id="slot-picker">
-      <h1 className="text-2xl text-slate-200 mb-4 font-medium">
-        Select your time slot
+    <div className="flex flex-col items-start mt-8 w-full max-w-[700px]" id="slot-picker">
+      <h1 className="text-lg md:text-2xl text-slate-200 mb-4 font-medium">
+        Not getting flexible time slots?
+        <br/>
+        You can choose any of these time slots everyday according to your convenience.
       </h1>
       <div className="flex flex-col items-start gap-2 mb-4 w-full">
         <h4 className="text-slate-400 text-sm md:text-base">Morning Slots</h4>
