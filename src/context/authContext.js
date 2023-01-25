@@ -15,7 +15,9 @@ export const AuthContextProvider = ({children})=>{
     useEffect(()=>{
       if(user){
         setIsAuthModalOpen(false);
+        return;
       }
+      setHasEnrolled(false)
     },[user])
     const value = {isAuthenticated:Boolean(user),loading, error,isAuthModalOpen,setIsAuthModalOpen,hasEnrolled,setHasEnrolled,slot,setSlot}
 
