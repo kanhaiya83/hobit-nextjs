@@ -21,12 +21,12 @@ const VideoTestimonialSection = ({ data }) => {
       <h4 className="text-2xl text-slate-800 font-medium text-center w-full mb-4">
         Reserve a seat before 10th Jan&apos;23 to join the January batch.
       </h4>
-      <EnrollButton applyClasses={"flex justify-center py-4 md:py-6"}>
+      <EnrollButton applyClasses={"py-4 md:py-6"}>
         30 Days transformative Zumba class in &#x20b9;&nbsp;
         <span className="line-through text-slate-200 font-thin">
           {data.before_discount_price}
         </span>
-        <span className="ml-1 text-2xl font-bold">{data.price}</span>
+        <span className="ml-1 text-xl md:text-2xl font-bold">{data.price}</span>
       </EnrollButton>
     </section>
   );

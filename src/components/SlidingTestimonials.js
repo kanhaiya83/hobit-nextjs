@@ -22,9 +22,9 @@ const SlidingTestimonials = ({data}) => {
         <Swiper
           autoplay={{ delay: 3000 }}
           breakpoints={{
-            400: {
+            300: {
               slidesPerView: 1.2,
-              spaceBetween: 10,
+              spaceBetween: 5,
             },
             768: {
               slidesPerView: 2,
@@ -39,7 +39,7 @@ const SlidingTestimonials = ({data}) => {
           {testimonialsImages.map((img, i) => {
             return (
               <SwiperSlide key={i}>
-                <div className=" p-2 rounded pt-[157%]">
+                <div className=" p-2 rounded pt-[135%]">
                   <Image
                     src={img}
                     fill={true}

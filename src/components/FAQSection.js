@@ -68,8 +68,8 @@ const AccordionItem = ({ question, answer }) => {
         className="flex items-center justify-between   py-5 cursor-pointer"
         onClick={() => setIsActive(!isActive)}
       >
-        <h1 className="text-lg md:text-xl px-4 font-semibold text-slate-700">{question}</h1>
-        <div className={`w-8 h-8 relative mr-[5%] transition-all ${isActive && "rotate-180"}`}>
+        <h1 className="text-base md:text-xl px-4 font-semibold text-slate-700">{question}</h1>
+        <div className={`w-6 h-6 relative mr-[5%] transition-all ${isActive && "rotate-180"}`}>
             <Image src="/images/chevron-down.svg" alt="Chevron" fill={true} style={{objectFit:"contain"}}/>
         </div>
       </div>

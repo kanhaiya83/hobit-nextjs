@@ -6,7 +6,12 @@
       { "gradient": "Lose Belly fat " },
       { "normal": "& Sky Rocket your confidence in just 30 days." }
     ],
-    "description": "Virtual Programme through which I have transformed 10k+ lives in last seven years.",
+    "description": [
+      {"gradient":"Virtual Programme "},
+      {"normal":"through which I have transformed "},
+      { "gradient": "10k+ " },
+      { "normal": "lives in last seven years." }
+    ],
     "before_discount_price": 1299,
     "price": 999,
     "instructor": {

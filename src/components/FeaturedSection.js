@@ -26,7 +26,7 @@ const FeaturedSection = () => {
         {featuredInList.map((item, index) => {
           return (
             <div
-            className=" bg-dark-secondary-color rounded-lg p-2"
+            className=" bg-dark-secondary-color rounded-lg px-8 py-3"
             key={index}
             >
               <a
