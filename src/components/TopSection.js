@@ -106,7 +106,7 @@ const InfoCard = ({ data }) => {
             src="/images/planner.svg"
             alt=""
           /> */}
-          <span className="text-base md:text-base font-semibold ml-3 text-left">
+          <span className="text-base md:text-base font-semibold ml-3 text-center">
             Personilzed Diet Plans
           </span>
         </div>
@@ -118,7 +118,7 @@ const InfoCard = ({ data }) => {
             src="/images/clock.svg"
             alt=""
           /> */}
-          <span className="text-base md:text-base font-semibold ml-3 text-left">
+          <span className="text-base md:text-base font-semibold ml-3 text-center">
             Convinient Time Slots
           </span>
         </div>
