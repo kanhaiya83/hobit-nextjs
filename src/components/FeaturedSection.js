@@ -20,7 +20,7 @@ const featuredInList = [
 ];
 const FeaturedSection = () => {
   return (
-    <div className="bg-dark-primary-color mb-10 md:mb-15 py-6 w-full flex flex-col items-center px-[5%]">
+    <div className="bg-dark-primary-color mb-10 md:mb-15 pt-5 md:pt-8 pb-8 md:pb-20 w-full flex flex-col items-center px-[5%]">
       <SectionHeading className={"text-slate-200"}>Featured In</SectionHeading>
       <div className="grid grid-cols-2 md:grid-cols-4 max-w-[900px] w-full gap-x-[5%] gap-y-8">
         {featuredInList.map((item, index) => {

@@ -1,10 +1,9 @@
 import moment from "moment";
 import Image from "next/image";
-import { useState } from "react";
-import { twMerge } from "tailwind-merge";
-import { useAuthContext } from "../context/authContext";
 import EnrollButton from "./EnrollButton";
 import GradientText from "./GradientText";
+import SlotPicker from "./SlotPicker";
+import VideoPlayer from "./VideoPlayer";
 // import moment from "moment/moment";
 const ParsedGradientText=(textData)=>{
 
@@ -16,6 +15,22 @@ const ParsedGradientText=(textData)=>{
       return <span key={i}>{txt["normal"]}</span>;
     });
   }
+}
+const FeaturedCard=({image,text})=>{
+  return(
+    <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
+    <Image
+      width={20}
+      height={20}
+      priority={true}
+      src={image}
+      alt=""
+    />
+    <span className="text-xs md:text-base font-semibold ml-3 text-left">
+      {text}
+    </span>
+  </div>
+  )
 }
 const TopSection = ({ data }) => {
  
@@ -33,7 +48,6 @@ const TopSection = ({ data }) => {
       </div>
       <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
         <h1 className="flex flex-col md:block text-xl md:text-5xl font-bold mb-4 max-w-[80%] md:max-w-[90%]">
-          {/* <GradientText>{data.title}</GradientText> */}
           {ParsedGradientText(data.title)}
         </h1>
         <h5 className="text-sm md:text-lg font-medium md:px-[15%] mx-auto my-2">
@@ -55,54 +69,10 @@ const InfoCard = ({ data }) => {
   return (
     <div className="flex-1 mx-2 rounded-xl bg-dark-secondary-color p-5">
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
-        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
-          <Image
-            width={20}
-            height={20}
-            priority={true}
-            src="/images/calender.svg"
-            alt=""
-          />
-          <span className="text-xs md:text-base font-semibold ml-3 text-left">
-            30 Days
-          </span>
-        </div>
-        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
-          <Image
-            width={20}
-            height={20}
-            priority={true}
-            src="/images/double-chevron-right.svg"
-            alt=""
-          />
-          <span className="text-xs md:text-base font-semibold ml-3 text-left">
-            Starts from {moment(data.startDate).format("Do MMMM,YYYY")}
-          </span>
-        </div>
-        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
-          <Image
-            width={20}
-            height={20}
-            priority={true}
-            src="/images/video.svg"
-            alt=""
-          />
-          <span className="text-xs md:text-base font-semibold ml-3 text-left">
-            Virtual Class + QnA chat
-          </span>
-        </div>
-        <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
-          <Image
-            width={20}
-            height={20}
-            priority={true}
-            src="/images/hour-glass.svg"
-            alt="users"
-          />
-          <span className="text-xs md:text-base font-semibold ml-3 text-left">
-            40-45 minutes/class
-          </span>
-        </div>
+        <FeaturedCard text="30 Days" image="/images/calender.svg"/>
+        <FeaturedCard text={`Starts from ${moment(data.startDate).format("Do MMMM,YYYY")}`} image="/images/double-chevron-right.svg"/>
+        <FeaturedCard text="Virtual Class + QnA chat" image="/images/video.svg"/>
+        <FeaturedCard text="40-45 minutes/class" image="/images/hour-glass.svg"/>
       </div>
       {/* Intructor */}
       <div className="my-8">
@@ -156,6 +126,7 @@ const InfoCard = ({ data }) => {
     </div>
   );
 };
+
 const VideoCard = ({ data }) => {
   return (
     <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
@@ -167,106 +138,6 @@ const VideoCard = ({ data }) => {
         Reserve a seat before {moment(data.startDate).format("Do MMMM,YYYY")}
       </h4>
       <h4 className="text-slate-300">Limited seats available</h4>
-    </div>
-  );
-};
-const VideoPlayer = ({ video }) => {
-  const [playVideo, setPlayVIdeo] = useState(false);
-  const handleClick = () => {
-    setPlayVIdeo(true);
-  };
-  return (
-    <div className="w-full mb-5 pt-[56%] bg-slate-800 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full">
-        {playVideo ? (
-          <video className="w-full relative" playsInline autoPlay muted loop>
-            <source src={video.src} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        ) : (
-          <div>
-            <Image
-              src={video.thumbnail}
-              alt="Introduction"
-              className="opacity-50 w-full"
-              fill={true}
-              style={{ objectFit: "cover" }}
-              priority={true}
-            />
-            <button
-              className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col items-center bg-slate-800 bg-opacity-50 p-2 rounded-lg"
-              onClick={handleClick}
-            >
-              <Image
-                src="/images/play.svg"
-                alt="Play"
-                width={32}
-                height={32}
-                priority={true}
-              />
-              <span className="text-sm">Watch Trailer</span>
-            </button>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-const SlotPicker = ({ data }) => {
-  const {slot,setSlot}=useAuthContext()
-  return (
-    <div className="flex flex-col items-start mt-8 w-full max-w-[700px]" id="slot-picker">
-      <h1 className=" mb-4 font-medium">
-        <span class="text-lg md:text-2xl font-medium">Not getting flexible time slots?</span>
-        <br/>
-        <span class="md:text-xl text-slate-400">You can choose any of these time slots everyday according to your convenience.</span>
-      </h1>
-      <div className="flex flex-col items-start gap-2 mb-4 w-full">
-        <h4 className="text-slate-400 text-sm md:text-base">Morning Slots</h4>
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 w-full">
-          {data.slots["morning"].map((s) => {
-            return (
-              <button
-                key={s}
-                className={twMerge(`px-4 py-2 border-slate-500 text-slate-300 border-2 rounded ${
-                  slot === s && " border-primary-color text-white bg-primary-color"
-                }`)}
-                onClick={() => {
-                  setSlot(s);
-                }}
-              >
-                <span>{s}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-      <div className="flex flex-col items-start gap-2 mb-4 w-full">
-        <h4 className="text-slate-400 text-sm md:text-base">Evening Slots</h4>
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 w-full">
-          {data.slots["evening"].map((s) => {
-            return (
-              <button
-                key={s}
-                className={twMerge(`px-4 py-2 border-slate-500 text-slate-300 border-2 rounded ${
-                  slot === s && " border-primary-color text-white bg-primary-color"
-                }`)}
-                onClick={() => {
-                  setSlot(s);
-                }}
-              >
-                <span>{s}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-      <EnrollButton
-        applyClasses="py-4 mt-4"
-        disabled={!Boolean(slot) && true}
-      >
-        Book your slot at &#x20b9; {data.price}
-      </EnrollButton>
     </div>
   );
 };
