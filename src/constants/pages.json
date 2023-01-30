@@ -14,13 +14,19 @@
     ],
     "primaryCards": [
       { "text": "30 Days", "image": "/images/cards/calender.svg" },
-      { "text": "Starts from ", "image": "/images/cards/double-chevron-right.svg" },
-      { "text": "Virtual Class + QnA chat", "image": "/images/cards/video.svg" },
+      {
+        "text": "Starts from ",
+        "image": "/images/cards/double-chevron-right.svg"
+      },
+      {
+        "text": "Virtual Class + QnA chat",
+        "image": "/images/cards/video.svg"
+      },
       { "text": "40-45 minutes/class", "image": "/images/cards/hour-glass.svg" }
     ],
     "secondaryCards": [
-      { "text": "Personalized Diet Plans"},
-      { "text": "Convenient Time Slots"}
+      { "text": "Personalized Diet Plans" },
+      { "text": "Convenient Time Slots" }
     ],
     "before_discount_price": 1299,
     "price": 999,
@@ -78,6 +84,7 @@
         "text": "You want to stay fit,healthy and increase your strength?"
       }
     ],
+    "testimonialsHeading":"1000+ people people from all over the world have taken the classes.",
     "testimonialsImages": [
       "https://user-images.githubusercontent.com/76777058/212974664-1dc1eb30-efa9-4752-be6d-866b2d740438.jpeg",
       "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
@@ -142,13 +149,22 @@
     ],
     "primaryCards": [
       { "text": "60 Days", "image": "/images/cards/calender.svg" },
-      { "text": "40-45 minutes/class", "image": "/images/cards/hour-glass.svg" },
-      { "text": "Virtual Class + QnA chat", "image": "/images/cards/video.svg" },
-      { "text": "Starts from 10th Jan'23", "image": "/images/cards/double-chevron-right.svg" }
+      {
+        "text": "40-45 minutes/class",
+        "image": "/images/cards/hour-glass.svg"
+      },
+      {
+        "text": "Virtual Class + QnA chat",
+        "image": "/images/cards/video.svg"
+      },
+      {
+        "text": "Starts from 10th Jan'23",
+        "image": "/images/cards/double-chevron-right.svg"
+      }
     ],
     "secondaryCards": [
-      { "text": "Recipes  "},
-      { "text": "Convenient Time Slots"}
+      { "text": "Recipes  " },
+      { "text": "Convenient Time Slots" }
     ],
     "before_discount_price": 1299,
     "price": 999,
@@ -202,6 +218,7 @@
         "text": "You don't want to rely on any third person to cook food for you?"
       }
     ],
+    "testimonialsHeading":"5000+ people people from all over the world have mastered their art of indian cooking with us.",
     "testimonialsImages": [
       "https://user-images?githubusercontent.com/76777058/212974664-1dc1eb30-efa9-4752-be6d-866b2d740438.jpeg",
       "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
@@ -263,26 +280,35 @@
     ],
     "primaryCards": [
       { "text": "30 Days", "image": "/images/cards/calender.svg" },
-      { "text": "40-45 minutes/class", "image": "/images/cards/hour-glass.svg" },
-      { "text": "Virtual Class + QnA chat", "image": "/images/cards/video.svg" },
-      { "text": "Starts from 11th Jan'23", "image": "/images/cards/double-chevron-right.svg" }
+      {
+        "text": "40-45 minutes/class",
+        "image": "/images/cards/hour-glass.svg"
+      },
+      {
+        "text": "Virtual Class + QnA chat",
+        "image": "/images/cards/video.svg"
+      },
+      {
+        "text": "Starts from 11th Jan'23",
+        "image": "/images/cards/double-chevron-right.svg"
+      }
     ],
     "secondaryCards": [
-      { "text": "Beginner friendly"},
-      { "text": "Convenient Time Slots"}
+      { "text": "Beginner friendly" },
+      { "text": "Convenient Time Slots" }
     ],
     "before_discount_price": 1299,
     "price": 999,
     "instructor": {
-      "name": "Mr. Prince Sharma",
-      "image": "/images/instructors/prince_sharma.jpg",
-      "profession": "Zumba Intructor",
-      "description": "Prince Jain has guided a number of people through their cooking journey. Currently he holds 2+ years of experience in teaching individuals Cooking."
+      "name": "Ms. Nidhi Thakkar",
+      "image": "/images/instructors/nidhi_thakkar.jpg",
+      "profession": "Belly Dance Intructor",
+      "description": "Nidhi is a CA turned professional belly dancer with 7+ years of experience.She is a master when it comes to guiding and teaching techniques of the Belly Dance and gracefully performing the same."
     },
-    "bgImage": "/images/backgrounds/cooking.jpg",
+    "bgImage": "/images/backgrounds/belly-dance.jpg",
     "video": {
-      "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Zumba+Tutor+Videos1-1.mp4",
-      "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Newposterapp/Zumba2.jpeg"
+      "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",
+      "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/4-12-2021/19Bellydance.jpg"
     },
     "startDate": 1699145775000,
     "endDate": 1674145775000,
@@ -290,39 +316,40 @@
     "advantages": [
       {
         "id": 1,
-        "text": "Learn the basic"
+        "text": "Learn the basics of the belly dance and the foundation iconic movements that every dancer should know."
       },
       {
         "id": 2,
-        "text": "You will master the measurement of dry & fresh ingredients adn learn about spices and herbs."
+        "text": "Step-By-Step movement instructions that will you fill confident,flexible adn energized."
       },
       {
         "id": 3,
-        "text": "You will become a confident home cook,even if you have never liked cooking.It's easier than you think."
+        "text": "You will learn about belly dance drill,combinations and choreography."
       },
       {
         "id": 4,
-        "text": "You will learn how to setup your own kitchen,use appliances and many more."
+        "text": "Only a willingness to have fun adn learn.No other prerequisites"
       }
     ],
     "checklist": [
       {
         "id": 1,
-        "text": "You want to say 'No' to boring food & cook amazing dishes daily that you will be proud of?"
+        "text": "You want to get a great foundation in belly dance hand have a great workout at same time?"
       },
       {
         "id": 2,
-        "text": "You want to go beyond 'chai' & 'maggi' and you culinary journey?"
+        "text": "You want to get in shape(or same time) and have a blast at same time?"
       },
       {
         "id": 3,
-        "text": "You want to save money and impress you friends with your cooking skills like a master chef?"
+        "text": "You want to perform an original belly dance choreography?"
       },
       {
         "id": 4,
-        "text": "You don't want to rely on any third person to cook food for you?"
+        "text": "You want to feel and learn the real magic of Belly Dance?"
       }
     ],
+    "testimonialsHeading":"10,000+ students from all over the world have started their Belly Dance journey with us.",
     "testimonialsImages": [
       "https://user-images?githubusercontent.com/76777058/212974664-1dc1eb30-efa9-4752-be6d-866b2d740438.jpeg",
       "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
@@ -363,8 +390,141 @@
       }
     ],
     "slots": {
-      "morning": ["05:00AM", "06:00AM", "07:00AM", "08:00AM"],
-      "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM"]
+      "morning": ["05:00AM", "06:00AM", "07:00AM", "08:00AM", "09:00AM"],
+      "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM", "09:00PM"]
+    }
+  },
+  {
+    "campaign_id": "bhangra",
+    "activity_name": "bhangra Fitness",
+    "title": [
+      { "normal": "Burn unwanted calories and feel " },
+      { "gradient": "Happier " },
+      { "normal": "& " },
+      { "gradient": "Healthier " },
+      { "normal": "in 30 days." }
+    ],
+    "header": "Do Bhangra, Be Happy, Feel Free",
+    "description": [
+      { "gradient": "Virtual Programme " },
+      { "normal": "through which I have trained " },
+      { "gradient": "15,000+ " },
+      { "normal": "people in last 10 years." }
+    ],
+    "primaryCards": [
+      { "text": "30 Days", "image": "/images/cards/calender.svg" },
+      {
+        "text": "40-45 minutes/class",
+        "image": "/images/cards/hour-glass.svg"
+      },
+      {
+        "text": "Virtual Class + QnA chat",
+        "image": "/images/cards/video.svg"
+      },
+      {
+        "text": "Starts from 11th Jan'23",
+        "image": "/images/cards/double-chevron-right.svg"
+      }
+    ],
+    "secondaryCards": [
+      { "text": "Personalized Diet Plan" },
+      { "text": "Convenient Time Slots" }
+    ],
+    "before_discount_price": 1299,
+    "price": 999,
+    "instructor": {
+      "name": "Ms. Rahul Sabharwal",
+      "image": "/images/instructors/rahul_sabharwal.jpg",
+      "profession": "Belly Dance Intructor",
+      "description": "Nidhi is a CA turned professional belly dancer with 7+ years of experience.She is a master when it comes to guiding and teaching techniques of the Belly Dance and gracefully performing the same."
+    },
+    "bgImage": "/images/backgrounds/belly-dance.jpg",
+    "video": {
+      "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",
+      "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/4-12-2021/19Bellydance.jpg"
+    },
+    "startDate": 1699145775000,
+    "endDate": 1674145775000,
+    "daysCount": 30,
+    "advantages": [
+      {
+        "id": 1,
+        "text": "Full body workout with Powerful Bhangra Moves"
+      },
+      {
+        "id": 2,
+        "text": "Burn unwanted calories."
+      },
+      {
+        "id": 3,
+        "text": "Beginner friendly sessions."
+      },
+      {
+        "id": 4,
+        "text": "Improve your body posture,strength adn flexibility."
+      }
+    ],
+    "checklist": [
+      {
+        "id": 1,
+        "text": "Your are a beginner and you want to lose belly fat?"
+      },
+      {
+        "id": 2,
+        "text": "Your schedule is hectic and you  want take classes on a convenient time slot??"
+      },
+      {
+        "id": 3,
+        "text": "You want to create a customized diet for yourself?"
+      },
+      {
+        "id": 4,
+        "text": "You want to stay fit,healthy and increase your strength?"
+      }
+    ],
+    "testimonialsHeading":"5000+ people people from all over the world have started their fitness journey with us.",
+    "testimonialsImages": [
+      "https://user-images?githubusercontent.com/76777058/212974664-1dc1eb30-efa9-4752-be6d-866b2d740438.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974677-1249e8a5-df10-457e-b514-ef2a29798a97.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974681-9a5a04d9-f9e1-4832-8dc4-f0c04fdc26f6.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974688-7183fff8-bb18-472d-8632-111e3be4a2c9.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974693-3c635c0b-cd33-41e6-a419-c3c30748e0f6.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974695-46a620e2-391b-47e5-a1a6-ba12c082eb04.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974698-5cd7b95f-2c62-4e7d-a58b-14e59bad58d4.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974702-31c8d967-9182-4720-b2c4-f21805b1c09e.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974712-3463eb28-0ec2-443b-9baf-c53fba618cad.jpeg"
+    ],
+    "faqs": [
+      {
+        "id": 1,
+        "question": "Will I get to interact with my tutor?",
+        "answer": "Yes! All the doubts and queries would be addressed through built in chat option and WhatsApp portal would also be active where your tutor would respond you within 24 hours of addressing your query."
+      },
+      {
+        "id": 2,
+        "question": "Who all can attend this course?",
+        "answer": "Anyone struggling with weight gain or a non- consistent workout routine can hop onto these sessions."
+      },
+      {
+        "id": 3,
+        "question": "Do I need any equipment?",
+        "answer": "No! These are no equipment workouts for you to practice them easily at home."
+      },
+      {
+        "id": 4,
+        "question": "What is the procedure after I purchase this course?",
+        "answer": "Once you register for our sessions, your course will be visible to you in ‘My stuff’. You can select your desired time slot once each day and can attend your session."
+      },
+      {
+        "id": 5,
+        "question": "What if I miss a session?",
+        "answer": "In case you miss a session, don’t worry. We offer flexible time slots to our users. You can select your desired time slot each day."
+      }
+    ],
+    "slots": {
+      "morning": ["05:00AM", "06:00AM", "07:00AM", "08:00AM", "09:00AM"],
+      "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM", "09:00PM"]
     }
   }
 ]

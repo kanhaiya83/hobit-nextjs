@@ -14,7 +14,7 @@ const AdvantagesSection = ({data}) => {
                         <div className="mr-2 relative w-5 h-5 md:w-8 md:h-8">
                         <Image src="/images/checked-circle.svg" alt="" fill={true} style={{objectFit:"fill"}}/>
                         </div>
-                        <h4 className='text-sm md:text-2xl font-medium'>{adv.text}</h4>
+                        <h4 className='text-sm md:text-2xl font-medium md:font-normal'>{adv.text}</h4>
                     </div>
                 </li>
             })}

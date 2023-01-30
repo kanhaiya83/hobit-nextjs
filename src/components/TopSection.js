@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import EnrollButton from "./EnrollButton";
 import GradientText from "./GradientText";
 import SlotPicker from "./SlotPicker";
+import { VideoJSPlayer } from "./VideoJsPlayer";
 import VideoPlayer from "./VideoPlayer";
 
 const ParsedGradientText = (textData) => {
@@ -107,9 +108,20 @@ const InfoCard = ({ data }) => {
 };
 
 const VideoCard = ({ data }) => {
+  const videoJsOptions = {
+    controls: true,
+    responsive: true,
+    fluid: true,
+    preload:"none",
+    poster:data.video.thumbnail,
+    sources: [{
+      src: data.video.src,
+      type: 'video/mp4'
+    }]
+  };
   return (
     <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
-      <VideoPlayer video={data.video} />
+       <VideoJSPlayer options={videoJsOptions} />
       <EnrollButton applyClasses={"mb-4 py-6 md:py-4"}>
         Enroll now at &#x20b9; {data.price}
       </EnrollButton>

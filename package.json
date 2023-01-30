@@ -27,7 +27,8 @@
     "react-toastify": "^9.1.1",
     "shortid": "^2.2.16",
     "swiper": "^8.4.5",
-    "tailwind-merge": "^1.8.1"
+    "tailwind-merge": "^1.8.1",
+    "video.js": "^7.21.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
