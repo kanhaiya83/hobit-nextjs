@@ -75,7 +75,7 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { campaign_id: "zumba" } },
-      // { params: { campaign_id: "bellydance" } },
+      { params: { campaign_id: "cooking" } },
       // { params: { campaign_id: "bollywooddance" } },
       // { params: { campaign_id: "kathak" } },
       // { params: { campaign_id: "bhangra" } },

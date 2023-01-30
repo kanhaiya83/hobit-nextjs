@@ -1,12 +1,12 @@
 import moment from "moment";
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 import EnrollButton from "./EnrollButton";
 import GradientText from "./GradientText";
 import SlotPicker from "./SlotPicker";
 import VideoPlayer from "./VideoPlayer";
-// import moment from "moment/moment";
-const ParsedGradientText=(textData)=>{
 
+const ParsedGradientText = (textData) => {
   if (textData) {
     return textData.map((txt, i) => {
       if (txt["gradient"]) {
@@ -15,25 +15,18 @@ const ParsedGradientText=(textData)=>{
       return <span key={i}>{txt["normal"]}</span>;
     });
   }
-}
-const FeaturedCard=({image,text})=>{
-  return(
-    <div className=" bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
-    <Image
-      width={20}
-      height={20}
-      priority={true}
-      src={image}
-      alt=""
-    />
-    <span className="text-xs md:text-base font-semibold ml-3 text-left">
-      {text}
-    </span>
-  </div>
-  )
-}
+};
+const FeaturedCard = ({ card,isSecondaryCard}) => {
+  return (
+    <div className={twMerge(`bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center ${isSecondaryCard && "px-1"}`)}>
+      {!isSecondaryCard && <Image width={20} height={20} priority={true} src={card?.image} alt="" />}
+      <span  className={twMerge(`text-xs md:text-base font-semibold ml-3 text-left ${isSecondaryCard && "text-base text-center"}`)}>
+        {card.text}
+      </span>
+    </div>
+  );
+};
 const TopSection = ({ data }) => {
- 
   return (
     <div className="bg-dark-primary-color w-full text-white relative overflow-hidden z-10 px-[5%] py-4">
       <div className="bg-dark-primary-color absolute top-0 left-0 w-full h-full flex items-start justify-start">
@@ -47,6 +40,12 @@ const TopSection = ({ data }) => {
         />
       </div>
       <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
+        {Boolean(data?.header) && (
+          <h5 className="text-base md:text-xl font-medium md:px-[15%] mx-auto my-2 text-slate-100">
+            {data.header}
+          </h5>
+        )}
+
         <h1 className="flex flex-col md:block text-xl md:text-5xl font-bold mb-4 max-w-[80%] md:max-w-[90%]">
           {ParsedGradientText(data.title)}
         </h1>
@@ -69,10 +68,9 @@ const InfoCard = ({ data }) => {
   return (
     <div className="flex-1 mx-2 rounded-xl bg-dark-secondary-color p-5">
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
-        <FeaturedCard text="30 Days" image="/images/calender.svg"/>
-        <FeaturedCard text={`Starts from ${moment(data.startDate).format("Do MMMM,YYYY")}`} image="/images/double-chevron-right.svg"/>
-        <FeaturedCard text="Virtual Class + QnA chat" image="/images/video.svg"/>
-        <FeaturedCard text="40-45 minutes/class" image="/images/hour-glass.svg"/>
+        {data.primaryCards.map((c, i) => {
+          return <FeaturedCard key={i} card={c} />;
+        })}
       </div>
       {/* Intructor */}
       <div className="my-8">
@@ -90,7 +88,9 @@ const InfoCard = ({ data }) => {
             </div>
           </div>
           <div className="flex flex-col  flex-[6] text-left">
-            <h3 className="text-xl md:text-2xl font-bold mb-1">{data.instructor.name}</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-1">
+              {data.instructor.name}
+            </h3>
             <h3 className="text-xs md:text-sm text-slate-400 ">
               {data.instructor.description}
             </h3>
@@ -98,30 +98,9 @@ const InfoCard = ({ data }) => {
         </div>
       </div>
       <div className="grid grid-cols-2 w-full gap-2 mb-8">
-        <div className=" bg-dark-primary-color px-1 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
-          {/* <Image
-            width={20}
-            height={20}
-            priority={true}
-            src="/images/planner.svg"
-            alt=""
-          /> */}
-          <span className="text-base md:text-base font-semibold ml-3 text-center">
-            Personilzed Diet Plans
-          </span>
-        </div>
-        <div className=" bg-dark-primary-color px-1 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center">
-          {/* <Image
-            width={20}
-            height={20}
-            priority={true}
-            src="/images/clock.svg"
-            alt=""
-          /> */}
-          <span className="text-base md:text-base font-semibold ml-3 text-center">
-            Convinient Time Slots
-          </span>
-        </div>
+      {data.secondaryCards.map((c, i) => {
+          return <FeaturedCard key={i} card={c} isSecondaryCard={true}/>;
+        })}
       </div>
     </div>
   );
