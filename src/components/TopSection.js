@@ -5,7 +5,6 @@ import EnrollButton from "./EnrollButton";
 import GradientText from "./GradientText";
 import SlotPicker from "./SlotPicker";
 import { VideoJSPlayer } from "./VideoJsPlayer";
-import VideoPlayer from "./VideoPlayer";
 
 const ParsedGradientText = (textData) => {
   if (textData) {
@@ -30,15 +29,16 @@ const FeaturedCard = ({ card,isSecondaryCard}) => {
 const TopSection = ({ data }) => {
   return (
     <div className="bg-dark-primary-color w-full text-white relative overflow-hidden z-10 px-[5%] py-4">
-      <div className="bg-dark-primary-color absolute top-0 left-0 w-full h-full flex items-start justify-start">
+      <div className="bg-dark-primary-color absolute top-0 left-0 w-full h-screen flex items-start justify-start">
         <Image
           src={data.bgImage}
           fill={true}
           style={{ objectFit: "contain", objectPosition: "0% 0%" }}
           alt="background"
-          className="w-[50%]"
           priority={true}
         />
+        <div className="vertical-black-gradient absolute top-0 left-0 w-full h-full"></div>
+        <div className="horizontal-black-gradient absolute top-0 left-0 w-full h-full"></div>
       </div>
       <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
         {Boolean(data?.header) && (
@@ -122,7 +122,7 @@ const VideoCard = ({ data }) => {
   return (
     <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
        <VideoJSPlayer options={videoJsOptions} />
-      <EnrollButton applyClasses={"mb-4 py-6 md:py-4"}>
+      <EnrollButton applyClasses={"mb-4 py-6 md:py-4 mt-5"}>
         Enroll now at &#x20b9; {data.price}
       </EnrollButton>
       <h4 className="md:text-lg text-slate-200 font-medium">

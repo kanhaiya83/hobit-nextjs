@@ -81,3 +81,14 @@
     background-position: 0 50%;
   }
 }
+.vertical-black-gradient{
+  background: rgb(1,1,1);
+background: linear-gradient(180deg, rgba(1,1,1,0.2) 6%, rgba(1,1,1,1) 78%);
+
+
+}
+.horizontal-black-gradient{
+  background: rgb(1,1,1);
+background: linear-gradient(90deg, rgba(1,1,1,0.2) 6%, rgba(1,1,1,1) 68%);
+
+}
