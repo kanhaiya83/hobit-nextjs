@@ -57,6 +57,7 @@ export const RazorpayContextProvider = ({ children,pageData }) => {
   //     console.log(e);
   //   }
   // }
+  const handlePayment=()=>{}
   return (
     <razorpayContext.Provider value={{handlePayment,pageData}}>
       {children}
