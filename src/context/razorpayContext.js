@@ -4,7 +4,7 @@ import { auth } from "../utils/firebase";
 import { errorToast, successToast, warnToast } from "../utils/toast";
 import { useAuthContext } from "./authContext";
 import logoImage from "./../../public/images/logo.png"
-const razorpayContext = React.createContext({ isAuthenticated: false });
+const razorpayContext = React.createContext({handlePayment:()=>{},pageData:{}});
 
 export const useRazorpayContext = () => useContext(razorpayContext);
 
