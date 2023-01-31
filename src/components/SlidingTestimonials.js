@@ -57,6 +57,9 @@ const SlidingTestimonials = ({ data }) => {
                     alt=""
                     className="select-none w-full h-auto"
                     draggable="false"
+                    sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 25vw,
+              20vw"
                     quality={100}
                   />
                 </div>

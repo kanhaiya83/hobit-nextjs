@@ -113,6 +113,7 @@ const VideoCard = ({ data }) => {
   };
   const videoJsOptions = {
   autoplay:"any",
+  muted:true,
     controls: true,
     responsive: true,
     fluid: true,
