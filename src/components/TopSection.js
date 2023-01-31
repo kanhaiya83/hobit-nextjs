@@ -1,5 +1,6 @@
 import moment from "moment";
 import Image from "next/image";
+import { useRef } from "react";
 import { twMerge } from "tailwind-merge";
 import EnrollButton from "./EnrollButton";
 import GradientText from "./GradientText";
@@ -37,8 +38,6 @@ const TopSection = ({ data }) => {
           alt="background"
           priority={true}
         />
-        <div className="vertical-black-gradient absolute top-0 left-0 w-full h-full"></div>
-        <div className="horizontal-black-gradient absolute top-0 left-0 w-full h-full"></div>
       </div>
       <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
         {Boolean(data?.header) && (
@@ -108,7 +107,12 @@ const InfoCard = ({ data }) => {
 };
 
 const VideoCard = ({ data }) => {
+  const playerRef = useRef(null);
+  const handlePlayerReady =async  (player) => {
+    
+  };
   const videoJsOptions = {
+  autoplay:"any",
     controls: true,
     responsive: true,
     fluid: true,
@@ -121,7 +125,7 @@ const VideoCard = ({ data }) => {
   };
   return (
     <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
-       <VideoJSPlayer options={videoJsOptions} />
+       <VideoJSPlayer options={videoJsOptions} onReady={handlePlayerReady}/>
       <EnrollButton applyClasses={"mb-4 py-6 md:py-4 mt-5"}>
         Enroll now at &#x20b9; {data.price}
       </EnrollButton>

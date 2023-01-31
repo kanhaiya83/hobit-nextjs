@@ -122,9 +122,7 @@
     "activity_name": "Cooking",
     "title": [
       { "normal": "Save " },
-      { "gradient": "Money " },
-      { "normal": "& " },
-      { "gradient": "Health " },
+      { "gradient": "Money & Health" },
       { "normal": "by making amazing food like Masterchef " },
       { "gradient": "Prince Sharma" }
     ],
@@ -363,9 +361,7 @@
     "activity_name": "bhangra Fitness",
     "title": [
       { "normal": "Burn unwanted calories and feel " },
-      { "gradient": "Happier " },
-      { "normal": "& " },
-      { "gradient": "Healthier " },
+      { "gradient": "Happier & Healthier" },
       { "normal": "in 30 days." }
     ],
     "header": "Do Bhangra, Be Happy, Feel Free",
