@@ -3,6 +3,7 @@ import { useState } from "react";
 import Modal from "react-modal";
 import EnrollButton from "./EnrollButton";
 import CrossImage from "./../../public/images/cross.svg"
+import VideoJSPlayer from "./VideoJsPlayer";
 const customStyles = {
   content: {
     top: "50%",
@@ -82,15 +83,18 @@ const Testimonial = ({ video }) => {
           />
         </button>
         <div class="w-full max-w-[900px] px-2">
-          <video
-            controls
-            preload="none"
-            className="w-full"
-            autoPlay
-          >
-            <source src={video.src} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <VideoJSPlayer
+            options={{
+              autoplay:"any"  ,
+              controls: true,
+              responsive: true,
+              fluid: true,
+              preload:"none",
+              sources: [{
+                src: video.src,
+                type: 'video/mp4'
+              }]
+            }}/>
         </div>
       </Modal>
       <div
