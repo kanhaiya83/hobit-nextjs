@@ -99,12 +99,16 @@ const Testimonial = ({ video }) => {
           setIsOpen(true);
         }}
       >
-        <img src={video.thumbnail} alt=""/>
+        <div className="pt-[57%] overflow-hidden relative">
+        <Image src={video.thumbnail} fill={true} priority={true} sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 25vw,
+              20vw"/>
+</div>          
+
         <div class="bg-black absolute left-0 top-0 w-full h-full bg-opacity-40"></div>
-        <button class="absolute top-[50%] left-[50%] translate-x-[-50%]  translate-y-[-50%] w-14 p-2 rounded-md">
-          <img className="w-full" src="/images/play.svg" alt="" />
+        <button class="absolute top-[50%] left-[50%] translate-x-[-50%]  translate-y-[-50%] w-14 h-14 p-2 rounded-md">
+          <Image src="/images/play.svg" fill={true} style={{objectFit:"contain"}}/>
         </button>
-        {/* <h4 class="text-2xl font-semibold absolute bottom-0 left-0 w-full text-white">{`"${video.thumbnailText}"`}</h4> */}
       </div>
     </>
   );
