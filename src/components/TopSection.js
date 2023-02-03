@@ -72,6 +72,12 @@ const InfoCard = ({ data }) => {
           return <FeaturedCard key={i} card={c} />;
         })}
       </div>
+      <div className={twMerge(`bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-center items-center mt-2`)}>
+       <Image width={20} height={20} priority={true} src={"/images/cards/five-icon.svg"} alt="" />
+      <span  className={twMerge(`text-xs md:text-base font-semibold ml-3 text-left`)}>
+        Monday to Friday
+      </span>
+    </div>
       {/* Intructor */}
       <div className="my-8">
         <h1 className="text-2xl text-slate-200 mb-4">Meet your instructor</h1>
