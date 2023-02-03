@@ -157,7 +157,7 @@
     "instructor": {
       "name": "Mr. Prince Sharma",
       "image": "/images/instructors/prince_sharma.jpg",
-      "profession": "Zumba Intructor",
+      "profession": "Cooking Instructor",
       "description": "Prince Jain has guided a number of people through their cooking journey. Currently he holds 2+ years of experience in teaching individuals Cooking."
     },
     "bgImage": "/images/backgrounds/cooking.jpg",
@@ -395,8 +395,8 @@
     "instructor": {
       "name": "Ms. Rahul Sabharwal",
       "image": "/images/instructors/rahul_sabharwal.jpg",
-      "profession": "Belly Dance Intructor",
-      "description": "Nidhi is a CA turned professional belly dancer with 7+ years of experience.She is a master when it comes to guiding and teaching techniques of the Belly Dance and gracefully performing the same."
+      "profession": "Bhangra Intructor",
+      "description": "Rahul is a professional bhangra dancer with several years of experience.He is a master when it comes to guiding and teaching techniques of the Bhangra Dance and gracefully performing the same."
     },
     "bgImage": "/images/backgrounds/zumba.jpg",
     "video": {
