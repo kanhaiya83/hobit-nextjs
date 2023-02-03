@@ -17,11 +17,31 @@ const ParsedGradientText = (textData) => {
     });
   }
 };
-const FeaturedCard = ({ card,isSecondaryCard}) => {
+const FeaturedCard = ({ card, isSecondaryCard }) => {
   return (
-    <div className={twMerge(`bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center ${isSecondaryCard && "px-1"}`)}>
-      {!isSecondaryCard && <Image width={20} height={20} priority={true} src={card?.image} alt="" />}
-      <span  className={twMerge(`text-xs md:text-base font-semibold ml-3 text-left ${isSecondaryCard && "text-base text-center"}`)}>
+    <div
+      className={twMerge(
+        `bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-start items-center ${
+          isSecondaryCard && "px-1"
+        }`
+      )}
+    >
+      {!isSecondaryCard && (
+        <Image
+          width={20}
+          height={20}
+          priority={true}
+          src={card?.image}
+          alt=""
+        />
+      )}
+      <span
+        className={twMerge(
+          `text-xs md:text-base font-semibold ml-3 text-left ${
+            isSecondaryCard && "text-base text-center"
+          }`
+        )}
+      >
         {card.text}
       </span>
     </div>
@@ -72,12 +92,26 @@ const InfoCard = ({ data }) => {
           return <FeaturedCard key={i} card={c} />;
         })}
       </div>
-      <div className={twMerge(`bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-center items-center mt-2`)}>
-       <Image width={20} height={20} priority={true} src={"/images/cards/five-icon.svg"} alt="" />
-      <span  className={twMerge(`text-xs md:text-base font-semibold ml-3 text-left`)}>
-        Monday to Friday
-      </span>
-    </div>
+      <div
+        className={twMerge(
+          `bg-dark-primary-color px-2 md:px-4 py-4 md:py-6 rounded-xl flex justify-center items-center mt-2`
+        )}
+      >
+        <Image
+          width={20}
+          height={20}
+          priority={true}
+          src={"/images/cards/five-icon.svg"}
+          alt=""
+        />
+        <span
+          className={twMerge(
+            `text-xs md:text-base font-semibold ml-3 text-left`
+          )}
+        >
+          Monday to Friday
+        </span>
+      </div>
       {/* Intructor */}
       <div className="my-8">
         <h1 className="text-2xl text-slate-200 mb-4">Meet your instructor</h1>
@@ -104,8 +138,8 @@ const InfoCard = ({ data }) => {
         </div>
       </div>
       <div className="grid grid-cols-2 w-full gap-2 mb-8">
-      {data.secondaryCards.map((c, i) => {
-          return <FeaturedCard key={i} card={c} isSecondaryCard={true}/>;
+        {data.secondaryCards.map((c, i) => {
+          return <FeaturedCard key={i} card={c} isSecondaryCard={true} />;
         })}
       </div>
     </div>
@@ -114,25 +148,24 @@ const InfoCard = ({ data }) => {
 
 const VideoCard = ({ data }) => {
   const playerRef = useRef(null);
-  const handlePlayerReady =async  (player) => {
-    
-  };
+  const handlePlayerReady = async (player) => {};
   const videoJsOptions = {
-  autoplay:"any",
-  muted:true,
+    autoplay: "any",
     controls: true,
     responsive: true,
     fluid: true,
-    preload:"none",
-    poster:data.video.thumbnail,
-    sources: [{
-      src: data.video.src,
-      type: 'video/mp4'
-    }]
+    preload: "none",
+    poster: data.video.thumbnail,
+    sources: [
+      {
+        src: data.video.src,
+        type: "video/mp4",
+      },
+    ],
   };
   return (
     <div className="flex-1 mx-2 rounded-xl rounded-xl overflow-hidden mb-4">
-       <VideoJSPlayer options={videoJsOptions} onReady={handlePlayerReady}/>
+      <VideoJSPlayer options={videoJsOptions} onReady={handlePlayerReady} />
       <EnrollButton applyClasses={"mb-4 py-6 md:py-4 mt-5"}>
         Enroll now at &#x20b9; {data.price}
       </EnrollButton>

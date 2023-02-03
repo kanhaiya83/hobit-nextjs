@@ -36,6 +36,7 @@
       "profession": "Zumba Intructor",
       "description": "Priyanka Saini has guided a number of people through their weight loss journey. Currently she holds 7+ years of experience in training corporates and industries for Zumba."
     },
+    "btnText":"30 days transformative Zumba class in ",
     "bgImage": "/images/backgrounds/zumba.jpg",
     "video": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Zumba+Tutor+Videos1-1.mp4",
@@ -122,7 +123,7 @@
     "activity_name": "Cooking",
     "title": [
       { "normal": "Save " },
-      { "gradient": "Money & Health" },
+      { "gradient": "Money & Health " },
       { "normal": "by making amazing food like Masterchef " },
       { "gradient": "Prince Sharma" }
     ],
@@ -160,6 +161,7 @@
       "profession": "Cooking Instructor",
       "description": "Prince Jain has guided a number of people through their cooking journey. Currently he holds 2+ years of experience in teaching individuals Cooking."
     },
+    "btnText":"Learn the art of cooking in 60 days for ",
     "bgImage": "/images/backgrounds/cooking.jpg",
     "video": {
       "src": "/videos/cooking.mp4",
@@ -279,6 +281,7 @@
       "profession": "Belly Dance Intructor",
       "description": "Nidhi is a CA turned professional belly dancer with 7+ years of experience.She is a master when it comes to guiding and teaching techniques of the Belly Dance and gracefully performing the same."
     },
+    "btnText":"Learn the Belly Dance Art from ",
     "bgImage": "/images/backgrounds/zumba.jpg",
     "video": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",
@@ -361,7 +364,7 @@
     "activity_name": "bhangra Fitness",
     "title": [
       { "normal": "Burn unwanted calories and feel " },
-      { "gradient": "Happier & Healthier" },
+      { "gradient": "Happier & Healthier " },
       { "normal": "in 30 days." }
     ],
     "header": "Do Bhangra, Be Happy, Feel Free",
@@ -398,6 +401,7 @@
       "profession": "Bhangra Fitness Intructor",
       "description": "Rahul is a professional bhangra fitness intructor with several years of experience.He is a master when it comes to guiding and teaching techniques of the Bhangra Dance and gracefully performing the same."
     },
+    "btnText":"30 days transformative Bhangra class in ",
     "bgImage": "/images/backgrounds/zumba.jpg",
     "video": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",

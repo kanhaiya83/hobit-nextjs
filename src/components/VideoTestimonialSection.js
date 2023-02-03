@@ -50,7 +50,7 @@ const VideoTestimonialSection = ({ data }) => {
         Reserve a seat before 10th Jan&apos;23 to join the January batch.
       </h4>
       <EnrollButton applyClasses={"py-4 md:py-6"}>
-        30 Days transformative Zumba class in &#x20b9;&nbsp;
+        {data.btnText}&#x20b9;&nbsp;
         <span className="line-through text-slate-200 font-thin">
           {data.before_discount_price}
         </span>
