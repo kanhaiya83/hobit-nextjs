@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import EnrollButton from "./EnrollButton";
 import SectionHeading from "./SectionHeading";
 import Image from "next/image";
-const testimonialsImages = [
+const _testimonialsImages = [
   "https://user-images.githubusercontent.com/76777058/212974664-1dc1eb30-efa9-4752-be6d-866b2d740438.jpeg",
   "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
   "https://user-images.githubusercontent.com/76777058/212974677-1249e8a5-df10-457e-b514-ef2a29798a97.jpeg",
@@ -19,7 +19,10 @@ const testimonialsImages = [
   "https://user-images.githubusercontent.com/76777058/212974712-3463eb28-0ec2-443b-9baf-c53fba618cad.jpeg",
 ];
 const SlidingTestimonials = ({ data }) => {
-  const { testimonialsHeading } = data;
+  const { testimonialsHeading,testimonialsImages } = data;
+  if(!testimonialsHeading || !testimonialsImages || !testimonialsImages.length===0){
+    return ""
+  }
   SwiperCore.use(Autoplay);
   return (
     <div className="my-10 md:my-15 w-full max-w-[1100px] mx-auto text-center px-[5%] px-4">

@@ -155,10 +155,10 @@ const VideoCard = ({ data }) => {
     responsive: true,
     fluid: true,
     preload: "none",
-    poster: data.video.thumbnail,
+    poster: data.teaser.thumbnail,
     sources: [
       {
-        src: data.video.src,
+        src: data.teaser.src,
         type: "video/mp4",
       },
     ],

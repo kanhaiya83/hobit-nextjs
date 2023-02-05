@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import EnrollButton from "./EnrollButton";
 import CrossImage from "./../../public/images/cross.svg"
 import VideoJSPlayer from "./VideoJsPlayer";
+import { twMerge } from "tailwind-merge";
 const customStyles = {
   content: {
     top: "50%",
@@ -24,24 +25,14 @@ const customStyles = {
     zIndex: 1000,
   },
 };
-const videoTestimonials = [
-  {
-    src: "https://user-images.githubusercontent.com/76777058/213711162-3246f27d-fbfd-489e-a7bc-1d14e982e81b.mp4",
-    thumbnail:
-      "https://user-images.githubusercontent.com/76777058/214374975-6df5544d-6481-41f2-9d80-58689c525aa5.png",
-    thumbnailText: "I saw really good result in just 2 months.",
-  },
-  {
-    src: "https://user-images.githubusercontent.com/76777058/213711184-5eb620b3-723e-4c66-bd6b-67f39cb433c8.mp4",
-    thumbnail:
-      "https://user-images.githubusercontent.com/76777058/214551388-7fdaea10-1d7f-4fb0-aacc-967e8d661226.png",
-    thumbnailText: "100% satisfied with the product.",
-  },
-];
 const VideoTestimonialSection = ({ data }) => {
+  const {videoTestimonials} = data;
+  if(!videoTestimonials || videoTestimonials.length ===0){
+    return "";
+  }
   return (
-    <section className="my-10 md:my-20 text-gray-700 max-w-[1000px] mx-auto px-[5%]">
-      <div className="grid md:grid-cols-2 gap-6 lg:gap-12 text-center mb-8">
+    <section className="my-10 md:my-20 text-gray-700 max-w-[1200px] mx-auto">
+      <div className={twMerge(`grid md:grid-cols-3 gap-3 lg:gap-5 text-center mb-8 ${videoTestimonials.length ===2 && " gap-6 lg:gap-12 md:grid-cols-2" }`)}>
         {videoTestimonials.map((t, i) => {
           return <Testimonial key={i} video={t} />;
         })}
@@ -92,7 +83,7 @@ const Testimonial = ({ video }) => {
               preload:"none",
               sources: [{
                 src: video.src,
-                type: 'video/mp4'
+                type: video.type
               }]
             }}/>
         </div>
