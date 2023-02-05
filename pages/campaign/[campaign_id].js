@@ -78,6 +78,7 @@ export async function getStaticPaths() {
       { params: { campaign_id: "cooking" } },
       { params: { campaign_id: "bellydance" } },
       { params: { campaign_id: "bhangra" } },
+      { params: { campaign_id: "yoga" } }
     ],
     fallback: false,
   };
