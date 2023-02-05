@@ -32,7 +32,7 @@ const VideoTestimonialSection = ({ data }) => {
   }
   return (
     <section className="my-10 md:my-20 text-gray-700 max-w-[1200px] mx-auto">
-      <div className={twMerge(`grid md:grid-cols-3 gap-3 lg:gap-5 text-center mb-8 ${videoTestimonials.length ===2 && " gap-6 lg:gap-12 md:grid-cols-2" }`)}>
+      <div className={twMerge(`grid md:grid-cols-3 gap-3 lg:gap-5 text-center mb-8 px-[5%] md:px-0 ${videoTestimonials.length ===2 && " gap-6 lg:gap-12 md:grid-cols-2" }`)}>
         {videoTestimonials.map((t, i) => {
           return <Testimonial key={i} video={t} />;
         })}
