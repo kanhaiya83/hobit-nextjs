@@ -82,9 +82,14 @@ const Testimonial = ({ video }) => {
               fluid: true,
               preload:"none",
               sources: [{
-                src: video.src,
-                type: video.type
-              }]
+                src: video.webm,
+                type: "video/webm"
+              },
+              {
+                src: video.mp4,
+                type: "video/mp4"
+              }
+            ]
             }}/>
         </div>
       </Modal>

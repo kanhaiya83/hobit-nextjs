@@ -36,16 +36,28 @@
       "profession": "Zumba Instructor",
       "description": "Priyanka Saini has guided a number of people through their weight loss journey. Currently she holds 7+ years of experience in training corporates and industries for Zumba."
     },
-    "btnText":"30 days transformative Zumba class in ",
+    "btnText": "30 days transformative Zumba class in ",
     "bgImage": "/images/backgrounds/zumba.jpg",
     "teaser": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Zumba+Tutor+Videos1-1.mp4",
       "thumbnail": "/images/thumbnails/zumba.jpg"
     },
-    "videoTestimonials":[
-      {"src":"/videos/feedbacks/zumba-1.webm","type":"video/webm","thumbnail":"/images/thumbnails/zumba-feedback-1.png"},
-      {"src":"/videos/feedbacks/zumba-2.webm","type":"video/webm","thumbnail":"/images/thumbnails/zumba-feedback-2.png"},
-      {"src":"/videos/feedbacks/zumba-3.webm","type":"video/webm","thumbnail":"/images/thumbnails/zumba-feedback-3.png"}
+    "videoTestimonials": [
+      {
+        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687057/hobit/video-feedbacks/zumba-1_gnjmhs.webm",
+        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687057/hobit/video-feedbacks/zumba-1_gnjmhs.mp4",
+        "thumbnail": "/images/thumbnails/zumba-feedback-1.png"
+      },
+      {
+        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687052/hobit/video-feedbacks/zumba-2_gwiyct.webm",
+        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687052/hobit/video-feedbacks/zumba-2_gwiyct.mp4",
+        "thumbnail": "/images/thumbnails/zumba-feedback-2.png"
+      },
+      {
+        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687023/hobit/video-feedbacks/zumba-3_x0uqoz.webm",
+        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687023/hobit/video-feedbacks/zumba-3_x0uqoz.mp4",
+        "thumbnail": "/images/thumbnails/zumba-feedback-3.png"
+      }
     ],
     "startDate": 1699145775000,
     "endDate": 1674145775000,
@@ -91,17 +103,17 @@
       }
     ],
     "testimonialsHeading": "1000+ people people from all over the world have taken the classes.",
-    "testimonialsImages":[
+    "testimonialsImages": [
       "https://user-images.githubusercontent.com/76777058/212974664-1dc1eb30-efa9-4752-be6d-866b2d740438.jpeg",
-  "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
-  "https://user-images.githubusercontent.com/76777058/212974677-1249e8a5-df10-457e-b514-ef2a29798a97.jpeg",
-  "https://user-images.githubusercontent.com/76777058/212974681-9a5a04d9-f9e1-4832-8dc4-f0c04fdc26f6.jpeg",
-  "https://user-images.githubusercontent.com/76777058/212974688-7183fff8-bb18-472d-8632-111e3be4a2c9.jpeg",
-  "https://user-images.githubusercontent.com/76777058/212974693-3c635c0b-cd33-41e6-a419-c3c30748e0f6.jpeg",
-  "https://user-images.githubusercontent.com/76777058/212974695-46a620e2-391b-47e5-a1a6-ba12c082eb04.jpeg",
-  "https://user-images.githubusercontent.com/76777058/212974698-5cd7b95f-2c62-4e7d-a58b-14e59bad58d4.jpeg",
-  "https://user-images.githubusercontent.com/76777058/212974702-31c8d967-9182-4720-b2c4-f21805b1c09e.jpeg",
-  "https://user-images.githubusercontent.com/76777058/212974712-3463eb28-0ec2-443b-9baf-c53fba618cad.jpeg"
+      "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974677-1249e8a5-df10-457e-b514-ef2a29798a97.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974681-9a5a04d9-f9e1-4832-8dc4-f0c04fdc26f6.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974688-7183fff8-bb18-472d-8632-111e3be4a2c9.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974693-3c635c0b-cd33-41e6-a419-c3c30748e0f6.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974695-46a620e2-391b-47e5-a1a6-ba12c082eb04.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974698-5cd7b95f-2c62-4e7d-a58b-14e59bad58d4.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974702-31c8d967-9182-4720-b2c4-f21805b1c09e.jpeg",
+      "https://user-images.githubusercontent.com/76777058/212974712-3463eb28-0ec2-443b-9baf-c53fba618cad.jpeg"
     ],
     "faqs": [
       {
@@ -178,16 +190,24 @@
       "profession": "Cooking Instructor",
       "description": "Masterchef India fame, Prince Sharma is a celebrity chef and food industry trainer. He is well known for his chocolate & sugar art where he remains at the top for his creations.Learn all about the basics of baking with Masterchef himself.Relish not just your self baked desserts, but also the tips and tricks behind being a successful baker. Get ready to run your own successful bakery."
     },
-    "btnText":"Learn the art of cooking in 60 days for ",
+    "btnText": "Learn the art of cooking in 60 days for ",
     "bgImage": "/images/backgrounds/cooking.jpg",
     "teaser": {
       "src": "/videos/teasers/cooking-teaser.mp4",
       "thumbnail": "/images/thumbnails/cooking.jpg"
     },
-    "videoTestimonials":[
-      {"src":"/videos/feedbacks/cooking-1.webm","type":"video/webm","thumbnail":"/images/thumbnails/cooking-feedback-1.png"},
-      {"src":"/videos/feedbacks/cooking-2.webm","type":"video/webm","thumbnail":"/images/thumbnails/cooking-feedback-2.png"}
-        ],
+    "videoTestimonials": [
+      {
+        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687063/hobit/video-feedbacks/cooking-1_teqrlo.webm",
+        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687063/hobit/video-feedbacks/cooking-1_teqrlo.mp4",
+        "thumbnail": "/images/thumbnails/cooking-feedback-1.png"
+      },
+      {
+        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687066/hobit/video-feedbacks/cooking-2_v6htu8.webm",
+        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687066/hobit/video-feedbacks/cooking-2_v6htu8.mp4",
+        "thumbnail": "/images/thumbnails/cooking-feedback-2.png"
+      }
+    ],
     "startDate": 1699145775000,
     "endDate": 1674145775000,
     "daysCount": 30,
@@ -228,7 +248,7 @@
       }
     ],
     "testimonialsHeading": "5000+ people people from all over the world have mastered their art of indian cooking with us.",
-    "testimonialsImages":[
+    "testimonialsImages": [
       "/images/feedbacks/cooking1.png",
       "/images/feedbacks/cooking2.png",
       "/images/feedbacks/cooking3.png",
@@ -263,8 +283,8 @@
       }
     ],
     "slots": {
-      "morning": ["05:00AM", "06:00AM", "07:00AM", "08:00AM","09:00AM"],
-      "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM","09:00AM"]
+      "morning": ["05:00AM", "06:00AM", "07:00AM", "08:00AM", "09:00AM"],
+      "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM", "09:00AM"]
     }
   },
   {
@@ -309,15 +329,23 @@
       "profession": "Belly Dance Instructor",
       "description": "Nidhi Thakkar is a CA turned professional belly dancer with 7+ years of experience. She's the master when it comes to guiding through the techniques of belly dance and gracefully performing the same on Bollywood melodies.Learn beginner level isolation techniques for your muscles .It covers both, techniques and choreography to mould you into a professional belly dancer."
     },
-    "btnText":"Learn the Belly Dance Art from ",
+    "btnText": "Learn the Belly Dance Art from ",
     "bgImage": "/images/backgrounds/zumba.jpg",
     "teaser": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",
       "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/4-12-2021/19Bellydance.jpg"
     },
-    "videoTestimonials":[
-      {"src":"/videos/feedbacks/belly-dance-1.webm","type":"video/webm","thumbnail":"/images/thumbnails/belly-dance-feedback-1.png"},
-      {"src":"/videos/feedbacks/belly-dance-2.mp4","type":"video/mp4","thumbnail":"/images/thumbnails/belly-dance-feedback-2.png"}
+    "videoTestimonials": [
+      {
+        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687039/hobit/video-feedbacks/belly-dance-1_dpulqs.webm",
+        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687039/hobit/video-feedbacks/belly-dance-1_dpulqs.mp4",
+        "thumbnail": "/images/thumbnails/belly-dance-feedback-1.png"
+      },
+      {
+        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675686983/hobit/video-feedbacks/belly-dance-2_gwxlji.webm",
+        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675686983/hobit/video-feedbacks/belly-dance-2_gwxlji.mp4",
+        "thumbnail": "/images/thumbnails/belly-dance-feedback-2.png"
+      }
     ],
     "startDate": 1699145775000,
     "endDate": 1674145775000,
@@ -359,7 +387,7 @@
       }
     ],
     "testimonialsHeading": "10,000+ students from all over the world have started their Belly Dance journey with us.",
-    "testimonialsImages":[
+    "testimonialsImages": [
       "/images/feedbacks/belly1.png",
       "/images/feedbacks/belly2.png",
       "/images/feedbacks/belly3.png",
@@ -440,13 +468,13 @@
       "profession": "Bhangra Fitness Instructor",
       "description": "A certified bhangra fitness trainer, Rahul Sabharwal has guided a no.of people through his energetic bhangra fitness dance.Currently he holds 4+years of experience in bhangra fitness.Great for losing weight, building stamina, developing strength and improving flexibility."
     },
-    "btnText":"30 days transformative Bhangra class in ",
+    "btnText": "30 days transformative Bhangra class in ",
     "bgImage": "/images/backgrounds/zumba.jpg",
     "teaser": {
       "src": "/videos/teasers/bhangra-teaser.mp4",
-      "thumbnail":""
+      "thumbnail": ""
     },
-    "videoTestimonials":[],
+    "videoTestimonials": [],
     "startDate": 1699145775000,
     "endDate": 1674145775000,
     "daysCount": 30,
@@ -487,7 +515,7 @@
       }
     ],
     "testimonialsHeading": "5000+ people people from all over the world have started their fitness journey with us.",
-    "testimonialsImages":[
+    "testimonialsImages": [
       "/images/feedbacks/bhangra1.png",
       "/images/feedbacks/bhangra2.png",
       "/images/feedbacks/bhangra3.png",
@@ -568,13 +596,24 @@
       "profession": "Yoga Instructor",
       "description": "Nidhi Thakkar is a CA turned Yoga practitioner.She took a leap of faith and practices Ashtanga Vinyasa as her passion with her 7+ years experience.She is on a mission to transform thousands of lives."
     },
-    "btnText":"30 days transformative Yoga class in ",
+    "btnText": "30 days transformative Yoga class in ",
     "bgImage": "/images/backgrounds/zumba.jpg",
     "teaser": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",
       "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/4-12-2021/19Bellydance.jpg"
     },
-    "videoTestimonials":[],
+    "videoTestimonials": [
+      {
+        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687818/hobit/video-feedbacks/yoga-1_l98oz2.webm",
+        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687818/hobit/video-feedbacks/yoga-1_l98oz2.mp4",
+        "thumbnail": "/images/thumbnails/yoga-feedback-1.png"
+      },
+      {
+        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/b_rgb:000000,c_lpad,h_450,w_730/v1675687944/hobit/video-feedbacks/yoga-2_ourmtn.webm",
+        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/b_rgb:000000,c_lpad,h_450,w_730/v1675687944/hobit/video-feedbacks/yoga-2_ourmtn.mp4",
+        "thumbnail": "/images/thumbnails/yoga-feedback-2.png"
+      }
+    ],
     "startDate": 1699145775000,
     "endDate": 1674145775000,
     "daysCount": 30,
