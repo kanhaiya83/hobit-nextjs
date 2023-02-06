@@ -22,7 +22,7 @@ const FAQSection = ({ data }) => {
           support team will reply within 12 hours. 🙂
         </h4>
         <ul className="flex flex-col items-stretch">
-          {List.map((l, i) => {
+          {faqs.map((l, i) => {
           return (
             <AccordionItem
               key={i}
