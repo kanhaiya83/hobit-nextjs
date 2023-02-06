@@ -4,28 +4,10 @@ import EnrollButton from "./EnrollButton";
 import SectionHeading from "./SectionHeading";
 
 const FAQSection = ({ data }) => {
-  const List = [
-    {
-      question: "Will I get to interact with my tutor?",
-      answer:
-        "Yes! All the doubts and queries would be addressed through built in chat option and WhatsApp portal would also be active where your tutor would respond you within 24 hours of addressing your query.",
-    },
-    {
-      question: "Do I need any equipment?",
-      answer:
-        "No! These are no equipment workouts for you to practice them easily at home.",
-    },
-    {
-      question: "What is the procedure after I purchase this course?",
-      answer:
-        "Once you register for our sessions, your course will be visible to you in ‘My stuff’. You can select your desired time slot once each day and can attend your session.",
-    },
-    {
-      question: "What if I miss a session?",
-      answer:
-        "In case you miss a session, don’t worry. We offer flexible time slots to our users. You can select your desired time slot each day.",
-    },
-  ];
+  const {faqs} = data;
+  if(!faqs || faqs.length===0){
+    return ""
+  }
   return (
     <div className="bg-white w-full py-10 px-[5%]">
       <div className="max-w-[900px] mx-auto">
