@@ -654,6 +654,11 @@
       }
     ],
     "testimonialsHeading": "5000+ people people from all over the world have started their fitness journey with us.",
+    "testimonialsImages":[
+      "/images/feedbacks/yoga1.jpeg",
+      "/images/feedbacks/yoga2.jpeg",
+      "/images/feedbacks/yoga3.jpeg"
+    ],
     "faqs": [
       {
         "id": 1,
