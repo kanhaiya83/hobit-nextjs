@@ -3,13 +3,14 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import { successToast } from './toast';
 const config = {
-  apiKey: "AIzaSyCM6v2a9F-CeZLN4OmbZp-O0Qec7YMuS9w",
-  authDomain: "pankaj-landing-page.firebaseapp.com",
-  projectId: "pankaj-landing-page",
-  storageBucket: "pankaj-landing-page.appspot.com",
-  messagingSenderId: "939914453906",
-  appId: "1:939914453906:web:70a31bac85011d9d46174b",
-  measurementId: "G-ECCN9RJV1W"
+  apiKey: "AIzaSyAC3TjQ4_Wkzct5wgP6hJk2yoX-kY68rAI",
+  authDomain: "hobitapp-22cb6.firebaseapp.com",
+  databaseURL: "https://hobitapp-22cb6.firebaseio.com",
+  projectId: "hobitapp-22cb6",
+  storageBucket: "hobitapp-22cb6.appspot.com",
+  messagingSenderId: "337979726950",
+  appId: "1:337979726950:web:9b5945f198cb6097eea1a7",
+  measurementId: "G-8ME2CGF0DP"
 };
 firebase.initializeApp(config);
 const uiConfig = {
