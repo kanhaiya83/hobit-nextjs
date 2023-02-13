@@ -1,7 +1,8 @@
 import moment from "moment";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { twMerge } from "tailwind-merge";
+import { isElementInViewport } from "../utils";
 import EnrollButton from "./EnrollButton";
 import GradientText from "./GradientText";
 import SlotPicker from "./SlotPicker";
@@ -148,7 +149,18 @@ const InfoCard = ({ data }) => {
 
 const VideoCard = ({ data }) => {
   const playerRef = useRef(null);
-  const handlePlayerReady = async (player) => {};
+  const handlePlayerReady = async (player) => {
+    const interval=setInterval(()=>{
+      if(!player)return;
+      if(!isElementInViewport(player.el_)){
+        player.pause()
+      }
+
+    },1000)
+    if(!player){
+      clearInterval(interval)
+    }
+  };
   const videoJsOptions = {
     autoplay: "any",
     controls: true,
