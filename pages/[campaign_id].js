@@ -1,22 +1,22 @@
-import TopSection from "../../src/components/TopSection";
-import FAQSection from "../../src/components/FAQSection";
-import CheckboxSection from "../../src/components/CheckboxSection";
-import LoginModal from "../../src/components/LoginModal";
+import TopSection from "../src/components/TopSection";
+import FAQSection from "../src/components/FAQSection";
+import CheckboxSection from "../src/components/CheckboxSection";
+import LoginModal from "../src/components/LoginModal";
 import { useEffect, useState } from "react";
-import Header from "../../src/components/Header";
-import TimerSection from "../../src/components/TimerSection";
-import pagesData from "../../src/constants/pages.json";
-import Footer from "../../src/components/Footer";
-import FeaturedSection from "../../src/components/FeaturedSection";
-import SlidingTestimonials from "../../src/components/SlidingTestimonials";
-import MentorSection from "../../src/components/MentorSection";
-import AdvantagesSection from "../../src/components/AdvantagesSection";
-import VideoTestimonialSection from "../../src/components/VideoTestimonialSection";
-import { useAuthContext } from "../../src/context/authContext";
-import { auth } from "../../src/utils/firebase";
+import Header from "../src/components/Header";
+import TimerSection from "../src/components/TimerSection";
+import pagesData from "../src/constants/pages.json";
+import Footer from "../src/components/Footer";
+import FeaturedSection from "../src/components/FeaturedSection";
+import SlidingTestimonials from "../src/components/SlidingTestimonials";
+import MentorSection from "../src/components/MentorSection";
+import AdvantagesSection from "../src/components/AdvantagesSection";
+import VideoTestimonialSection from "../src/components/VideoTestimonialSection";
+import { useAuthContext } from "../src/context/authContext";
+import { auth } from "../src/utils/firebase";
 import { useRouter } from "next/router";
-import { RazorpayContextProvider } from "../../src/context/razorpayContext";
-import Divider from "../../src/components/Divider";
+import { RazorpayContextProvider } from "../src/context/razorpayContext";
+import Divider from "../src/components/Divider";
 
 export default function CampaignPage({ data }) {
 const {isAuthenticated,hasEnrolled,setHasEnrolled} = useAuthContext()

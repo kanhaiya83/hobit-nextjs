@@ -4,19 +4,23 @@ export default function Home() {
     <>
       <li>
         
-        <Link  className="underline text-blue-600 text-xl" href="/campaign/zumba">Zumba</Link>
+        <Link  className="underline text-blue-600 text-xl" href="/zumba">Zumba</Link>
       </li>
       <li>
         
-        <Link  className="underline text-blue-600 text-xl" href="/campaign/cooking">Cooking</Link>
+        <Link  className="underline text-blue-600 text-xl" href="/cooking">Cooking</Link>
       </li>
       <li>
         
-        <Link  className="underline text-blue-600 text-xl" href="/campaign/bellydance">Belly Dance</Link>
+        <Link  className="underline text-blue-600 text-xl" href="/bellydance">Belly Dance</Link>
       </li>
       <li>
         
-        <Link  className="underline text-blue-600 text-xl" href="/campaign/bhangra">Bhangra Fitness</Link>
+        <Link  className="underline text-blue-600 text-xl" href="/bhangra">Bhangra Fitness</Link>
+      </li>
+      <li>
+        
+        <Link  className="underline text-blue-600 text-xl" href="/yoga">Yoga</Link>
       </li>
     </>
   );
