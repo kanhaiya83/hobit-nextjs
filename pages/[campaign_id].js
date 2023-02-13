@@ -17,6 +17,7 @@ import { auth } from "../src/utils/firebase";
 import { useRouter } from "next/router";
 import { RazorpayContextProvider } from "../src/context/razorpayContext";
 import Divider from "../src/components/Divider";
+import ChatButton from "../src/components/ChatButton";
 
 export default function CampaignPage({ data }) {
 const {isAuthenticated,hasEnrolled,setHasEnrolled} = useAuthContext()
@@ -58,6 +59,7 @@ const pid = router.query;
 
       <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
       </RazorpayContextProvider>
+      <ChatButton/>
     </>
   );
 }
