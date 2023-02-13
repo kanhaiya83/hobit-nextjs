@@ -6,6 +6,7 @@ import "swiper/css/autoplay";
 import EnrollButton from "./EnrollButton";
 import SectionHeading from "./SectionHeading";
 import Image from "next/image";
+import { DiscountPrice } from "./DiscountPrice";
 const _testimonialsImages = [
   "https://user-images.githubusercontent.com/76777058/212974664-1dc1eb30-efa9-4752-be6d-866b2d740438.jpeg",
   "https://user-images.githubusercontent.com/76777058/212974671-9bfb484b-f873-4cf9-82c0-8af0cd06af7a.jpeg",
@@ -72,7 +73,7 @@ const SlidingTestimonials = ({ data }) => {
         </Swiper>
       </div>
       <EnrollButton applyClasses={"md:py-6 my-8"}>
-        Sale at &#x20b9;{data.price}
+        Sale at <DiscountPrice price={data.price}/>
       </EnrollButton>
     </div>
   );

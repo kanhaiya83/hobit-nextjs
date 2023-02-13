@@ -15,6 +15,7 @@ export const RazorpayContextProvider = ({ children,pageData }) => {
   const handlePayment = async (paymentData) => {
     const {course,currency,amount} = paymentData;
     if(!slot){
+      document.getElementById("slot-picker")?.scrollIntoView();
         return warnToast("Please select a slot!")
     }
     try {

@@ -5,6 +5,7 @@ import EnrollButton from "./EnrollButton";
 import CrossImage from "./../../public/images/cross.svg"
 import VideoJSPlayer from "./VideoJsPlayer";
 import { twMerge } from "tailwind-merge";
+import { DiscountPrice } from "./DiscountPrice";
 const customStyles = {
   content: {
     top: "50%",
@@ -41,11 +42,8 @@ const VideoTestimonialSection = ({ data }) => {
         Reserve a seat before 10th Jan&apos;23 to join the January batch.
       </h4>
       <EnrollButton applyClasses={"py-4 md:py-6"}>
-        {data.btnText}&#x20b9;&nbsp;
-        <span className="line-through text-slate-200 font-thin">
-          {data.before_discount_price}
-        </span>
-        <span className="ml-1 text-xl md:text-2xl font-bold">{data.price}</span>
+        {data.btnText}
+        <DiscountPrice price={data.price}/>
       </EnrollButton>
     </section>
   );

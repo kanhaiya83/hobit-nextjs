@@ -18,7 +18,7 @@ const FAQSection = ({ data }) => {
         <h4 className="md:text-xl text-slate-700 font-medium text-center md:max-w-[80%] mx-auto mb-6">
           We’ve tried my best to answer all frequently asked questions. For
           further queries, please email me at:{" "}
-          <span className=" text-blue-700">support@hobit.in</span>. Our amazing
+          <span className=" text-blue-700">lakshay@hobit.in</span>. Our amazing
           support team will reply within 12 hours. 🙂
         </h4>
         <ul className="flex flex-col items-stretch">

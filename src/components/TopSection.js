@@ -18,7 +18,7 @@ const ParsedGradientText = (textData) => {
     });
   }
 };
-const FeaturedCard = ({ card, isSecondaryCard }) => {
+const FeaturedCard = ({ card, isSecondaryCard ,type,data}) => {
   return (
     <div
       className={twMerge(
@@ -43,7 +43,7 @@ const FeaturedCard = ({ card, isSecondaryCard }) => {
           }`
         )}
       >
-        {card.text}
+        {type==="dynamic" ? card.text+moment(data.startDate).format("Do MMM YYYY"):card.text}
       </span>
     </div>
   );
@@ -60,7 +60,7 @@ const TopSection = ({ data }) => {
           priority={true}
         />
       </div>
-      <div className="pt-20 md:pt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
+      <div className="pt-20 md:Do MMMM,YYYYpt-32 flex flex-col items-center mx-auto max-w-[1100px] text-center relative">
         {Boolean(data?.header) && (
           <h5 className="text-base md:text-xl font-medium md:px-[15%] mx-auto my-2 text-slate-100">
             {data.header}
@@ -90,7 +90,7 @@ const InfoCard = ({ data }) => {
     <div className="flex-1 mx-2 rounded-xl bg-dark-secondary-color p-5">
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-2">
         {data.primaryCards.map((c, i) => {
-          return <FeaturedCard key={i} card={c} />;
+          return <FeaturedCard key={i} card={c} data={data} type={c.type}/>;
         })}
       </div>
       <div
@@ -110,7 +110,7 @@ const InfoCard = ({ data }) => {
             `text-xs md:text-base font-semibold ml-3 text-left`
           )}
         >
-          Monday to Friday
+          Monday to Friday Sessions
         </span>
       </div>
       {/* Intructor */}

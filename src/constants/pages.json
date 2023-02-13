@@ -16,7 +16,8 @@
       { "text": "30 Days", "image": "/images/cards/calender.svg" },
       {
         "text": "Starts from ",
-        "image": "/images/cards/double-chevron-right.svg"
+        "image": "/images/cards/double-chevron-right.svg",
+        "type":"dynamic"
       },
       {
         "text": "Virtual Class + QnA chat",
@@ -59,7 +60,7 @@
         "thumbnail": "/images/thumbnails/zumba-feedback-3.png"
       }
     ],
-    "startDate": 1699145775000,
+    "startDate": 1676911690000,
     "endDate": 1674145775000,
     "daysCount": 30,
     "advantages": [
@@ -174,12 +175,13 @@
         "image": "/images/cards/video.svg"
       },
       {
-        "text": "Starts from 10th Jan'23",
-        "image": "/images/cards/double-chevron-right.svg"
+        "text": "Starts from ",
+        "image": "/images/cards/double-chevron-right.svg",
+        "type":"dynamic"
       }
     ],
     "secondaryCards": [
-      { "text": "Recipes  " },
+      { "text": "Recipes Available" },
       { "text": "Convenient Time Slots" }
     ],
     "before_discount_price": 1299,
@@ -208,7 +210,7 @@
         "thumbnail": "/images/thumbnails/cooking-feedback-2.png"
       }
     ],
-    "startDate": 1699145775000,
+    "startDate": 1676911690000,
     "endDate": 1674145775000,
     "daysCount": 30,
     "advantages": [
@@ -218,7 +220,7 @@
       },
       {
         "id": 2,
-        "text": "You will master the measurement of dry & fresh ingredients adn learn about spices and herbs."
+        "text": "You will master the measurement of dry & fresh ingredients and learn about spices and herbs."
       },
       {
         "id": 3,
@@ -236,7 +238,7 @@
       },
       {
         "id": 2,
-        "text": "You want to go beyond 'chai' & 'maggi' and you culinary journey?"
+        "text": "You want to go beyond 'chai' & 'maggi' and your culinary journey?"
       },
       {
         "id": 3,
@@ -313,8 +315,9 @@
         "image": "/images/cards/video.svg"
       },
       {
-        "text": "Starts from 11th Jan'23",
-        "image": "/images/cards/double-chevron-right.svg"
+        "text": "Starts from ",
+        "image": "/images/cards/double-chevron-right.svg",
+        "type":"dynamic"
       }
     ],
     "secondaryCards": [
@@ -329,8 +332,8 @@
       "profession": "Belly Dance Instructor",
       "description": "Nidhi Thakkar is a CA turned professional belly dancer with 7+ years of experience. She's the master when it comes to guiding through the techniques of belly dance and gracefully performing the same on Bollywood melodies.Learn beginner level isolation techniques for your muscles .It covers both, techniques and choreography to mould you into a professional belly dancer."
     },
-    "btnText": "Learn the Belly Dance Art from ",
-    "bgImage": "/images/backgrounds/zumba.jpg",
+    "btnText": "Learn the Belly Dance Art form at ",
+    "bgImage": "/images/backgrounds/bellydance.jpg",
     "teaser": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",
       "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/4-12-2021/19Bellydance.jpg"
@@ -347,7 +350,7 @@
         "thumbnail": "/images/thumbnails/belly-dance-feedback-2.png"
       }
     ],
-    "startDate": 1699145775000,
+    "startDate": 1676911690000,
     "endDate": 1674145775000,
     "daysCount": 30,
     "advantages": [
@@ -357,7 +360,7 @@
       },
       {
         "id": 2,
-        "text": "Step-By-Step movement instructions that will you fill confident,flexible adn energized."
+        "text": "Step-By-Step movement instructions that will you fill confident,flexible and energized."
       },
       {
         "id": 3,
@@ -365,17 +368,17 @@
       },
       {
         "id": 4,
-        "text": "Only a willingness to have fun adn learn.No other prerequisites"
+        "text": "Only a willingness to have fun and learn.No other prerequisites"
       }
     ],
     "checklist": [
       {
         "id": 1,
-        "text": "You want to get a great foundation in belly dance hand have a great workout at same time?"
+        "text": "You want to get a great foundation in belly dance and have a great workout at same time?"
       },
       {
         "id": 2,
-        "text": "You want to get in shape(or same time) and have a blast at same time?"
+        "text": "You want to get in(or stay in) shape and have a blast at same time?"
       },
       {
         "id": 3,
@@ -452,8 +455,9 @@
         "image": "/images/cards/video.svg"
       },
       {
-        "text": "Starts from 11th Jan'23",
-        "image": "/images/cards/double-chevron-right.svg"
+        "text": "Starts from ",
+        "image": "/images/cards/double-chevron-right.svg",
+        "type":"dynamic"
       }
     ],
     "secondaryCards": [
@@ -463,19 +467,19 @@
     "before_discount_price": 1299,
     "price": 999,
     "instructor": {
-      "name": "Ms. Rahul Sabharwal",
+      "name": "Mr. Rahul Sabharwal",
       "image": "/images/instructors/rahul_sabharwal.jpg",
       "profession": "Bhangra Fitness Instructor",
       "description": "A certified bhangra fitness trainer, Rahul Sabharwal has guided a no.of people through his energetic bhangra fitness dance.Currently he holds 4+years of experience in bhangra fitness.Great for losing weight, building stamina, developing strength and improving flexibility."
     },
     "btnText": "30 days transformative Bhangra class in ",
-    "bgImage": "/images/backgrounds/zumba.jpg",
+    "bgImage": "/images/backgrounds/bhangra.jpg",
     "teaser": {
       "src": "/videos/teasers/bhangra-teaser.mp4",
       "thumbnail": ""
     },
     "videoTestimonials": [],
-    "startDate": 1699145775000,
+    "startDate": 1676911690000,
     "endDate": 1674145775000,
     "daysCount": 30,
     "advantages": [
@@ -493,25 +497,25 @@
       },
       {
         "id": 4,
-        "text": "Improve your body posture,strength adn flexibility."
+        "text": "Improve your body posture,strength and flexibility."
       }
     ],
     "checklist": [
       {
         "id": 1,
-        "text": "Your are a beginner and you want to lose belly fat?"
+        "text": "You want to stay, fit, healthy and increase your strength?"
       },
       {
         "id": 2,
-        "text": "Your schedule is hectic and you  want take classes on a convenient time slot??"
+        "text": "You want to learn bhangra steps, choreography and groove on bhangra songs?"
       },
       {
         "id": 3,
-        "text": "You want to create a customized diet for yourself?"
+        "text": "You want to improve your bhangra skills and increase your stamina, flexibility and get a toned body?"
       },
       {
         "id": 4,
-        "text": "You want to stay fit,healthy and increase your strength?"
+        "text": "You want to feel energetic, improve endurance and focus?"
       }
     ],
     "testimonialsHeading": "5000+ people people from all over the world have started their fitness journey with us.",
@@ -580,8 +584,9 @@
         "image": "/images/cards/video.svg"
       },
       {
-        "text": "Starts from 5th Nov'23",
-        "image": "/images/cards/double-chevron-right.svg"
+        "text": "Starts from ",
+        "image": "/images/cards/double-chevron-right.svg",
+        "type":"dynamic"
       }
     ],
     "secondaryCards": [
@@ -597,7 +602,7 @@
       "description": "Nidhi Thakkar is a CA turned Yoga practitioner.She took a leap of faith and practices Ashtanga Vinyasa as her passion with her 7+ years experience.She is on a mission to transform thousands of lives."
     },
     "btnText": "30 days transformative Yoga class in ",
-    "bgImage": "/images/backgrounds/zumba.jpg",
+    "bgImage": "/images/backgrounds/yoga.jpg",
     "teaser": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",
       "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/4-12-2021/19Bellydance.jpg"
@@ -614,7 +619,7 @@
         "thumbnail": "/images/thumbnails/yoga-feedback-2.png"
       }
     ],
-    "startDate": 1699145775000,
+    "startDate": 1676911690000,
     "endDate": 1674145775000,
     "daysCount": 30,
     "advantages": [
@@ -646,7 +651,7 @@
       },
       {
         "id": 3,
-        "text": "You want to live a pain free life adn want to recover from your pre/post injury in a natural way?"
+        "text": "You want to live a pain free life and want to recover from your pre/post injury in a natural way?"
       },
       {
         "id": 4,
@@ -654,7 +659,7 @@
       }
     ],
     "testimonialsHeading": "5000+ people people from all over the world have started their fitness journey with us.",
-    "testimonialsImages":[
+    "testimonialsImages": [
       "/images/feedbacks/yoga1.jpeg",
       "/images/feedbacks/yoga2.jpeg",
       "/images/feedbacks/yoga3.jpeg"

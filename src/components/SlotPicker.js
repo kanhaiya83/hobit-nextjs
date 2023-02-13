@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { useAuthContext } from "../context/authContext";
+import { DiscountPrice } from "./DiscountPrice";
 import EnrollButton from "./EnrollButton";
 
   const SlotPicker = ({ data }) => {
@@ -55,7 +56,7 @@ import EnrollButton from "./EnrollButton";
           applyClasses="py-4 mt-4"
           disabled={!Boolean(slot) && true}
         >
-          Book your slot at &#x20b9; {data.price}
+          Book your slot at <DiscountPrice price={data.price}/>
         </EnrollButton>
       </div>
     );
