@@ -71,8 +71,9 @@ export async function getStaticProps(context) {
     return {
       props: {
         data: foundCampaign,
-        revalidate: 30
       },
+      revalidate: 30
+
     };
   } else {
     console.log("No data available");
