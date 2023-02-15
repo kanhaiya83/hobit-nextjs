@@ -8,13 +8,12 @@ export const FormControlWrapper = ({ label, children }) => {
       {children}
     </div>
   );
-
 };
-export const  VideoTestimonialFormControl = ({formData,setFormData}) => {
+const  VideoTestimonialsSection = ({formData,setFormData}) => {
   const [uploadedVideoURL, setUploadedVideoURL] = useState(false);
 
   return (
-    <FormControlWrapper label="Video Testimonials">
+    <div>
               <div className="flex gap-x-6 gap-y-8 items-stretch w-full">
                 {formData.videoTestimonials?.map((testimonial, i) => {
                   return (
@@ -62,8 +61,13 @@ export const  VideoTestimonialFormControl = ({formData,setFormData}) => {
                   );
                 })}
               </div>
+
+              <div class="border-b border-slate-700 w-full mt-4"></div>
+              <h1 className='w-full text-center text-2xl my-6'>Add new video testimonial</h1>
               <VideoTestimonialUpload setFormData={setFormData} setUploadedVideoURL={setUploadedVideoURL}/>
               <ThumbnailUpload setFormData={setFormData} uploadedVideoURL={uploadedVideoURL}/>
-            </FormControlWrapper>
+            </div>
   )
 }
+
+export default VideoTestimonialsSection

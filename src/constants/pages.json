@@ -29,7 +29,7 @@
       { "text": "Personalized Diet Plans" },
       { "text": "Convenient Time Slots" }
     ],
-    "before_discount_price": 1299,
+    "before_discount_price": 1999,
     "price": 999,
     "instructor": {
       "name": "Ms. Priyanka Saini",
@@ -181,7 +181,7 @@
       { "text": "Recipes Available" },
       { "text": "Convenient Time Slots" }
     ],
-    "before_discount_price": 1299,
+    "before_discount_price": 1999,
     "price": 999,
     "instructor": {
       "name": "Mr. Prince Sharma",
@@ -319,7 +319,7 @@
       { "text": "Beginner friendly" },
       { "text": "Convenient Time Slots" }
     ],
-    "before_discount_price": 1299,
+    "before_discount_price": 1999,
     "price": 999,
     "instructor": {
       "name": "Ms. Nidhi Thakkar",
@@ -457,7 +457,7 @@
       { "text": "Personalized Diet Plan" },
       { "text": "Convenient Time Slots" }
     ],
-    "before_discount_price": 1299,
+    "before_discount_price": 1999,
     "price": 999,
     "instructor": {
       "name": "Mr. Rahul Sabharwal",
@@ -586,7 +586,7 @@
       { "text": "Personalized Diet Plan" },
       { "text": "Convenient Time Slots" }
     ],
-    "before_discount_price": 1299,
+    "before_discount_price": 1999,
     "price": 999,
     "instructor": {
       "name": "Ms. Nidhi Thakkar",
