@@ -36,6 +36,7 @@ const AdminPage = () => {
     const pageRef = ref(db, "pages");
     onValue(pageRef, (snapshot) => {
       const data = snapshot.val();
+      if(!data || data.length===0)return;
       setPagesData(data);
     });
   }, []);

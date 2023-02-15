@@ -45,15 +45,15 @@
     },
     "videoTestimonials": [
       {
-        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687057/hobit/video-feedbacks/zumba-1_gnjmhs.mp4",
+        "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Ftestimonials-videos%2Fzumba-3_x0uqoz.mp4?alt=media&token=3fda4c1d-7511-4421-a8af-feacd27b46de",
         "thumbnail": "/images/thumbnails/zumba-feedback-1.png"
       },
       {
-        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687052/hobit/video-feedbacks/zumba-2_gwiyct.mp4",
+        "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Ftestimonials-videos%2Fzumba-2_gwiyct.mp4?alt=media&token=af1bf9d2-e718-4d75-976b-8e92182b7df2",
         "thumbnail": "/images/thumbnails/zumba-feedback-2.png"
       },
       {
-        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687023/hobit/video-feedbacks/zumba-3_x0uqoz.mp4",
+        "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Ftestimonials-videos%2Fzumba-1_gnjmhs.mp4?alt=media&token=0230058d-7f68-4a24-a588-e6a203537b53",
         "thumbnail": "/images/thumbnails/zumba-feedback-3.png"
       }
     ],
@@ -197,11 +197,11 @@
     },
     "videoTestimonials": [
       {
-        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687063/hobit/video-feedbacks/cooking-1_teqrlo.mp4",
+        "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Ftestimonials-videos%2Fcooking-1_teqrlo.mp4?alt=media&token=8db28e2a-8d70-498e-8d38-3fbaafc719a7",
         "thumbnail": "/images/thumbnails/cooking-feedback-1.png"
       },
       {
-        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687066/hobit/video-feedbacks/cooking-2_v6htu8.mp4",
+        "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Ftestimonials-videos%2Fcooking-2_v6htu8.mp4?alt=media&token=3eb8a24f-9df9-41df-bf8a-de2bc9b60b46",
         "thumbnail": "/images/thumbnails/cooking-feedback-2.png"
       }
     ],
@@ -335,11 +335,11 @@
     },
     "videoTestimonials": [
       {
-        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687039/hobit/video-feedbacks/belly-dance-1_dpulqs.mp4",
+        "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Ftestimonials-videos%2Fbelly-dance-1_dpulqs.mp4?alt=media&token=4afe7574-c961-4b5c-b75a-c755755e8f17",
         "thumbnail": "/images/thumbnails/belly-dance-feedback-1.png"
       },
       {
-        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675686983/hobit/video-feedbacks/belly-dance-2_gwxlji.mp4",
+        "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Ftestimonials-videos%2Fbelly-dance-2_gwxlji.mp4?alt=media&token=84eeb9ee-ec2c-42fe-8411-569bc1900f35",
         "thumbnail": "/images/thumbnails/belly-dance-feedback-2.png"
       }
     ],
@@ -602,11 +602,11 @@
     },
     "videoTestimonials": [
       {
-        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687818/hobit/video-feedbacks/yoga-1_l98oz2.mp4",
+        "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Ftestimonials-videos%2Fyoga-1_l98oz2.mp4?alt=media&token=f2701cca-7d45-4e65-b216-78396f2e70cc",
         "thumbnail": "/images/thumbnails/yoga-feedback-1.png"
       },
       {
-        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/b_rgb:000000,c_lpad,h_450,w_730/v1675687944/hobit/video-feedbacks/yoga-2_ourmtn.mp4",
+        "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Ftestimonials-videos%2Fyoga-2_ourmtn.mp4?alt=media&token=ae8e24c6-2566-4f91-b44e-b8e892c6b754",
         "thumbnail": "/images/thumbnails/yoga-feedback-2.png"
       }
     ],

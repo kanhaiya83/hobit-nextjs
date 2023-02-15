@@ -163,7 +163,7 @@ export const VideoTestimonialUpload = ({
       file,
       setPercent,
       onComplete,
-      folderName: "testimonialsVideos",
+      folderName: "testimonials-videos",
     });
   }
   const btnText = getButtonText(percent);
