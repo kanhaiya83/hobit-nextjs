@@ -30,7 +30,7 @@ const DetailsSection = ({formData,setFormData}) => {
               label={"Starting Date"}
               value={formData.startDate}
               onChange={(e) => {
-                changeHandler(new Date(e.target.value), "startDate");
+                changeHandler(new Date(e.target.value).getTime(), "startDate");
               }}
               />
             <div class="border-b border-slate-500 my-2 w-full"></div>
