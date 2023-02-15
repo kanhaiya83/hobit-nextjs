@@ -80,11 +80,11 @@ const Testimonial = ({ video }) => {
               fluid: true,
               preload:"none",
               sources: [{
-                src: video.webm,
+                src: video.src,
                 type: "video/webm"
               },
               {
-                src: video.mp4,
+                src: video.src,
                 type: "video/mp4"
               }
             ]

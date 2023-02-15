@@ -7,6 +7,7 @@ import localFont from '@next/font/local'
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LoginModal from "../src/components/LoginModal";
 const gilroy = localFont({ src: [{
   path: '../public/fonts/gilroy/Gilroy-Light.woff',
   weight: '300',
@@ -46,6 +47,8 @@ export default function App({ Component, pageProps }) {
           <main className={`${gilroy.variable} font-sans`}>
 
           <Component {...pageProps} />
+      <LoginModal/>
+
           </main>
  </AuthContextProvider>
       <ToastContainer/>

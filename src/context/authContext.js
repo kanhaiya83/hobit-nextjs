@@ -19,7 +19,7 @@ export const AuthContextProvider = ({children})=>{
       }
       setHasEnrolled(false)
     },[user])
-    const value = {isAuthenticated:Boolean(user),loading, error,isAuthModalOpen,setIsAuthModalOpen,hasEnrolled,setHasEnrolled,slot,setSlot}
+    const value = {isAuthenticated:Boolean(user),loading, error,isAuthModalOpen,setIsAuthModalOpen,hasEnrolled,setHasEnrolled,slot,setSlot,user}
 
     return(
         <authContext.Provider value={value}>{children}</authContext.Provider>

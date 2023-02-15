@@ -45,18 +45,15 @@
     },
     "videoTestimonials": [
       {
-        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687057/hobit/video-feedbacks/zumba-1_gnjmhs.webm",
-        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687057/hobit/video-feedbacks/zumba-1_gnjmhs.mp4",
+        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687057/hobit/video-feedbacks/zumba-1_gnjmhs.mp4",
         "thumbnail": "/images/thumbnails/zumba-feedback-1.png"
       },
       {
-        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687052/hobit/video-feedbacks/zumba-2_gwiyct.webm",
-        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687052/hobit/video-feedbacks/zumba-2_gwiyct.mp4",
+        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687052/hobit/video-feedbacks/zumba-2_gwiyct.mp4",
         "thumbnail": "/images/thumbnails/zumba-feedback-2.png"
       },
       {
-        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687023/hobit/video-feedbacks/zumba-3_x0uqoz.webm",
-        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687023/hobit/video-feedbacks/zumba-3_x0uqoz.mp4",
+        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687023/hobit/video-feedbacks/zumba-3_x0uqoz.mp4",
         "thumbnail": "/images/thumbnails/zumba-feedback-3.png"
       }
     ],
@@ -193,20 +190,18 @@
       "description": "Masterchef India fame, Prince Sharma is a celebrity chef and food industry trainer. He is well known for his chocolate & sugar art where he remains at the top for his creations.Learn all about the basics of baking with Masterchef himself.Relish not just your self baked desserts, but also the tips and tricks behind being a successful baker. Get ready to run your own successful bakery."
     },
     "btnText": "Learn the art of cooking in 60 days for ",
-    "bgImage": "/images/backgrounds/cooking.jpg",
+    "bgImage": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Fbg-images%2Fcooking.jpg?alt=media&token=0026240e-8fde-49ee-829b-9ce1dffa63ad",
     "teaser": {
-      "src": "/videos/teasers/cooking-teaser.mp4",
+      "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Fteasers%2Fcooking-teaser.mp4?alt=media&token=892afcdb-8b03-4a71-a06b-3abce07093c7",
       "thumbnail": "/images/thumbnails/cooking.jpg"
     },
     "videoTestimonials": [
       {
-        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687063/hobit/video-feedbacks/cooking-1_teqrlo.webm",
-        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687063/hobit/video-feedbacks/cooking-1_teqrlo.mp4",
+        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687063/hobit/video-feedbacks/cooking-1_teqrlo.mp4",
         "thumbnail": "/images/thumbnails/cooking-feedback-1.png"
       },
       {
-        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687066/hobit/video-feedbacks/cooking-2_v6htu8.webm",
-        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687066/hobit/video-feedbacks/cooking-2_v6htu8.mp4",
+        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687066/hobit/video-feedbacks/cooking-2_v6htu8.mp4",
         "thumbnail": "/images/thumbnails/cooking-feedback-2.png"
       }
     ],
@@ -333,20 +328,18 @@
       "description": "Nidhi Thakkar is a CA turned professional belly dancer with 7+ years of experience. She's the master when it comes to guiding through the techniques of belly dance and gracefully performing the same on Bollywood melodies.Learn beginner level isolation techniques for your muscles .It covers both, techniques and choreography to mould you into a professional belly dancer."
     },
     "btnText": "Learn the Belly Dance Art form at ",
-    "bgImage": "/images/backgrounds/bellydance.jpg",
+    "bgImage": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Fbg-images%2Fbellydance.jpg?alt=media&token=9f69cb1b-66c3-4918-995b-d82d74958e29",
     "teaser": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",
       "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/4-12-2021/19Bellydance.jpg"
     },
     "videoTestimonials": [
       {
-        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687039/hobit/video-feedbacks/belly-dance-1_dpulqs.webm",
-        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687039/hobit/video-feedbacks/belly-dance-1_dpulqs.mp4",
+        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687039/hobit/video-feedbacks/belly-dance-1_dpulqs.mp4",
         "thumbnail": "/images/thumbnails/belly-dance-feedback-1.png"
       },
       {
-        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675686983/hobit/video-feedbacks/belly-dance-2_gwxlji.webm",
-        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675686983/hobit/video-feedbacks/belly-dance-2_gwxlji.mp4",
+        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675686983/hobit/video-feedbacks/belly-dance-2_gwxlji.mp4",
         "thumbnail": "/images/thumbnails/belly-dance-feedback-2.png"
       }
     ],
@@ -473,9 +466,9 @@
       "description": "A certified bhangra fitness trainer, Rahul Sabharwal has guided a no.of people through his energetic bhangra fitness dance.Currently he holds 4+years of experience in bhangra fitness.Great for losing weight, building stamina, developing strength and improving flexibility."
     },
     "btnText": "30 days transformative Bhangra class in ",
-    "bgImage": "/images/backgrounds/bhangra.jpg",
+    "bgImage": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Fbg-images%2Fbhangra.jpg?alt=media&token=07bfc8c1-dfc6-4cee-b608-c53fa9b462ec",
     "teaser": {
-      "src": "/videos/teasers/bhangra-teaser.mp4",
+      "src": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Fteasers%2Fbhangra-teaser.mp4?alt=media&token=a59a3ae7-849a-437b-86cd-7c5324f6437f",
       "thumbnail": ""
     },
     "videoTestimonials": [],
@@ -602,20 +595,18 @@
       "description": "Nidhi Thakkar is a CA turned Yoga practitioner.She took a leap of faith and practices Ashtanga Vinyasa as her passion with her 7+ years experience.She is on a mission to transform thousands of lives."
     },
     "btnText": "30 days transformative Yoga class in ",
-    "bgImage": "/images/backgrounds/yoga.jpg",
+    "bgImage": "https://firebasestorage.googleapis.com/v0/b/hobitapp-22cb6.appspot.com/o/campaign-site-assets%2Fbg-images%2Fyoga.jpg?alt=media&token=711943b2-b6a7-472c-b621-ed09805c28fb",
     "teaser": {
       "src": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/Tutor+teser+videos/Temp+Tutor+Videos+Belly-1.mp4",
       "thumbnail": "https://hobitworkshops.s3.ap-south-1.amazonaws.com/4-12-2021/19Bellydance.jpg"
     },
     "videoTestimonials": [
       {
-        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687818/hobit/video-feedbacks/yoga-1_l98oz2.webm",
-        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687818/hobit/video-feedbacks/yoga-1_l98oz2.mp4",
+        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/c_scale,w_730/v1675687818/hobit/video-feedbacks/yoga-1_l98oz2.mp4",
         "thumbnail": "/images/thumbnails/yoga-feedback-1.png"
       },
       {
-        "webm": "https://res.cloudinary.com/dbgfrdoan/video/upload/b_rgb:000000,c_lpad,h_450,w_730/v1675687944/hobit/video-feedbacks/yoga-2_ourmtn.webm",
-        "mp4": "https://res.cloudinary.com/dbgfrdoan/video/upload/b_rgb:000000,c_lpad,h_450,w_730/v1675687944/hobit/video-feedbacks/yoga-2_ourmtn.mp4",
+        "src": "https://res.cloudinary.com/dbgfrdoan/video/upload/b_rgb:000000,c_lpad,h_450,w_730/v1675687944/hobit/video-feedbacks/yoga-2_ourmtn.mp4",
         "thumbnail": "/images/thumbnails/yoga-feedback-2.png"
       }
     ],
