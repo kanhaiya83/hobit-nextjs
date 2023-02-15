@@ -10,7 +10,7 @@ const TimerSection = ({ data }) => {
 
   useEffect(() => {
     setTimeRemaining(
-      Math.trunc((data.startDate - new Date().getTime()) / 1000)
+      Math.trunc((new Date(data.startDate).getTime() - new Date().getTime()) / 1000)
     );
   }, []);
   useEffect(() => {
