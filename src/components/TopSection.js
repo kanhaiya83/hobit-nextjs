@@ -8,8 +8,8 @@ import GradientText from "./GradientText";
 import SlotPicker from "./SlotPicker";
 import { VideoJSPlayer } from "./VideoJsPlayer";
 
-const ParsedGradientText = (textData) => {
-  if (textData) {
+export const ParsedGradientText = (textData) => {
+  if (textData && Array.isArray(textData)) {
     return textData.map((txt, i) => {
       if (txt["gradient"]) {
         return <GradientText key={i}>{txt["gradient"]}</GradientText>;
