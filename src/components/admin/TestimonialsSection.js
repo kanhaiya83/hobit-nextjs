@@ -23,7 +23,7 @@ const TestimonialsSection = ({formData,setFormData}) => {
                           className="w-full absolute top-0 left-0"
                         />
                       </div>
-                      <div className="flex flex-col">
+                      <div className="flex flex-col items-center">
                         <a
                           href={img}
                           target="_blank"
@@ -33,7 +33,7 @@ const TestimonialsSection = ({formData,setFormData}) => {
                           Visit
                         </a>
                         <button
-                          className="bg-slate-700 mt-2 p-3 rounded"
+                          className="bg-red-700 mt-2 p-2 rounded"
                           onClick={() => {
                             setFormData((prev) => {
                               const clonedState = cloneDeep(prev);

@@ -42,7 +42,7 @@ const  VideoTestimonialsSection = ({formData,setFormData}) => {
                           {"Video link " + (i + 1)}
                         </a>
                         <button
-                          className="bg-slate-700 mt-2 p-3 rounded"
+                          className="bg-red-700 mt-2 p-3 rounded"
                           onClick={() => {
                             setFormData((prev) => {
                               const clonedState = cloneDeep(prev);

@@ -40,7 +40,7 @@ export const BackgroundImageUpload = ({ setFormData }) => {
       {file && (
         <button
           className={twMerge(
-            `bg-slate-800 p-3 rounded ${!file && "opacity-30"}`
+            `bg-primary-color w-fit p-3 rounded ${!file && "opacity-30"}`
           )}
           onClick={handleUpload}
           disabled={!file}
@@ -79,7 +79,7 @@ export const TeaserUpload = ({ setFormData }) => {
       {file && (
         <button
           className={twMerge(
-            `bg-slate-800 p-3 rounded ${!file && "opacity-30"}`
+            `bg-primary-color w-fit p-3 rounded ${!file && "opacity-30"}`
           )}
           onClick={handleUpload}
           disabled={!file}
@@ -124,7 +124,7 @@ export const TestimonialUpload = ({ setFormData }) => {
       {file && (
         <button
           className={twMerge(
-            `bg-slate-800 p-3 rounded ${!file && "opacity-30"}`
+            `bg-primary-color w-fit p-3 rounded ${!file && "opacity-30"}`
           )}
           onClick={handleUpload}
           disabled={!file}
@@ -149,14 +149,14 @@ export const VideoTestimonialUpload = ({
 
   const onComplete = (url) => {
     setUploadedVideoURL(url);
-    setFormData((prev) => {
-      const clonedState = cloneDeep(prev);
-      clonedState.videoTestimonials = [
-        ...clonedState.videoTestimonials,
-        { src: url },
-      ];
-      return clonedState;
-    });
+    // setFormData((prev) => {
+    //   const clonedState = cloneDeep(prev);
+    //   clonedState.videoTestimonials = [
+    //     ...clonedState.videoTestimonials,
+    //     { src: url },
+    //   ];
+    //   return clonedState;
+    // });
   };
   function handleUpload() {
     uploadFile({
@@ -175,7 +175,7 @@ export const VideoTestimonialUpload = ({
       {file && (
         <button
           className={twMerge(
-            `bg-slate-800 p-3 rounded ${!file && "opacity-30"}`
+            `bg-primary-color w-fit p-3 rounded ${!file && "opacity-30"}`
           )}
           onClick={handleUpload}
           disabled={!file}
@@ -198,12 +198,7 @@ export const ThumbnailUpload = ({ setFormData, uploadedVideoURL }) => {
   const onComplete = (url) => {
     setFormData((prev) => {
       const clonedState = cloneDeep(prev);
-      clonedState.videoTestimonials = clonedState.videoTestimonials.map((t) => {
-        if (t.src === uploadedVideoURL) {
-          t.thumbnail = url;
-        }
-        return t;
-      });
+      clonedState.videoTestimonials.push({src:uploadedVideoURL,thumbnail:url})
       return clonedState;
     });
   };
@@ -224,7 +219,7 @@ export const ThumbnailUpload = ({ setFormData, uploadedVideoURL }) => {
       {file && (
         <button
           className={twMerge(
-            `bg-slate-800 p-3 rounded ${!file && "opacity-30"}`
+            `bg-primary-color w-fit p-3 rounded ${!file && "opacity-30"}`
           )}
           onClick={handleUpload}
           disabled={!file}
