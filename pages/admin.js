@@ -6,13 +6,9 @@ import { db, logout } from "../src/utils/firebase";
 import {
   ref,
   onValue,
-  getStorage,
   update,
-  set,
 } from "firebase/database";
 import { cloneDeep } from "lodash";
-import { TeaserUpload, TestimonialUpload, ThumbnailUpload, VideoTestimonialUpload } from "../src/components/admin";
-import { FormControlWrapper, VideoTestimonialFormControl } from "../src/components/admin/Form";
 import Sidebar from "../src/components/admin/Sidebar";
 import DetailsSection from "../src/components/admin/DetailsSection";
 import TeaserSection from "../src/components/admin/TeaserSection";
@@ -33,11 +29,16 @@ const AdminPage = () => {
     setFormData(newState);
   }, [selectedPage, pagesData?.length]);
   useEffect(() => {
-    const pageRef = ref(db, "pages");
+    const pageRef = ref(db, "Campaigns");
     onValue(pageRef, (snapshot) => {
       const data = snapshot.val();
-      if(!data || data.length===0)return;
-      setPagesData(data);
+      if(!data )return;
+      const dataArr = Object.values(data);
+      if(!dataArr || dataArr.length<1){
+        return 
+      }
+
+      setPagesData(dataArr);
     });
   }, []);
   useEffect(() => {
@@ -53,7 +54,10 @@ const AdminPage = () => {
     console.log("saving formData:", formData);
     setSaving(true);
     try {
-      await update(ref(db), { "/pages/0": formData });
+      const campaignURL="Campaigns/"+formData.campaign_id
+      const updates= {};
+      updates["Campaigns/"+formData.campaign_id]=formData
+      await update(ref(db),updates);
       setSaving(false);
       alert("Data saving saved successfully!!");
     } catch (e) {

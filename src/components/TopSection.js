@@ -152,8 +152,8 @@ const VideoCard = ({ data }) => {
   const handlePlayerReady = async (player) => {
     const interval=setInterval(()=>{
       if(!player)return;
-      if(!isElementInViewport(player.el_)){
-        player.pause()
+      if(!isElementInViewport(player?.el_)){
+        player?.pause()
       }
 
     },1000)

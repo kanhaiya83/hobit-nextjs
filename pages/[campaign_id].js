@@ -65,9 +65,9 @@ export async function getStaticProps(context) {
   const { params } = context;
   const campaign_id = params.campaign_id;
   const dbRef = ref(db);
-  const snapshot = await get(child(dbRef, `pages`));
+  const snapshot = await get(child(dbRef, `Campaigns`));
   if (snapshot.exists()) {
-    const foundCampaign = snapshot.val().find((p) => p.campaign_id === campaign_id);
+    const foundCampaign = snapshot.val()[campaign_id];
     return {
       props: {
         data: foundCampaign,

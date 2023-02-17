@@ -1,5 +1,5 @@
-[
-  {
+
+ { "zumba":{
     "campaign_id": "zumba",
     "activity_name": "Zumba",
     "title": [
@@ -145,7 +145,7 @@
       "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM", "09:00PM"]
     }
   },
-  {
+  "cooking":{
     "campaign_id": "cooking",
     "activity_name": "Cooking",
     "title": [
@@ -284,7 +284,7 @@
       "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM", "09:00AM"]
     }
   },
-  {
+  "bellydance":{
     "campaign_id": "bellydance",
     "activity_name": "Belly Dance",
     "title": [
@@ -422,7 +422,7 @@
       "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM", "09:00PM"]
     }
   },
-  {
+ "bhangra": {
     "campaign_id": "bhangra",
     "activity_name": "bhangra Fitness",
     "title": [
@@ -551,7 +551,7 @@
       "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM", "09:00PM"]
     }
   },
-  {
+  "yoga":{
     "campaign_id": "yoga",
     "activity_name": "yoga",
     "title": [
@@ -687,4 +687,4 @@
       "evening": ["05:00PM", "06:00PM", "07:00PM", "08:00PM", "09:00PM"]
     }
   }
-]
+ }
