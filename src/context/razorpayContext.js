@@ -29,7 +29,7 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
       document.getElementById("slot-picker")?.scrollIntoView();
       return warnToast("Please select a slot!");
     }
-    if(!productUID,campaignId,amount)return;
+    if(!productUID || !campaignId || !amount)return;
     try {
      const createdOrder = await  http
         .post(`createOrder`, {

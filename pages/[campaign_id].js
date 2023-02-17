@@ -23,6 +23,7 @@ export default function CampaignPage({ data }) {
   const router = useRouter();
   const pid = router.query;
   useEffect(() => {
+    return
     if (!isAuthenticated || hasEnrolled === pid) return;
     (async () => {
       const res = await fetch(
