@@ -16,7 +16,17 @@ const razorpayContext = React.createContext({
   handlePayment: () => {},
   pageData: {},
 });
+const parseSlot=(slot)=>{
+  if(slot.slice(5).toUpperCase()==="PM"){
+    return slot.slice(0,5)
+  }
+  else{
+    const parsedHours =( parseInt(slot.slice(0,2))+12).toString()
+    return parsedHours+slot.slice(2,5)
 
+  }
+
+}
 export const useRazorpayContext = () => useContext(razorpayContext);
 
 export const RazorpayContextProvider = ({ children, pageData }) => {
@@ -60,7 +70,7 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
               amount: amount,
               paymentId: response.razorpay_payment_id,
             };
-            const paymentResponse =await http.post(`paymentRazorpay`, { paymentDetails, slot })
+            const paymentResponse =await http.post(`paymentRazorpay`, { paymentDetails, slot:parseSlot(slot) })
           console.log("Order success response:",paymentResponse);
 
 
