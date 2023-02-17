@@ -42,6 +42,7 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
             campaignId
           }
         })
+        console.log("order creation response",createdOrder);
         const order_id = createdOrder.data?.data?.id
         var options = {
           key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
@@ -60,6 +61,7 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
               paymentId: response.razorpay_payment_id,
             };
             const paymentResponse =await http.post(`paymentRazorpay`, { paymentDetails, slot })
+          console.log("Order success response:",paymentResponse);
 
 
 
@@ -75,6 +77,14 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
         };
       const rzpay = new Razorpay(options);
       rzpay.open();
+        // Validate
+        try {
+         const r =await  http.post(`validateOrder`, {id:order_id,userUID:user.uid})
+          console.log("Order validation response:",r);
+        
+      } catch (error) {
+        
+      }
     } catch (e) {
       errorToast("Some error occurred!!");
       console.log(e);
