@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-export const successToast=(msg)=>{
+export const successToast=(msg,options)=>{
     toast.success(msg, {
         position: "top-right",
         autoClose: 3000,
@@ -10,6 +10,7 @@ export const successToast=(msg)=>{
         draggable: true,
         progress: undefined,
         theme: "dark",
+        ...options
         });
 }
 export const errorToast = (msg)=>{

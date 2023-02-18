@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import useRazorpay from "react-razorpay";
-import { auth } from "../utils/firebase";
+import { useRouter } from "next/router";
+import { ref, child, get } from "firebase/database";
+import { auth, db } from "../utils/firebase";
 import { errorToast, successToast, warnToast } from "../utils/toast";
 import { useAuthContext } from "./authContext";
-import logoImage from "./../../public/images/logo.png";
 import axios from "axios";
+import { getProductUID, parseSlot } from "../utils";
 const http = axios.create({
   baseURL: "https://asia-southeast1-hobitapp-22cb6.cloudfunctions.net/",
   headers: {
@@ -16,89 +18,113 @@ const razorpayContext = React.createContext({
   handlePayment: () => {},
   pageData: {},
 });
-const parseSlot=(slot)=>{
-  if(slot.slice(5).toUpperCase()==="PM"){
-    return slot.slice(0,5)
-  }
-  else{
-    const parsedHours =( parseInt(slot.slice(0,2))+12).toString()
-    return parsedHours+slot.slice(2,5)
 
-  }
-
-}
 export const useRazorpayContext = () => useContext(razorpayContext);
 
 export const RazorpayContextProvider = ({ children, pageData }) => {
-  const { setHasEnrolled, slot ,user} = useAuthContext();
-
+  const { user, slot,setHasEnrolled } = useAuthContext();
+  const router = useRouter();
+  const productUID = getProductUID(pageData.campaign_id, pageData.startDate);
+  const campaignId = pageData.campaign_id;
+  const amount = pageData.price;
   const Razorpay = useRazorpay();
+  useEffect(() => {
+    if(!user)return;
+    const dbRef = ref(db);
+    get(child(dbRef, `MyLive/${user.uid}/${productUID}`))
+      .then((snapshot) => {
+        console.log("Checking if course already bought")
+        if (snapshot.exists()) {
+          console.log(snapshot.val());
+          setHasEnrolled(true)
+        } else {
+          console.log("No data available");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, [user]);
   const handlePayment = async (paymentData) => {
-    const {  amount,productUID,campaignId,slot} = paymentData;
     if (!slot) {
       document.getElementById("slot-picker")?.scrollIntoView();
       return warnToast("Please select a slot!");
     }
-    if(!productUID || !campaignId || !amount)return;
+    if (!productUID || !campaignId || !amount) {
+      console.log("Error while initiating payment:", {
+        productUID,
+        campaignId,
+        amount,
+      });
+    }
     try {
-     const createdOrder = await  http
-        .post(`createOrder`, {
-          UID:productUID,
-          userUID: user.uid,
-          type: "Live",
-          OS: "android",
-          campaign:{
-            isCampaignPurchase:true,
-            campaignId
-          }
-        })
-        console.log("order creation response",createdOrder);
-        const order_id = createdOrder.data?.data?.id
-        var options = {
-          key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
-          name: "Hobit",
-          currency: "INR",
-          order_id,
-          image: "https://s3.amazonaws.com/rzp-mobile/images/rzp.png",
-          description:productUID,
-          handler:async function (response) {
-            const paymentDetails = {
-              customerId: user.uid,
-              productId: productUID,
-              type: "Live",
+      const createdOrder = await http.post(`createOrder`, {
+        UID: productUID,
+        userUID: user.uid,
+        type: "Live",
+        OS: "android",
+        campaign: {
+          isCampaignPurchase: true,
+          campaignId,
+        },
+      });
+      console.log("order creation response", createdOrder);
+      const order_id = createdOrder.data?.data?.id;
+      var options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
+        name: "Hobit",
+        currency: "INR",
+        order_id,
+        image: "https://s3.amazonaws.com/rzp-mobile/images/rzp.png",
+        description: productUID,
+        handler: async function (response) {
+          const paymentDetails = {
+            customerId: user.uid,
+            productId: productUID,
+            type: "Live",
             discountCode: "",
             amount: amount,
-              paymentId: response.razorpay_payment_id,
-            };
-           try{ const paymentResponse =await http.post(`paymentRazorpay`, { details:paymentDetails, timeSlot:parseSlot(slot) })
-          console.log("Order success response:",paymentResponse);
-
-          successToast("Payment successful!!");
-          setHasEnrolled(true);
-}
-catch(e){
-  console.log("Error while payment",e);
-}
-
-
-          },
-          prefill: {
-            contact: auth.currentUser.phoneNumber,
-          },
-          theme: {
-            color: "#8B53FF",
-          },
-        };
+            paymentId: response.razorpay_payment_id,
+          };
+          try {
+            const paymentResponse = await http.post(`paymentRazorpay`, {
+              details: paymentDetails,
+              timeSlot: parseSlot(slot),
+            });
+            console.log("Order success response:", paymentResponse);
+            console.log(paymentResponse.data, paymentResponse.data.status);
+            if (paymentResponse.data?.status) {
+              successToast(
+                "Payment successful!Please login at hobit.in to access your course",
+                { autoClose: 4000 }
+              );
+              setTimeout(() => {
+                router.push("https://hobit.in/my-stuff");
+              }, 4000);
+            } else {
+              errorToast("Some error occurred while making payment!!");
+            }
+          } catch (e) {
+            console.log("Error while payment", e);
+          }
+        },
+        prefill: {
+          contact: auth.currentUser.phoneNumber,
+        },
+        theme: {
+          color: "#8B53FF",
+        },
+      };
       const rzpay = new Razorpay(options);
       rzpay.open();
-        // Validate
-        try {
-         const r =await  http.post(`validateOrder`, {id:order_id,userUID:user.uid})
-          console.log("Order validation response:",r);
-        
-      } catch (error) {
-        
-      }
+      // Validate
+      try {
+        const r = await http.post(`validateOrder`, {
+          id: order_id,
+          userUID: user.uid,
+        });
+        console.log("Order validation response:", r);
+      } catch (error) {}
     } catch (e) {
       errorToast("Some error occurred!!");
       console.log(e);

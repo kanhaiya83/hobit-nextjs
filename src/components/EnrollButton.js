@@ -1,36 +1,20 @@
 import moment from "moment";
+import { useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { useAuthContext } from "../context/authContext";
 import { useRazorpayContext } from "../context/razorpayContext";
-const getProductUID=(campaignId,date)=>{
-    const keys={
-        zumba:"AZumba",
-        yoga:"Yoga",
-        bhangra:"Bhangra",
-        bellydance:"BellyDance",
-        cooking:"Cooking"
-    }
-    if(!keys[campaignId])return null;
-    const productUID=`${keys[campaignId]}_${moment(date).format('MM-DD-YYYY')}`
-    return productUID
-}
+
 const EnrollButton = ({ children, onClick, disabled, applyClasses }) => {
-  const { handlePayment, pageData } = useRazorpayContext();
-  const { isAuthenticated, setIsAuthModalOpen, hasEnrolled, slot } =
-    useAuthContext();
-  const defaultHandleClick = () => {
+  const { handlePayment} = useRazorpayContext();
+  const { isAuthenticated, setIsAuthModalOpen, hasEnrolled} = useAuthContext();
+  const handleClick = () => {
     if (!isAuthenticated) {
       return setIsAuthModalOpen(true);
     }
     if (hasEnrolled) {
       return;
     }
-    handlePayment({
-      amount: pageData.price,
-      campaignId: pageData.campaign_id,
-      slot,
-      productUID:getProductUID(pageData.campaign_id,pageData.startDate)
-    });
+    handlePayment();
   };
   return (
     <button
@@ -40,7 +24,7 @@ const EnrollButton = ({ children, onClick, disabled, applyClasses }) => {
           disabled && "opacity-50"
         }  ${applyClasses}`
       )}
-      onClick={onClick ? onClick : defaultHandleClick}
+      onClick={onClick ? onClick : handleClick}
     >
       {hasEnrolled ? "You have enrolled!" : children}
     </button>
