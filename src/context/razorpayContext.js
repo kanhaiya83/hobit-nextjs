@@ -65,18 +65,22 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
             const paymentDetails = {
               customerId: user.uid,
               productId: productUID,
-              paymentOption: $.paymentMethod,
               type: "Live",
-              amount: amount,
+            discountCode: "",
+            amount: amount,
               paymentId: response.razorpay_payment_id,
             };
-            const paymentResponse =await http.post(`paymentRazorpay`, { paymentDetails, slot:parseSlot(slot) })
+           try{ const paymentResponse =await http.post(`paymentRazorpay`, { details:paymentDetails, timeSlot:parseSlot(slot) })
           console.log("Order success response:",paymentResponse);
 
+          successToast("Payment successful!!");
+          setHasEnrolled(true);
+}
+catch(e){
+  console.log("Error while payment",e);
+}
 
 
-            successToast("Payment successful!!");
-            setHasEnrolled(true);
           },
           prefill: {
             contact: auth.currentUser.phoneNumber,

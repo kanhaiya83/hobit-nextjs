@@ -150,16 +150,13 @@ const InfoCard = ({ data }) => {
 const VideoCard = ({ data }) => {
   const playerRef = useRef(null);
   const handlePlayerReady = async (player) => {
-    const interval=setInterval((player)=>{
-      if(!Boolean(player))return;
-      if(player && !isElementInViewport(player?.el_)){
-        player.pause()
+    const interval=setInterval(()=>{
+      if(!Boolean(player)){return;}
+      else if(!isElementInViewport(player.el_)){
+        player && player.pause()
       }
 
     },1000)
-    if(!player){
-      clearInterval(interval)
-    }
   };
   const videoJsOptions = {
     autoplay: "any",
