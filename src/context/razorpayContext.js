@@ -37,6 +37,11 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
         if (snapshot.exists()) {
           console.log(snapshot.val());
           setHasEnrolled(true)
+          successToast("You have already enrolled! Redirecting to main site!")
+           setTimeout(() => {
+                router.push("https://hobit.in/my-stuff");
+              }, 4000);
+
         } else {
           console.log("No data available");
         }
