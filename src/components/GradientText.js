@@ -5,4 +5,4 @@ const GradientText =({children})=>{
         </span>
     )
 }
-export default GradientText
+export default GradientText;

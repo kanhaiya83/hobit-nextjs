@@ -33,6 +33,9 @@ const VideoTestimonialSection = ({ data }) => {
   }
   return (
     <section className="my-10 md:my-20 text-gray-700 max-w-[1200px] mx-auto">
+        <h4 className="text-2xl text-slate-800 font-medium text-center w-full mb-4">
+            Let’s hear what our users say about us
+        </h4>
       <div className={twMerge(`grid md:grid-cols-3 gap-3 lg:gap-5 text-center mb-8 px-[5%] md:px-0 ${videoTestimonials.length ===2 && " gap-6 lg:gap-12 md:grid-cols-2" }`)}>
         {videoTestimonials.map((t, i) => {
           return <Testimonial key={i} video={t} />;
@@ -101,7 +104,7 @@ const Testimonial = ({ video }) => {
         <Image src={video.thumbnail} fill={true} priority={true} sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 25vw,
               20vw"/>
-</div>          
+</div>
 
         <div class="bg-black absolute left-0 top-0 w-full h-full bg-opacity-40"></div>
         <button class="absolute top-[50%] left-[50%] translate-x-[-50%]  translate-y-[-50%] w-14 h-14 p-2 rounded-md">

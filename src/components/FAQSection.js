@@ -34,7 +34,7 @@ const FAQSection = ({ data }) => {
         })}
         </ul>
         <EnrollButton applyClasses="my-8">
-          Sale at &#x20b9; {data.price}
+            Achieve your Fitness goals Now
         </EnrollButton>
       </div>
     </div>
