@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <>
             <div className={'absolute z-[99]'}>
-                <div className="flex justify-between items-center pl-20 pt-4">
+                <div className="flex justify-between items-center pl-5 pt-4">
                     <div className="logo">
                         <Image src="/images/logo.png" width={60} height={60} alt="logo"/>
                     </div>
