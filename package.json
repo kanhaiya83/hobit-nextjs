@@ -22,6 +22,7 @@
     "razorpay": "^2.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-facebook-pixel": "^1.0.4",
     "react-firebase-hooks": "^5.1.1",
     "react-firebaseui": "^6.0.0",
     "react-modal": "^3.16.1",

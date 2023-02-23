@@ -56,18 +56,23 @@ export default function App({Component, pageProps}) {
                 setScriptSrc('/static/facebook_pixel/cooking.js');
                 break;
         }
+        import('react-facebook-pixel').then((ReactPixel) => {
+            ReactPixel.default.init(pixelId);
+            ReactPixel.default.pageView();
+        });
+
 
     }, [router]);
 
     return (
         <>
-            <Script async src={scriptSrc}/>
+            {/*<Script async src={scriptSrc}/>*/}
             <Head>
                 <title>Hobit</title>
                 <link rel="shortcut icon" href="/images/logo.png"/>
-                <noscript><img height="1" width="1" style={{display: 'none'}}
-                               src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}
-                /></noscript>
+                {/*<noscript><img height="1" width="1" style={{display: 'none'}}*/}
+                {/*               src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}*/}
+                {/*/></noscript>*/}
             </Head>
             <AuthContextProvider>
                 <main className={`${gilroy.variable} font-sans`}>
