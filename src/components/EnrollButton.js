@@ -1,13 +1,15 @@
 import {twMerge} from "tailwind-merge";
 import {useAuthContext} from "../context/authContext";
 import {useRazorpayContext} from "../context/razorpayContext";
+import fbq from "../utils/fbq";
 
 const EnrollButton = ({children, onClick, disabled, applyClasses}) => {
     const {handlePayment} = useRazorpayContext();
     const {isAuthenticated, setIsAuthModalOpen, hasEnrolled} = useAuthContext();
     const handleClick = () => {
-        import('react-facebook-pixel').then((ReactPixel) => {
-            ReactPixel.default.track("InitiateCheckout", {currency: "INR", value: 999.00});
+        fbq("track", "InitiateCheckout", {
+            currency: "INR",
+            value: 999.0,
         });
         if (!isAuthenticated) {
             return setIsAuthModalOpen(true);
