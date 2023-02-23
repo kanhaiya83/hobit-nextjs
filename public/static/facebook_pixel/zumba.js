@@ -8,3 +8,7 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '724029262513851');
     fbq('track', 'PageView');
+    document.getElementById('enroll-button').addEventListener('click', function () {
+        console.log('clicked');
+        fbq('track', 'InitiateCheckout', {currency: "INR", value: 999.00});
+    }  );

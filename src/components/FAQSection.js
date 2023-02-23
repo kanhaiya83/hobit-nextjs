@@ -4,7 +4,6 @@ import EnrollButton from "./EnrollButton";
 import SectionHeading from "./SectionHeading";
 
 const FAQSection = ({data}) => {
-    console.log(data);
     const {faqs} = data;
     if (!faqs || faqs.length === 0) {
         return ""
