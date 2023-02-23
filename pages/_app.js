@@ -62,7 +62,7 @@ export default function App({Component, pageProps}) {
         });
 
 
-    }, [router]);
+    }, [pixelId, router]);
 
     return (
         <>
