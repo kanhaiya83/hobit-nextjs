@@ -8,7 +8,7 @@ const EnrollButton = ({ children, onClick, disabled, applyClasses }) => {
   const { handlePayment} = useRazorpayContext();
   const { isAuthenticated, setIsAuthModalOpen, hasEnrolled} = useAuthContext();
   const handleClick = () => {
-    fbq('track', 'InitiateCheckout', {currency: "INR", value: 999.00});
+    // fbq('track', 'InitiateCheckout', {currency: "INR", value: 999.00});
     if (!isAuthenticated) {
       return setIsAuthModalOpen(true);
     }

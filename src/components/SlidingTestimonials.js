@@ -73,7 +73,7 @@ const SlidingTestimonials = ({ data }) => {
         </Swiper>
       </div>
       <EnrollButton applyClasses={"md:py-6 my-8"}>
-        Sale at <DiscountPrice price={data.price}/>
+        End Of Season Sale Offer <DiscountPrice price={data.price}/>
       </EnrollButton>
     </div>
   );
