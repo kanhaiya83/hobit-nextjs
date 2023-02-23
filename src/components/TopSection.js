@@ -69,8 +69,7 @@ const TopSection = ({ data }) => {
         )}
 
         <h1 className="flex flex-col md:block text-xl md:text-5xl font-bold mb-4 max-w-[80%] md:max-w-[90%]">
-          <TitleText>{data.title[0].gradient}</TitleText>
-            <span>{data.title[1].normal}</span>
+            {ParsedGradientText(data.title)}
         </h1>
         <h5 className="text-sm md:text-lg font-medium md:px-[15%] mx-auto my-2">
           {ParsedGradientText(data.description)}
