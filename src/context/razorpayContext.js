@@ -22,7 +22,7 @@ const razorpayContext = React.createContext({
 export const useRazorpayContext = () => useContext(razorpayContext);
 
 export const RazorpayContextProvider = ({ children, pageData }) => {
-  const { user, slot,setHasEnrolled } = useAuthContext();
+  const { user, slot,setHasEnrolled, isAuthenticated, setIsAuthModalOpen } = useAuthContext();
   const router = useRouter();
   const productUID = getProductUID(pageData.campaign_id, pageData.startDate);
   const campaignId = pageData.campaign_id;
@@ -51,10 +51,13 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
       });
   }, [user]);
   const handlePayment = async (paymentData) => {
-    if (!slot) {
-      document.getElementById("slot-picker")?.scrollIntoView();
-      return warnToast("Please select a slot!");
+    if (!isAuthenticated) {
+      return setIsAuthModalOpen(true);
     }
+    // if (!slot) {
+    //   document.getElementById("slot-picker")?.scrollIntoView();
+    //   return warnToast("Please select a slot!");
+    // }
     if (!productUID || !campaignId || !amount) {
       console.log("Error while initiating payment:", {
         productUID,
