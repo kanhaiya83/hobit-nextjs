@@ -53,7 +53,7 @@ export default function CampaignPage({ data }) {
         setHasEnrolled(pid);
       }
     })();
-  }, [isAuthenticated]);
+  }, [hasEnrolled, isAuthenticated, pid, setHasEnrolled]);
   return (
     <>
       <Script

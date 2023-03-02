@@ -7,6 +7,7 @@ import { errorToast, successToast, warnToast } from "../utils/toast";
 import { useAuthContext } from "./authContext";
 import axios from "axios";
 import { getProductUID, parseSlot } from "../utils";
+import fbq from "../utils/fbq";
 const http = axios.create({
   baseURL: "https://asia-southeast1-hobitapp-22cb6.cloudfunctions.net/",
   headers: {
@@ -49,7 +50,7 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
       .catch((error) => {
         console.error(error);
       });
-  }, [user]);
+  }, [productUID, router, setHasEnrolled, user]);
   const handlePayment = async (paymentData) => {
     if (!isAuthenticated) {
       return setIsAuthModalOpen(true);
@@ -106,9 +107,15 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
                 "Payment successful!Please login at hobit.in to access your course",
                 { autoClose: 4000 }
               );
-              setTimeout(() => {
-                router.push("https://hobit.in/my-stuff");
-              }, 4000);
+                fbq("track", "Purchase");
+              router.push({
+                pathname: "/thankyou",
+                query: {
+                    productUID,
+                    amount,
+                    campaignId
+                }
+              });
             } else {
               errorToast("Some error occurred while making payment!!");
             }
