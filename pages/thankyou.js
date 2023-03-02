@@ -32,10 +32,10 @@ const ThankYouPage = () => {
     const month = today.getMonth() + 1;
     const day = today.getDate();
     const date = year + '-' + month + '-' + day;
-    // setTimeout(() => {
-    //     router.push("https://hobit.in/my-stuff");
-    //     fbq('track', 'Purchase');
-    // }, 5000);
+    setTimeout(() => {
+        router.push("https://hobit.in/my-stuff");
+        // fbq('track', 'Purchase');
+    }, 5000);
     console.log('pixelId', pixelId);
 
     return (
