@@ -107,7 +107,10 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
                 "Payment successful!Please login at hobit.in to access your course",
                 { autoClose: 4000 }
               );
-                fbq("track", "Purchase");
+                fbq("track", "Purchase", {
+                  currency: "INR",
+                    value: amount,
+                });
               router.push({
                 pathname: "/thankyou",
                 query: {
