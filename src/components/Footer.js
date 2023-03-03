@@ -50,7 +50,7 @@ const Footer = () => {
         <a href="https://instagram.com/hobit.in?igshid=YmMyMTA2M2Y=" className="mr-2"  target="_blank" rel="noreferrer">
         <Image src="/images/instagram.svg" alt="" width={32} height={32} />
         </a>
-        <a href="https://api.whatsapp.com/send?phone=917042841737" className="mr-2"  target="_blank" rel="noreferrer">
+        <a href="https://api.whatsapp.com/send?phone=918076258737" className="mr-2"  target="_blank" rel="noreferrer">
         <Image src="/images/whatsapp.svg" alt=""  width={32} height={32} />
         </a>
       </div>
