@@ -63,6 +63,21 @@ export default function CampaignPage({ data }) {
           __html:html
         }}
         />
+
+      {/*Google Tag implementation*/}
+      <Script async={true} src="https://www.googletagmanager.com/gtag/js?id=AW-11109113326" />
+        <Script
+            id={"google-tag"}
+            strategy={"afterInteractive"}
+            dangerouslySetInnerHTML={{
+                __html:`window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                      
+                        gtag('config', 'AW-11109113326');`
+            }}
+        />
+
       <Head>
         <noscript><img height="1" width="1" style={{display: 'none'}}
                        src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}

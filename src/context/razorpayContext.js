@@ -8,6 +8,7 @@ import { useAuthContext } from "./authContext";
 import axios from "axios";
 import { getProductUID, parseSlot } from "../utils";
 import fbq from "../utils/fbq";
+import gtag from "../utils/gtag";
 const http = axios.create({
   baseURL: "https://asia-southeast1-hobitapp-22cb6.cloudfunctions.net/",
   headers: {
@@ -111,6 +112,10 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
                   currency: "INR",
                     value: amount,
                 });
+                gtag('event', 'conversion', {
+                'send_to': 'AW-11109113326/Sg2ICISkx48YEO67nrEp',
+                'transaction_id': ''
+              });
               router.push({
                 pathname: "/thankyou",
                 query: {
