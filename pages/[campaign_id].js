@@ -23,6 +23,7 @@ import Head from "next/head";
 export default function CampaignPage({data}) {
     let html = ``;
     let pixelId = null;
+    let gtagId = null;
     switch (data.activity_name) {
         case 'Cooking':
             html = `
@@ -42,8 +43,14 @@ export default function CampaignPage({data}) {
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "g4aonndzcc");
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7JGEZWVYKJ');
             `;
             pixelId = '1319617838557771';
+            gtagId = 'G-7JGEZWVYKJ';
             break;
         case 'Zumba':
             html = `
@@ -63,8 +70,14 @@ export default function CampaignPage({data}) {
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "g4anuod2eu");
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3GYGQB9FTG');
             `;
             pixelId = '488470343303714';
+            gtagId = 'G-3GYGQB9FTG';
             break;
         case 'bhangra Fitness':
             html = `
@@ -84,8 +97,14 @@ export default function CampaignPage({data}) {
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "g4apbw7ex6");
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JS687YD8JE');
             `;
             pixelId = '72688042548112';
+            gtagId = 'G-JS687YD8JE';
             break;
         case 'Belly Dance':
             html = `
@@ -105,8 +124,14 @@ export default function CampaignPage({data}) {
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "g4aq6jmx2k");
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-S054LL1JP2');
             `;
             pixelId = '206049795340000';
+            gtagId = 'G-S054LL1JP2';
             break;
         case 'yoga':
             html = `
@@ -126,8 +151,14 @@ export default function CampaignPage({data}) {
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "g4aqvkkhjb");
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NRJ1E1CDLR');
             `;
             pixelId = '73215676828834';
+            gtagId = 'G-NRJ1E1CDLR';
             break;
     }
     const {isAuthenticated, hasEnrolled, setHasEnrolled} = useAuthContext();
@@ -157,18 +188,7 @@ export default function CampaignPage({data}) {
             />
 
             {/*Google Tag implementation*/}
-            <Script async={true} src="https://www.googletagmanager.com/gtag/js?id=AW-11109113326"/>
-            <Script
-                id={"google-tag"}
-                strategy={"afterInteractive"}
-                dangerouslySetInnerHTML={{
-                    __html: `window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                      
-                        gtag('config', 'AW-11109113326');`
-                }}
-            />
+            <Script async={true} src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}/>
 
             <Head>
                 <noscript><img height="1" width="1" style={{display: 'none'}}
