@@ -35,7 +35,7 @@ export default function CampaignPage({data}) {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1319617838557771');
+            fbq('init', '561600562411357');
             fbq('track', 'PageView');
             
             (function(c,l,a,r,i,t,y){
@@ -49,7 +49,7 @@ export default function CampaignPage({data}) {
             gtag('js', new Date());
             gtag('config', 'G-7JGEZWVYKJ');
             `;
-            pixelId = '1319617838557771';
+            pixelId = '561600562411357';
             gtagId = 'G-7JGEZWVYKJ';
             break;
         case 'Zumba':
