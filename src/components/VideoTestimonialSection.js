@@ -6,6 +6,7 @@ import CrossImage from "./../../public/images/cross.svg"
 import VideoJSPlayer from "./VideoJsPlayer";
 import { twMerge } from "tailwind-merge";
 import { DiscountPrice } from "./DiscountPrice";
+import moment from "moment";
 const customStyles = {
   content: {
     top: "50%",
@@ -42,7 +43,7 @@ const VideoTestimonialSection = ({ data }) => {
         })}
       </div>
       <h4 className="text-2xl text-slate-800 font-medium text-center w-full mb-4">
-        Reserve a seat before 10th Jan&apos;23 to join the January batch.
+        Reserve a seat before {moment(data.startDate).format('Do MMMM')}.
       </h4>
       <EnrollButton applyClasses={"py-4 md:py-6"}>
         {data.btnText}
