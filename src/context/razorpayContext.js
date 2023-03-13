@@ -103,6 +103,7 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
             const paymentResponse = await http.post(`paymentRazorpay`, {
               details: paymentDetails,
               timeSlot: parseSlot(slot),
+              isCampaignPurchase:true
             });
             console.log("Order success response:", paymentResponse);
             console.log(paymentResponse.data, paymentResponse.data.status);
