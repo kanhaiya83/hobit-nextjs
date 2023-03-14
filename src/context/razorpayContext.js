@@ -97,13 +97,14 @@ export const RazorpayContextProvider = ({ children, pageData }) => {
             discountCode: "",
             amount: amount,
             paymentId: response.razorpay_payment_id,
+            phoneNumber:user?.phoneNumber
           };
           console.log("Payment details:", paymentDetails);
           try {
             const paymentResponse = await http.post(`paymentRazorpay`, {
               details: paymentDetails,
               timeSlot: parseSlot(slot),
-              isCampaignPurchase:true
+              isCampaignPurchase:true,
             });
             console.log("Order success response:", paymentResponse);
             console.log(paymentResponse.data, paymentResponse.data.status);
